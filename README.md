@@ -1,23 +1,30 @@
-# TÍTULO DO PROJETO
+# EventPASS: Conectando você aos melhores momentos.
 
-`CURSO`
+![Logo EventPASS](docs/img/logo-eventpass.png)
 
-`DISCIPLINA`
+`Analise de desenvolvimento sistemas`
 
-`SEMESTRE`
+`Eixo 2 - Eixo 2 - Projeto: Desenvolvimento de uma Aplicação Interativa - Turma 05 - 2023/2`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+`08/2023`
+
+Apresentamos o EventPASS, a sua solução inovadora para simplificar a experiência de compra e distribuição de ingressos para eventos. O EventPASS é uma aplicação interativa que revoluciona a forma como as pessoas participam de eventos, proporcionando uma plataforma ágil e conveniente para a venda e distribuição de ingressos.
+
+Com o EventPASS, nunca foi tão fácil garantir sua presença nos eventos mais aguardados. Nossa plataforma oferece uma experiência intuitiva, permitindo que os usuários naveguem por uma ampla variedade de eventos culturais, esportivos e de entretenimento. Ao utilizar o EventPASS, você poderá escolher os eventos que mais lhe interessam e adquirir seus ingressos em questão de segundos.
+
+Este projeto busca redefinir a maneira como as pessoas se envolvem com eventos, oferecendo uma abordagem inovadora para a compra de ingressos que é rápida, conveniente e simples. Prepare-se para uma nova era de acesso facilitado a momentos inesquecíveis com o EventPASS.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+- Julia Chaves Dutra
+- Luiz Eduardo Possidonio
+- Pedro Celso Mendes
+- Sandro Shayne Dutra
+- Thiago Singulano Machado
 
 ## Orientador
 
-* Nome completo do professor 1
+- Luciana de Nardin
 
 ## Instruções de utilização
 
