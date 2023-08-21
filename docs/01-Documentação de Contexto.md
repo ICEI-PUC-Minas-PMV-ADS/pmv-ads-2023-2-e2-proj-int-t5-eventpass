@@ -24,10 +24,6 @@ Desenvolver um software que aborde as complexidades associadas à venda e distri
 
 Ao focar nesses objetivos, pretendemos criar uma solução que simplifique a venda de ingressos para eventos, oferecendo uma experiência direta e agradável tanto para os organizadores quanto para os participantes. A aplicação resultante visa aumentar a eficiência do processo de venda de ingressos, melhorar a acessibilidade aos eventos e fortalecer a conexão entre os organizadores e o público.
 
-> **Links Úteis**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
 ## Justificativa
 
 Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
