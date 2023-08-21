@@ -3,24 +3,29 @@
 Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Na atualidade do mundo dos eventos e do entretenimento, um desafio notável vem à tona: a venda e distribuição de ingressos enfrentam uma série de obstáculos que impactam negativamente tanto os organizadores quanto o público em geral. A complexidade inerente a esse processo resulta em experiências insatisfatórias para os participantes, ao mesmo tempo em que cria dificuldades operacionais para os responsáveis pelos eventos. A falta de uma solução eficiente se traduz em filas longas, atrasos na aquisição de ingressos e complicações na gestão dos eventos.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+A lentidão do processo de compra de ingressos constitui um problema relevante, diminuindo a qualidade da experiência do usuário e restringindo o acesso a eventos desejados.
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Por outro lado, os organizadores de eventos também enfrentam desafios. Eles lidam com a administração manual de ingressos, incerteza quanto ao público esperado e dificuldades na promoção eficaz dos eventos. Esses fatores resultam em obstáculos tanto para as vendas quanto para a experiência dos participantes, minando o potencial completo dos eventos como momentos de conexão e entretenimento.
+
+Surge, então, o EventPASS, uma solução projetada para abordar esses problemas. Ao simplificar a venda e distribuição de ingressos, o EventPASS visa eliminar as barreiras que atualmente prejudicam o acesso aos eventos, oferecendo uma experiência mais agradável e eficiente tanto para os organizadores quanto para o público em geral.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Desenvolver um software que aborde as complexidades associadas à venda e distribuição de ingressos para eventos diversos, simplificando o processo para melhorar a experiência tanto dos organizadores quanto dos participantes.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
+- Desenvolvimento da Plataforma Intuitiva: Criar uma interface de usuário amigável que permita aos participantes navegar facilmente por uma variedade de eventos e acessar informações relevantes de maneira clara e organizada.
+
+- Gestão Simplificada para Organizadores: Desenvolver ferramentas de gestão eficientes que auxiliem os organizadores na criação de eventos, definição de quotas de ingressos e acompanhamento do número de ingressos vendidos.
+
+- Acesso a Informações Relevantes: Disponibilizar detalhes completos sobre os eventos, incluindo datas, horários, locais e descrições, permitindo que os participantes tomem decisões informadas.
+
+Ao focar nesses objetivos, pretendemos criar uma solução que simplifique a venda de ingressos para eventos, oferecendo uma experiência direta e agradável tanto para os organizadores quanto para os participantes. A aplicação resultante visa aumentar a eficiência do processo de venda de ingressos, melhorar a acessibilidade aos eventos e fortalecer a conexão entre os organizadores e o público.
+
 > **Links Úteis**:
+>
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
@@ -30,6 +35,7 @@ Descreva a importância ou a motivação para trabalhar com esta aplicação que
 O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
 
 > **Links Úteis**:
+>
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
@@ -40,6 +46,7 @@ hierárquicas, etc.
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
 > **Links Úteis**:
+>
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
 > - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
 > - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
