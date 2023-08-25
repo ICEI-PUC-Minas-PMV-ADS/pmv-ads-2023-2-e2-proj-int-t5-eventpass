@@ -1,55 +1,53 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+No contexto dinâmico dos eventos e do entretenimento, a distribuição de ingressos para eventos culturais gratuitos emerge como um desafio notável, afetando tanto os promotores quanto o público. As dificuldades inerentes a esse processo resultam em experiências insatisfatórias para os participantes e obstáculos operacionais para os organizadores. Diante disso, o presente trabalho aborda a problemática da distribuição de ingressos, visando apresentar o projeto EventPASS como uma solução inovadora para superar tais desafios.
+
+O problema reside na complexidade do processo de distribuição, que conduz a longas filas, demoras na obtenção de ingressos e complicações na gestão dos eventos. Isso impacta negativamente a experiência dos participantes e limita o acesso à riqueza cultural oferecida pelos eventos gratuitos. Paralelamente, os organizadores enfrentam dificuldades na administração manual de ingressos e na divulgação eficaz dos eventos.
+
+Nesse contexto, os objetivos do projeto EventPASS são delineados, buscando simplificar a distribuição de ingressos por meio de uma plataforma intuitiva. Além disso, o projeto visa fornecer ferramentas eficientes de gestão para os organizadores e promover a disseminação de eventos culturais à população. A importância desse projeto reside na sua capacidade de aprimorar a experiência do usuário, facilitar a operação para os organizadores e enriquecer a vida cultural da sociedade.
+
+O público-alvo compreende tanto os participantes interessados em eventos culturais diversos quanto os organizadores que buscam ampliar o alcance de seus eventos. Dessa forma, este trabalho explora a concepção, os objetivos, a justificativa e o público beneficiado pelo projeto EventPASS, traçando um panorama abrangente das implicações e contribuições dessa solução inovadora para a distribuição de ingressos em eventos culturais gratuitos.
 
 ## Problema
 
-A organização de eventos públicos frequentemente envolve problemas difíceis, que vão desde uma coordenação ineficaz até a dificuldade de comunicar informações importantes aos participantes. Além disso, é importante levar em consideração questões como venda de ingressos, gestão de dados, e controle do fluxo de pessoas. Esses problemas podem levar an eventos mal planejados e ineficiência geral na gestão do evento transmitindo aos participantes experiências ruins.
+Na contemporaneidade do cenário de eventos e entretenimento, surge um desafio notório: a distribuição de ingressos para eventos gratuitos enfrenta uma série de obstáculos que impactam de maneira desfavorável tanto os promotores dos eventos quanto o público em geral. A complexidade inerente a esse processo resulta em experiências insatisfatórias para os participantes, ao mesmo tempo em que cria dificuldades operacionais para os responsáveis pelos eventos. A ausência de uma solução eficaz se traduz em longas filas, demoras na obtenção de ingressos e complicações na gestão dos eventos.
 
-e garantia de uma experiência memorável
+A morosidade do procedimento de aquisição de ingressos constitui um problema relevante, que prejudica a qualidade da experiência do usuário e limita o acesso aos eventos desejados.
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação.
+Por outro lado, os organizadores dos eventos também enfrentam desafios. Eles lidam com a administração manual de ingressos, incertezas em relação ao público esperado e dificuldades na promoção eficaz dos eventos. Esses fatores geram obstáculos tanto para as vendas quanto para a experiência dos participantes, reduzindo o potencial completo dos eventos como momentos de conexão e entretenimento.
 
-Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Nesse contexto surge o EventPASS, uma solução elaborada para abordar esses problemas. Ao simplificar a distribuição de ingressos, o EventPASS tem como objetivo eliminar as barreiras que atualmente prejudicam o acesso aos eventos gratuitos, proporcionando uma experiência mais agradável e eficiente tanto para os organizadores quanto para o público em geral. Além disso, o foco do EventPASS vai além da mera distribuição de ingressos, pois visa também à facilitação da divulgação desses eventos, contribuindo para a disseminação de mais eventos culturais à população.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima.
+Desenvolver uma plataforma que lide com as complexidades inerentes à distribuição de ingressos para uma variedade de eventos gratuitos, visando aprimorar a experiência tanto dos promotores quanto dos participantes, ao mesmo tempo que promove a disseminação de eventos culturais.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+- Criação de uma Interface Intuitiva: Construir uma interface de usuário amigável que permita aos participantes navegar com facilidade por diversos eventos e acessar informações relevantes de forma clara e organizada.
 
-> **Links Úteis**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+- Simplificação da Gestão para os Organizadores: Desenvolver ferramentas de gestão eficazes que auxiliem os organizadores na criação de eventos, estabelecimento de limites de ingressos e monitoramento do número de ingressos reservados.
+
+- Disponibilização de Informações Relevantes: Oferecer detalhes abrangentes sobre os eventos, incluindo datas, horários, locais e descrições, capacitando os participantes a tomar decisões embasadas.
+
+- Promoção da Disseminação Cultural: Além dos objetivos técnicos, o foco na divulgação eficaz dos eventos culturais gratuitos visa aumentar sua visibilidade, contribuindo para a ampliação do acesso da população a essas experiências enriquecedoras.
+
+Através da concentração nesses objetivos, nossa intenção é conceber uma solução que simplifique a distribuição de ingressos para eventos gratuitos, proporcionando uma experiência direta e agradável tanto para os promotores quanto para os participantes. O resultado almejado é uma aplicação que otimize o processo de distribuição, amplie a acessibilidade aos eventos culturais e fortaleça a ligação entre os promotores e o público interessado.
+
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A escolha do projeto EventPASS como foco deste estudo é fortemente respaldada por um cenário nacional que demonstra a necessidade urgente de democratização do acesso à cultura no Brasil. A riqueza cultural e artística produzida no país muitas vezes permanece inacessível para uma parcela significativa da população, como evidenciado por dados concretos.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Segundo o IBGE (2010), a concentração de consumo cultural em regiões metropolitanas atinge alarmantes 41% do total, revelando uma disparidade entre a oferta cultural e a possibilidade de acesso a ela. Tal desigualdade é corroborada pelo estudo do IPHAN (2010), que ressalta a discrepância entre cidades que possuem exposições de artes plásticas e as que não contam com nenhuma forma de exibição, destacando como a concentração da oferta cultural pode limitar o acesso.
 
-> **Links Úteis**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Em um evento relevante, a ministra da Cultura Marta Suplicy ressaltou que quase 90% da população brasileira enfrenta limitações em acessar a cultura com regularidade. O acesso à cultura é intrinsecamente ligado ao desenvolvimento sustentável, abrangendo dimensões social, econômica e ambiental.
+
+O acesso desigual à arte e à cultura no Brasil é uma realidade persistente, enraizada em fatores complexos. A desigualdade geográfica é um desses fatores, com a concentração de recursos culturais nos centros urbanos, tornando a acessibilidade um desafio para as regiões periféricas. Além disso, a gestão inadequada das políticas culturais, frequentemente subordinada a outros setores, compromete a priorização da cultura na agenda política, desconsiderando seu potencial econômico e social.
+
+A lacuna entre equipamentos culturais e regiões periféricas, aliada à falta de políticas que reduzam essa disparidade, agravam ainda mais o problema. O direito à cultura é um direito fundamental que não pode ser negligenciado. Além de ser um exercício de cidadania, a cultura desempenha um papel crucial no desenvolvimento das comunidades.
+
+Diante desse contexto, a escolha dos objetivos específicos do projeto EventPASS ganha ainda mais importância. Ao simplificar a distribuição de ingressos para eventos culturais, promovendo a diversidade e o acesso equitativo, o projeto responde diretamente às lacunas quantitativas no acesso à cultura. Ele não apenas busca resolver problemas tangíveis, mas também contribui para a criação de uma sociedade mais inclusiva e enriquecedora, alinhada com o ideal de acesso democrático à cultura.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+--//--
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
->
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
