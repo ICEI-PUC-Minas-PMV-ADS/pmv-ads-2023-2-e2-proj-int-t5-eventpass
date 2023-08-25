@@ -32,6 +32,7 @@ Desenvolver uma plataforma que lide com as complexidades inerentes à distribui�
 
 Através da concentração nesses objetivos, nossa intenção é conceber uma solução que simplifique a distribuição de ingressos para eventos gratuitos, proporcionando uma experiência direta e agradável tanto para os promotores quanto para os participantes. O resultado almejado é uma aplicação que otimize o processo de distribuição, amplie a acessibilidade aos eventos culturais e fortaleça a ligação entre os promotores e o público interessado.
 
+
 ## Justificativa
 
 A escolha do projeto EventPASS como foco deste estudo é fortemente respaldada por um cenário nacional que demonstra a necessidade urgente de democratização do acesso à cultura no Brasil. A riqueza cultural e artística produzida no país muitas vezes permanece inacessível para uma parcela significativa da população, como evidenciado por dados concretos.
@@ -49,3 +50,4 @@ Diante desse contexto, a escolha dos objetivos específicos do projeto EventPASS
 ## Público-Alvo
 
 --//--
+
