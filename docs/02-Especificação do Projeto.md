@@ -42,7 +42,9 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. 
+Os requisitos funcionais são a funcionalidades essenciais para o funcionamento da aplicação.
+Os requisitos não funcionais não impedem o funcionamento da aplicação e está relacionadao diretamente em como as funcionalidades serão entregues ao usuário do software.
 
 ### Requisitos Funcionais
 
@@ -73,7 +75,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-007| A aplicação deve enviar um link para confirmação de autenticidade do usuário. |  BAIXA  |
 |RNF-008| O organizador do evento deverá informar a quantidade de ingressos por usuário.  |  MÉDIA  |
 |RNF-009| A aplicação deverá informar a quantidade limite de ingressos por usuário. |  MÉDIA  |
-|RNF-010| Emitir um relatório de tarefas no mês  |  MÉDIA  |
+|RNF-010| Emitir um relatório de tarefas no mês.  |  MÉDIA  |
 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
