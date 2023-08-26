@@ -48,15 +48,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001|	A aplicação deve conter um formulário para criação de perfil de administrador de evento. | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| A aplicação deve conter um formulário para criação de perfil. | ALTA | 
+|RF-002| A aplicação deve conter formulário para cadastro do evento.  | ALTA |
+|RF-003| A aplicação deve conter campo para upload de documentos para verificar a autenticidade do evento   |BAIXA|
+|RF-005| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-006| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-007| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-008| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-009| Emitir um relatório de tarefas no mês   | MÉDIA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
+|RNF-001| A aplicação deve ser responsiva para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-003| A aplicação deve possibilitar ao organizador do evento informar regras para aquisição de cortesias |  ALTA |
+|RNF-004| A aplicação deve possibilitar ao administrador limitar a quantidade ingressos para o evento. |  ALTA |
+|RNF-005|	A aplicação deve possibilitar ao organizador do evento visualizar o progresso da distribuição de ingressos.  | MÉDIA |
+|RNF-006| A aplicação deve   | MÉDIA |
+|RNF-007| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RNF-008| Emitir um relatório de tarefas no mês   | MÉDIA |
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
