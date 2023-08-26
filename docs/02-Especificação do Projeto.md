@@ -75,7 +75,7 @@ Os requisitos não funcionais não impedem o funcionamento da aplicação e est�
 |RNF-007| A aplicação deve enviar um link para confirmação de autenticidade do usuário. |  BAIXA  |
 |RNF-008| O organizador do evento deverá informar a quantidade de ingressos por usuário.  |  MÉDIA  |
 |RNF-009| A aplicação deverá informar a quantidade limite de ingressos por usuário. |  MÉDIA  |
-|RNF-010| Emitir um relatório de tarefas no mês.  |  MÉDIA  |
+
 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
