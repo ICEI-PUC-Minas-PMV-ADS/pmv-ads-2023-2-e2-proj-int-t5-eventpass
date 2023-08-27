@@ -6,17 +6,34 @@ Os membros da equipe realizaram um trabalho de imersão para consolidar a defini
 
 Durante o processo de estudo foram coletadas informações como idade, ocupação, motivação e frustrações. das personas identificadas durante o processo de entendimento do problema. As personas são apresentadas nas figuras a seguir:
 
-|                                                                                              | Ricardo lima - 38 anos                                                          |                                |
+|                                                                                              | Ricardo lima - 43 anos                                                          |                                |
 | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------ |
-| ![Gráfico de Im pacto](img/prefeito.jpeg)                                                       | **Ocupação:** Prefeito de Quartel São João Mg.                                                       | **Dispositivos:** Notebook, Smartphone e Tablet.  |
+| ![Gráfico de Im pacto](img/prefeito.png)                                                       | **Ocupação:** Prefeito de Quartel São João Mg.                                                       | **Dispositivos:** Notebook, Smartphone e Tablet.  |
 | **Motivações:** Buscas constantementes para aprimorar a gestão pública de sua cidade.. | **Frustrações:** Recursos financeiros limitados, infraestrutura precaria. | **Hobbies:** Leitura, caminhadas e sair com a familia  . |
 
 |                                                                                              | Luciana Texeira - 21 anos                                                                    |                                                 |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | ![Gráfico de Impacto](img/Luciana.png)                                     | **Ocupação:** Estudante de farmacia.                                                        | **Dispositivos:** Smartphone e tablet. |
-| **Motivações:** Formar e conseguir a independencia financeira. | **Frustrações:** Cidade pequena com poucas oportunidades de emprego. | **Hobbies:** Sair com amigos para se divertir e natação.                              |
+| **Motivações:** Formar e conseguir a independencia financeira. | **Frustrações:** Cidade pequena com poucas oportunidades de emprego. | **Hobbies:** Sair com amigos para se divertir e natação. |
 
-|                                                     
+
+                     
+|                                                                                              | Ricardo Martins - 38 anos                                                                    |                                                 |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| ![Gráfico de Impacto](img/ricardo.jpeg)                                     | **Ocupação:** Produtor de eventos.                                                        | **Dispositivos:** Smartphone,Notebook e tablet. |
+| **Motivações:** Proporcionar momentos memoráveis e unicos para publico. | **Frustrações:** Orçamentos restritos das prefeituras, concorrência acirrada e alterações climaticas. | **Hobbies:** Teatro, cozinhas para os amigos e viagens. |
+
+|
+|                                                                                              | Maria Julia Souza - 15 anos                                                                    |                                                 |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| ![Gráfico de Impacto](img/maria.png)                                     | **Ocupação:** Colegial.                                                        | **Dispositivos:** Smartphone. |
+| **Motivações:** Sonha em ser uma ifluencer digital. | **Frustrações:** Falta de diversidade cultural, monotonia e acesso limitado de tecnologia. | **Hobbies:** Assitir series, passeios com amigos da escola e tiktok. |
+
+
+
+
+
+                                                     
 
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
