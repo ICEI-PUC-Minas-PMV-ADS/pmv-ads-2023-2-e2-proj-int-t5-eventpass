@@ -27,15 +27,16 @@ Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos 
 
 Com base na análise das personas identificadas na etapa anterior, foram identificadas as seguintes histórias de usuários:
 
-| EU COMO... `PERSONA`  | QUERO/PRECISO ... `FUNCIONALIDADE`                | PARA ... `MOTIVO/VALOR`                                                                      |
-| --------------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Usuário do sistema    | Visualizar os eventos disponíveis na minha cidade | Poder escolher qual evento participar                                                        |
-| Usuário do sistema    | Realizar cadastro no sistema                      | Poder retirar os ingressos para acesso aos eventos                                           |
-| Usuário do sistema    | Solicitar a retirada dos ingressos                | Ter acesso aos eventos                                                                       |
-| Secretário de cultura | Realizar cadastro no sistema                      | Ter acesso às funcionalidades de visualização de ingressos fornecidos e cadastrar os eventos |
-| Secretário de cultura | Acessar um formulário para cadastro de evento     | Cadastrar novos eventos no sistema                                                           |
-| Secretário de cultura | Controlar o número de ingressos emitidos por CPF  | Coibir a ação de cambistas e controlar a retirada de ingressos                               |
-| Secretário de cultura | Visualizar o total de ingressos retirados         | Para adequar e preparar a estrutura do evento.                                               |
+| EU COMO... `PERSONA`   | QUERO/PRECISO ... `FUNCIONALIDADE`                              | PARA ... `MOTIVO/VALOR`                                                                                           |
+| ---------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Participante do evento | Visualizar os eventos disponíveis na minha cidade               | Escolher qual evento melhor se adapta melhor aos meus interesses e agenda.                                        |
+| Participante do evento | Realizar um cadastro simples no sistema EventPASS               | Poder utilizar as funcionlidades obter acesso rápido e fácil à retirada de ingressos para os eventos que escolher |
+| Participante do evento | Solicitar a retirada dos ingressos                              | Ser direcionado à página de retirada de ingressos e garantir minha presença nos eventos selecionados              |
+| Participante do evento | Receber uma confirmação do meu ingresso através do envio online | Ter a certeza de que meu pedido de ingresso foi bem-sucedido.                                                     |
+| Secretário de cultura  | Realizar cadastro no sistema EventPASS                          | Ter acesso às funcionalidades de visualização de ingressos fornecidos e cadastrar os eventos                      |
+| Secretário de cultura  | Acessar um formulário para cadastro de evento                   | Cadastrar novos eventos no sistema                                                                                |
+| Secretário de cultura  | Controlar o número de ingressos emitidos por CPF                | Coibir a ação de cambistas e controlar a retirada de ingressos                                                    |
+| Secretário de cultura  | Visualizar o total de ingressos retirados                       | Para adequar e preparar a estrutura do evento.                                                                    |
 
 ## Requisitos
 
