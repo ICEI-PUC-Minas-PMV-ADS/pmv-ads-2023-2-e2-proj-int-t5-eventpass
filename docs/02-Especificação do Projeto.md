@@ -13,7 +13,7 @@ Durante o processo de estudo foram coletadas informações como idade, ocupaçã
 
 |                                                                                              | Luciana Texeira - 21 anos                                                                    |                                                 |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| ![Gráfico de Impacto](img/Luciana.png)                                     | **Ocupação:** Estudante de farmacia.                                                        | **Dispositivos:** Smartphone e tablet. |
+| ![Gráfico de Impacto](img/Luciana.png)                                     | **Ocupação:** Estudante de farmacia.                                                        | **Dispositivos:** Smartphone e Notebook. |
 | **Motivações:** Formar e conseguir a independencia financeira. | **Frustrações:** Cidade pequena com poucas oportunidades de emprego. | **Hobbies:** Sair com amigos para se divertir e natação. |
 
 
