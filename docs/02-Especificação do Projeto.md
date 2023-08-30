@@ -68,21 +68,36 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. 
+Os requisitos funcionais são a funcionalidades essenciais para o funcionamento da aplicação.
+Os requisitos não funcionais não impedem o funcionamento da aplicação e está relacionadao diretamente em como as funcionalidades serão entregues ao usuário do software.
 
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| A aplicação deve permitir gerenciamento de cadastros. |  ALTA  | 
+|RF-002| A aplicação deve conter perfis de gestor de eventos e espectador. |  ALTA |
+|RF-003| A aplicação deve permitir o cadastro do evento pelo gestor.  |  ALTA  |
+|RF-004| A aplicação deve permitir o espectador pesquisar eventos. |  ALTA  |
+|RF-005| A aplicação deve informar os próximos 3 eventos na tela principal. | MÉDIA |
+|RF-006| A aplicação deve controlar a quantidade de ingressos disponíveis. |  MÉDIA  |
+|RF-007| A aplicação deve gerar número de ticket para cada ingresso adquirido |  MÉDIA  |
+|RF-008| A aplicação deve gerar um qr code por ticket e enviar por e-mail para o espectador. |  MÉDIA  |
+|RF-009| A aplicação deve possibilitar ao gestor do evento gerar relatório. |  BAIXA |
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| A aplicação deve ser responsiva para rodar em todos os dispositivos. |  MÉDIA  | 
+|RNF-002| A aplicação processar requisições do usuário em no máximo 10s. |  BAIXA |
+|RNF-003| Apenas espectadores previamente cadastrados e logados poderão gerar ingressos |  MÉDIA  |
+|RNF-004| A aplicação deve permitir o espectador solicitar até 3 ingressos. |  MÉDIA |
+
+
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
