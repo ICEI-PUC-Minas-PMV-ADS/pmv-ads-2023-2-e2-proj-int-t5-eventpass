@@ -49,5 +49,13 @@ Diante desse contexto, a escolha dos objetivos específicos do projeto EventPASS
 
 ## Público-Alvo
 
+O público-alvo para o projeto EventPASS abrange dois grupos principais:
+
+Participantes Interessados em Eventos Culturais Diversos:
+Este grupo inclui pessoas que têm interesse em participar de eventos culturais gratuitos, como exposições de arte, shows, peças de teatro, palestras e outras atividades culturais. 
+
+Organizadores de Eventos Culturais:
+Os organizadores de eventos culturais, como instituições culturais, teatros, museus, centros comunitários e grupos artísticos, constituem outro público-alvo. 
+
 --//--
 
