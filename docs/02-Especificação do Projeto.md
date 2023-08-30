@@ -50,31 +50,26 @@ Os requisitos não funcionais não impedem o funcionamento da aplicação e est�
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| A aplicação deve conter um formulário para criação de perfil. |  ALTA  | 
-|RF-002| A aplicação deve conter nível de perfil administrador e usuário. |  MÉDIA  |
-|RF-003| A aplicação deve conter formulário para cadastro do evento.  |  ALTA  |
-|RF-004| A aplicação deve conter campo para upload de documentos para verificar a autenticidade do evento. |  BAIXA  |
-|RF-005| A aplicação deve conter um campo com informações dos eventos abertos na tela principal. |  ALTA |
-|RF-006| A aplicação irá bloquear a emissão de ingressos conforme o limite de ingressos liberados pelo organizador do evento. |  MÉDIA  |
-|RF-007| A aplicação deve conter botão para confirmação da aquisição dos ingressos. |  MÉDIA  |
-|RF-008| A aplicação deve gerar um qr code após a confirmação do usuário. |  MÉDIA  |
-|RF-009| A aplicação deve enviar e-mail de confirmação com  o qr code para o usuário. |  MÉDIA  |
+|RF-001| A aplicação deve permitir gerenciamento de cadastros. |  ALTA  | 
+|RF-002| A aplicação deve conter perfis de gestor de eventos e espectador. |  ALTA |
+|RF-003| A aplicação deve permitir o cadastro do evento pelo gestor.  |  ALTA  |
+|RF-004| A aplicação deve permitir o espectador pesquisar eventos. |  ALTA  |
+|RF-005| A aplicação deve informar os próximos 3 eventos na tela principal. | MÉDIA |
+|RF-006| A aplicação deve controlar a quantidade de ingressos disponíveis. |  MÉDIA  |
+|RF-007| A aplicação deve gerar número de ticket para cada ingresso adquirido |  MÉDIA  |
+|RF-008| A aplicação deve gerar um qr code por ticket e enviar por e-mail para o espectador. |  MÉDIA  |
+|RF-009| A aplicação deve possibilitar ao gestor do evento gerar relatório. |  BAIXA |
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva para rodar em um dispositivos móvel. |  MÉDIA  | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s. |  BAIXA |
-|RNF-003| O perfil administrador será responsável pela organização do evento. |  ALTA |
-|RNF-004| O perfil usuário terá acesso apenas a funcionalidade de aquisição de ingressos. |  ALTA  |
-|RNF-005| A aplicação deve possibilitar ao organizador do evento informar regras para aquisição de cortesias. |  ALTA  |
-|RNF-004| A aplicação deve possibilitar ao administrador limitar a quantidade ingressos para o evento. |  ALTA  |
-|RNF-006|	A aplicação deve possibilitar ao organizador do evento visualizar o progresso da distribuição de ingressos. |  MÉDIA  |
-|RNF-007| A aplicação deve enviar um link para confirmação de autenticidade do usuário. |  BAIXA  |
-|RNF-008| O organizador do evento deverá informar a quantidade de ingressos por usuário.  |  MÉDIA  |
-|RNF-009| A aplicação deverá informar a quantidade limite de ingressos por usuário. |  MÉDIA  |
+|RNF-001| A aplicação deve ser responsiva para rodar em todos os dispositivos. |  MÉDIA  | 
+|RNF-002| A aplicação processar requisições do usuário em no máximo 10s. |  BAIXA |
+|RNF-003| Apenas espectadores previamente cadastrados e logados poderão gerar ingressos |  MÉDIA  |
+|RNF-004| A aplicação deve permitir o espectador solicitar até 3 ingressos. |  MÉDIA |
+
 
 
 
