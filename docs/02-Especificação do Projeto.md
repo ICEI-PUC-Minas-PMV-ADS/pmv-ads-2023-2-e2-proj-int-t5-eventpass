@@ -1,14 +1,31 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Os membros da equipe realizaram um trabalho de imersão para consolidar a definição do problema e os pontos mais relevantes a serem abordados neste projeto, contando com a participação dos usuários por meio de observações em seu ambiente habitual, estudos e pesquisas. Os detalhes coletados foram organizados em personas e histórias de usuários para guiar o design e desenvolvimento do produto ou serviço.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Durante o processo de estudo foram coletadas informações como idade, ocupação, motivação e frustrações. das personas identificadas durante o processo de entendimento do problema. As personas são apresentadas nas figuras a seguir:
+
+|                                                                                        | Ricardo lima - 43 anos                                                    |                                                         |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------- |
+| ![Gráfico de Im pacto](img/prefeito.png)                                               | **Ocupação:** Prefeito de Quartel São João Mg.                            | **Dispositivos:** Notebook, Smartphone e Tablet.        |
+| **Motivações:** Buscas constantementes para aprimorar a gestão pública de sua cidade.. | **Frustrações:** Recursos financeiros limitados, infraestrutura precaria. | **Hobbies:** Leitura, caminhadas e sair com a familia . |
+
+|                                                                | Luciana Texeira - 21 anos                                            |                                                          |
+| -------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
+| ![Gráfico de Impacto](img/Luciana.png)                         | **Ocupação:** Estudante de farmacia.                                 | **Dispositivos:** Smartphone e Notebook.                 |
+| **Motivações:** Formar e conseguir a independencia financeira. | **Frustrações:** Cidade pequena com poucas oportunidades de emprego. | **Hobbies:** Sair com amigos para se divertir e natação. |
+
+|                                                                         | Ricardo Martins - 38 anos                                                                             |                                                         |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| ![Gráfico de Impacto](img/ricardo.jpeg)                                 | **Ocupação:** Produtor de eventos.                                                                    | **Dispositivos:** Smartphone,Notebook e tablet.         |
+| **Motivações:** Proporcionar momentos memoráveis e unicos para publico. | **Frustrações:** Orçamentos restritos das prefeituras, concorrência acirrada e alterações climaticas. | **Hobbies:** Teatro, cozinhas para os amigos e viagens. |
+
+|
+| | Maria Julia Souza - 15 anos | |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| ![Gráfico de Impacto](img/maria.png) | **Ocupação:** Colegial. | **Dispositivos:** Smartphone. |
+| **Motivações:** Sonha em ser uma ifluencer digital. | **Frustrações:** Falta de diversidade cultural, monotonia e acesso limitado de tecnologia. | **Hobbies:** Assitir series, passeios com amigos da escola e tiktok. |
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
@@ -41,20 +58,31 @@ Com base na análise das personas identificadas na etapa anterior, foram identif
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+Os requisitos funcionais são a funcionalidades essenciais para o funcionamento da aplicação.
+Os requisitos não funcionais não impedem o funcionamento da aplicação e está relacionadao diretamente em como as funcionalidades serão entregues ao usuário do software.
 
 ### Requisitos Funcionais
 
-| ID     | Descrição do Requisito                  | Prioridade |
-| ------ | --------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês   | MÉDIA      |
+| ID     | Descrição do Requisito                                                              | Prioridade |
+| ------ | ----------------------------------------------------------------------------------- | ---------- |
+| RF-001 | A aplicação deve permitir gerenciamento de cadastros.                               | ALTA       |
+| RF-002 | A aplicação deve conter perfis de gestor de eventos e espectador.                   | ALTA       |
+| RF-003 | A aplicação deve permitir o cadastro do evento pelo gestor.                         | ALTA       |
+| RF-004 | A aplicação deve permitir o espectador pesquisar eventos.                           | ALTA       |
+| RF-005 | A aplicação deve informar os próximos 3 eventos na tela principal.                  | MÉDIA      |
+| RF-006 | A aplicação deve controlar a quantidade de ingressos disponíveis.                   | MÉDIA      |
+| RF-007 | A aplicação deve gerar número de ticket para cada ingresso adquirido                | MÉDIA      |
+| RF-008 | A aplicação deve gerar um qr code por ticket e enviar por e-mail para o espectador. | MÉDIA      |
+| RF-009 | A aplicação deve possibilitar ao gestor do evento gerar relatório.                  | BAIXA      |
 
 ### Requisitos não Funcionais
 
-| ID      | Descrição do Requisito                                            | Prioridade |
-| ------- | ----------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA      |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s             | BAIXA      |
+| ID      | Descrição do Requisito                                                        | Prioridade |
+| ------- | ----------------------------------------------------------------------------- | ---------- |
+| RNF-001 | A aplicação deve ser responsiva para rodar em todos os dispositivos.          | MÉDIA      |
+| RNF-002 | A aplicação processar requisições do usuário em no máximo 10s.                | BAIXA      |
+| RNF-003 | Apenas espectadores previamente cadastrados e logados poderão gerar ingressos | MÉDIA      |
+| RNF-004 | A aplicação deve permitir o espectador solicitar até 3 ingressos.             | MÉDIA      |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
