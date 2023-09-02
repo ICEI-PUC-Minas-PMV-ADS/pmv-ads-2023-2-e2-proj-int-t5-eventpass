@@ -6,27 +6,25 @@ Os membros da equipe realizaram um trabalho de imersão para consolidar a defini
 
 Durante o processo de estudo foram coletadas informações como idade, ocupação, motivação e frustrações. das personas identificadas durante o processo de entendimento do problema. As personas são apresentadas nas figuras a seguir:
 
-|                                                                                        | Ricardo lima - 43 anos                                                    |                                                         |
+|                                                                                        |                                                                           |                                                         |
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------- |
-| ![Gráfico de Im pacto](img/prefeito.png)                                               | **Ocupação:** Prefeito de Quartel São João Mg.                            | **Dispositivos:** Notebook, Smartphone e Tablet.        |
+| **Ricardo lima - 43 anos** ![Gráfico de Im pacto](img/prefeito.png)                    | **Ocupação:** Prefeito de Quartel São João Mg.                            | **Dispositivos:** Notebook, Smartphone e Tablet.        |
 | **Motivações:** Buscas constantementes para aprimorar a gestão pública de sua cidade.. | **Frustrações:** Recursos financeiros limitados, infraestrutura precaria. | **Hobbies:** Leitura, caminhadas e sair com a familia . |
 
-|                                                                | Luciana Texeira - 21 anos                                            |                                                          |
-| -------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
-| ![Gráfico de Impacto](img/Luciana.png)                         | **Ocupação:** Estudante de farmacia.                                 | **Dispositivos:** Smartphone e Notebook.                 |
-| **Motivações:** Formar e conseguir a independencia financeira. | **Frustrações:** Cidade pequena com poucas oportunidades de emprego. | **Hobbies:** Sair com amigos para se divertir e natação. |
+|                                                                      |                                                                      |                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
+| **Luciana Texeira - 21 anos** ![Gráfico de Impacto](img/Luciana.png) | **Ocupação:** Estudante de farmacia.                                 | **Dispositivos:** Smartphone e Notebook.                 |
+| **Motivações:** Formar e conseguir a independencia financeira.       | **Frustrações:** Cidade pequena com poucas oportunidades de emprego. | **Hobbies:** Sair com amigos para se divertir e natação. |
 
-|                                                                         | Ricardo Martins - 38 anos                                                                             |                                                         |
+|                                                                         |                                                                                                       |                                                         |
 | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| ![Gráfico de Impacto](img/ricardo.jpeg)                                 | **Ocupação:** Produtor de eventos.                                                                    | **Dispositivos:** Smartphone,Notebook e tablet.         |
+| **Rogério Martins - 38 anos** ![Gráfico de Impacto](img/ricardo.jpeg)   | **Ocupação:** Produtor de eventos.                                                                    | **Dispositivos:** Smartphone,Notebook e tablet.         |
 | **Motivações:** Proporcionar momentos memoráveis e unicos para publico. | **Frustrações:** Orçamentos restritos das prefeituras, concorrência acirrada e alterações climaticas. | **Hobbies:** Teatro, cozinhas para os amigos e viagens. |
 
-|
-| | Maria Julia Souza - 15 anos | |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| ![Gráfico de Impacto](img/maria.png) | **Ocupação:** Colegial. | **Dispositivos:** Smartphone. |
-| **Motivações:** Sonha em ser uma ifluencer digital. | **Frustrações:** Falta de diversidade cultural, monotonia e acesso limitado de tecnologia. | **Hobbies:** Assitir series, passeios com amigos da escola e tiktok. |
-                                                   
+|                                                                      |                                                                                            |                                                                      |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
+| **Maria Julia Souza - 15 anos** ![Gráfico de Impacto](img/maria.png) | **Ocupação:** Colegial.                                                                    | **Dispositivos:** Smartphone.                                        |
+| **Motivações:** Sonha em ser uma ifluencer digital.                  | **Frustrações:** Falta de diversidade cultural, monotonia e acesso limitado de tecnologia. | **Hobbies:** Assitir series, passeios com amigos da escola e tiktok. |
 
 ## Histórias de Usuários
 
@@ -66,24 +64,23 @@ Os requisitos não funcionais não impedem o funcionamento da aplicação e est�
 | ID      | Descrição do Requisito                                                        | Prioridade |
 | ------- | ----------------------------------------------------------------------------- | ---------- |
 | RNF-001 | A aplicação deve ser responsiva para rodar em todos os dispositivos.          | MÉDIA      |
-| RNF-002 | A aplicação processar requisições do usuário em no máximo 10s.                | BAIXA      |
-| RNF-003 | Apenas espectadores previamente cadastrados e logados poderão gerar ingressos | MÉDIA      |
-| RNF-004 | A aplicação deve permitir o espectador solicitar até 3 ingressos.             | MÉDIA      |
+| RNF-002 | Apenas espectadores previamente cadastrados e logados poderão gerar ingressos | MÉDIA      |
+| RNF-003 | A aplicação deve permitir o espectador solicitar até 3 ingressos.             | MÉDIA      |
+| RNF-004 | A aplicação processar requisições do usuário em no máximo 10s.                | BAIXA      |
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| A geração de ingressos deverá ser limitada a 3 unidades por CPF       |
-|03| O desenvolvimento da solução não poderá ser subcontratado  |
-
+| ID  | Restrição                                                       |
+| --- | --------------------------------------------------------------- |
+| 01  | O projeto deverá ser entregue até o final do semestre           |
+| 02  | A geração de ingressos deverá ser limitada a 3 unidades por CPF |
+| 03  | O desenvolvimento da solução não poderá ser subcontratado       |
 
 ## Diagrama de Casos de Uso
 
-Com base nas histórias de usuários coletadas na fase de elicitação de requisitos, foi desenvolvido o diagrama de casos de uso que tem como objetivo ilustrar os atores e suas relações com o sistema Eventpass
+Um diagrama de caso de uso é uma representação gráfica que mostra como atores (usuários ou sistemas) interagem com um sistema de software e descreve as principais funcionalidades oferecidas por esse sistema. Abaixo está representado o diagrama de casos de uso da aplicação EventPASS.
 
 Diagrama de casos de uso - Eventpass
-![Casos de uso](img/Diagrama%20de%20caso%20de%20uso%20-%20Eventpass.jpg)
+![Casos de uso](img/diagramaCasoDeUso.svg)
