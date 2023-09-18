@@ -29,39 +29,37 @@ A equipe responsável pelo desenvolvimento do EventPASS utiliza metodologias ág
 - Scrum Master: Sandro Shayne Dutra
 - Product Owner: Júlia Chaves Dutra
 - Equipe de Desenvolvimento
-  - Pedro Celso Mendes
-  - Thiago Singulano Machado
+  - Julia Chaves Dutra
   - Luiz Eduardo Possidonio
+  - Pedro Celso Mendes
+  - Sandro Shayne Dutra
+  - Thiago Singulano Machado
 - Equipe de Design: Júlia Chaves Dutra
 
 ### Processo
 
-Coloque informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+Para a organização e distribuição das tarefas a equipe está utilizando o quadro Kanban disponível no Github:
 
-> **Links Úteis**:
->
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+![Kanban](img/Kanban-Github.PNG)
+
+- New: Recebe as atividades a serem abordadas e representa o Product Backlog. Todas as tarefas identificadas ao longo do projeto também devem ser incluídas nesta lista.
+
+- In progress: é uma lista das tarefas que já estão em andamento
+
+- In review: Nesta fase, as modificações já foram implementadas no projeto, porém ainda estão em período de testes, podendo ainda passar por algumas alterações.
+
+- Done: Aqui estão listadas as tarefas que passaram pelos testes e controle de qualidade, e estão prontas para serem entregues ao usuário. Não são necessárias mais edições ou revisões, elas estão agendadas e prontas para serem implementadas.
 
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
+- Visual Studio Code.
+- Microsoft Teams
+- Github
+- Astah UML
 - Ferramentas de desenho de tela (_wireframing_)
 
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
+O editor de código Visual Studio foi escolhido pois possui integração com a ferramenta de versionamento de código GitHub utilizada pela equipe como repositório do código e documentação.
 
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
-
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**:
->
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+Para a comunicação da equipe, foi definida a ferramenta Microsoft Teams pois possibilita reuniões por videoconferência e comunicação eficiente via chat, mantendo um histórico de todas as conversas, facilitando a referência e o acompanhamento do progresso das discussões.
