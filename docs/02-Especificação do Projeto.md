@@ -78,13 +78,13 @@ Os requisitos não funcionais não impedem o funcionamento da aplicação e est�
 |------|-----------------------------------------|----|
 |RF-001| A aplicação deve permitir gerenciamento de cadastros. |  ALTA  | 
 |RF-002| A aplicação deve conter perfis de gestor de eventos e espectador. |  ALTA |
-|RF-003| A aplicação deve permitir o cadastro do evento pelo gestor.  |  ALTA  |
-|RF-004| A aplicação deve permitir o espectador pesquisar eventos. |  ALTA  |
-|RF-005| A aplicação deve informar os próximos 3 eventos na tela principal. | MÉDIA |
-|RF-006| A aplicação deve controlar a quantidade de ingressos disponíveis. |  MÉDIA  |
-|RF-007| A aplicação deve gerar número de ticket para cada ingresso adquirido |  MÉDIA  |
-|RF-008| A aplicação deve gerar um qr code por ticket e enviar por e-mail para o espectador. |  MÉDIA  |
-|RF-009| A aplicação deve possibilitar ao gestor do evento gerar relatório. |  BAIXA |
+|RF-003| A aplicação deve permitir o gerenciamento do evento pelo gestor.  |  ALTA  |
+|RF-004| A aplicação deve permitir o espectador pesquisar o evento por local, por data e tipo. |  ALTA  |
+|RF-005| A aplicação deve exibir os próximos 3 eventos na tela principal. | MÉDIA |
+|RF-006| A aplicação deve garantir que ao cadastrar o evento, o gestor informe a atração, o local, a data e a quantidade de ingressos disponíveis. |  ALTA |
+|RF-007| A aplicação deve gerar número de ticket para cada ingresso adquirido pelo espectador e deve diminuir a quantidade de ingressos disponíveis. |  ALTA  |
+|RF-008| A aplicação deve gerar um qr code por número de ticket e enviar por e-mail para o espectador. | MÉDIA |
+|RF-009| A aplicação deve possibilitar ao gestor do evento gerar relatório geral do evento com dados do eventos, ingressos disponíveis e ingressos já distribuídos. |  BAIXA |
 
 
 ### Requisitos não Funcionais
@@ -92,9 +92,10 @@ Os requisitos não funcionais não impedem o funcionamento da aplicação e est�
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| A aplicação deve ser responsiva para rodar em todos os dispositivos. |  MÉDIA  | 
-|RNF-002| A aplicação processar requisições do usuário em no máximo 10s. |  BAIXA |
+|RNF-002| A aplicação deve processar requisições do usuário em no máximo 10s. |  BAIXA |
 |RNF-003| Apenas espectadores previamente cadastrados e logados poderão gerar ingressos |  MÉDIA  |
-|RNF-004| A aplicação deve permitir o espectador solicitar até 3 ingressos. |  MÉDIA |
+|RNF-004| A aplicação deve ser compatível com os principais navegadores do mercado. | ALTA |
+|RNF-005| A aplicação deve seguir boas práticas de SEO. Isso inclui técnicas de otimização on-page e garantir a facilidade de rastreamento pelos motores de busca. |  ALTA |
 
 
 
