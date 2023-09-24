@@ -58,8 +58,10 @@ As ferramentas empregadas no projeto são:
 - Microsoft Teams
 - Github
 - Astah UML
-- Ferramentas de desenho de tela (_wireframing_)
+- Figma
 
 O editor de código Visual Studio foi escolhido pois possui integração com a ferramenta de versionamento de código GitHub utilizada pela equipe como repositório do código e documentação.
+
+Para a criação dos artefatos de software, priorizamos o uso de ferramentas alternativas e gratuitas de tecnologia, como o Astah para a elaboração dos diagramas UML e o Figma para a criação dos wireframes.
 
 Para a comunicação da equipe, foi definida a ferramenta Microsoft Teams pois possibilita reuniões por videoconferência e comunicação eficiente via chat, mantendo um histórico de todas as conversas, facilitando a referência e o acompanhamento do progresso das discussões.
