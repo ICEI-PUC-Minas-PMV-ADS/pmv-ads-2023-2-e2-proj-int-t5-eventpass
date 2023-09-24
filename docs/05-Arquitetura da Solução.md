@@ -12,29 +12,22 @@ O diagrama de classes é uma ferramenta de modelagem em UML que descreve as clas
 
 ## Modelo ER (Projeto Conceitual)
 
-O diagrama relacional ER (Entidade-Relacionamento) é uma ferramenta de modelagem utilizada para representar visualmente as entidades, seus atributos e os relacionamentos entre elas. Abaixo está o digrama modelo pela equipe de desenvolvimento:
+O diagrama relacional ER (Entidade-Relacionamento) é uma ferramenta de modelagem utilizada para representar visualmente as entidades, seus atributos e os relacionamentos entre elas. Abaixo está o diagrama modelado pela equipe de desenvolvimento:
 
 ![Diagrama ER](img/Diagrama%20ER%20-%20EventPASS.jpeg)
 
 ## Projeto da Base de Dados
 
-Com base no diagrama de relacionamento ER realizado pela equipe foi desenvolvida o seguinte projeto de base de dados para ilustrar as tabelas, seus atributos e as conexões entre elas ajudando a compreender a organização dos dados em um banco de dados, facilitando o desenvolvimento e a manutenção do software desenvolvido.
+Com base no diagrama de relacionamento ER realizado pela equipe, foi desenvolvido o seguinte projeto de base de dados para ilustrar as tabelas, seus atributos e as conexões entre elas, ajudando a compreender a organização dos dados em um banco de dados, facilitando o desenvolvimento e a manutenção do software desenvolvido.
 
 ![Base de dados](img/Esquema%20relacional%20-%20Base%20de%20dados.jpg)
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Para implementar a solução, foi concebida uma estrutura de aplicações que abrange tanto o front-end quanto o back-end. No front-end, serão empregadas as linguagens HTML, CSS e JavaScript, junto com a biblioteca REACT.TS. Para o desenvolvimento do back-end, serão utilizadas as linguagens C# em conjunto com o Framework da API Web do ASP.NET Core. O sistema de gerenciamento de dados (SGBD) escolhido será o SQL Server. Durante a fase de implementação e desenvolvimento, faremos uso da ferramenta Visual Studio Code para a criação de códigos, e o GitHub será a plataforma escolhida para hospedar o código-fonte.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+![Tecnologias](img/Tecnologias.jpg)
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+Para a hospedagem da aplicação, foi definido junto ao time de desenvolvimento a utilização da plataforma HEROKU, pois possui integração nativa com sistemas de controle de versão baseados em Git e oferece um processo de implantação simples e rápido.
