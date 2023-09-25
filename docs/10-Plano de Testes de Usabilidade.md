@@ -12,45 +12,45 @@ Selecionamos uma amostra de participantes que representem o público-alvo do Eve
 
 #### Cenário de Tarefa:
 
-Você deseja gerenciar um evento específico que está acontecendo em uma data futura.
-Você já escolheu o evento e a data que deseja solicitar ingressos para você.
-Você deve navegar pelo EventPass, selecionar os eventos e os ingressos desejados.
+1. Você deseja gerenciar um evento específico que está acontecendo em uma data futura.
+1. Você já escolheu o evento e a data que deseja solicitar ingressos para você.
+1. Você deve navegar pelo EventPass, selecionar os eventos e os ingressos desejados.
 
 #### Variáveis de Teste:
 
-Facilidade de cadastro na plataforma.
-Facilidade de navegação na plataforma.
-Facilidade de encontrar o evento desejado.
-Facilidade de selecionar o tipo e a quantidade de ingressos.
-Facilidade de adicionar ingressos ao carrinho.
-Facilidade de revisar o carrinho e fazer alterações, se necessário.
-Clareza das informações sobre o evento, ingressos.
+- Facilidade de cadastro na plataforma.
+- Facilidade de navegação na plataforma.
+- Facilidade de encontrar o evento desejado.
+- Facilidade de selecionar o tipo e a quantidade de ingressos.
+- Facilidade de adicionar ingressos ao carrinho.
+- Facilidade de revisar o carrinho e fazer alterações, se necessário.
+- Clareza das informações sobre o evento, ingressos.
 
 #### Métricas de Avaliação:
 
-Taxa de sucesso na conclusão da solicitação.
-Tempo médio gasto para concluir a solicitação.
-Número de erros cometidos pelos participantes.
-Satisfação geral do usuário (por meio de questionários pós-teste).
+- Taxa de sucesso na conclusão da solicitação.
+- Tempo médio gasto para concluir a solicitação.
+- Número de erros cometidos pelos participantes.
+- Satisfação geral do usuário (por meio de questionários pós-teste).
 
 #### Materiais Necessários:
 
-Computadores ou dispositivos móveis para os participantes.
-Acesso a plataforma EventPass.
-Gravador de tela e câmera para registrar a interação dos participantes.
-Questionários pós-teste para coletar feedback.
+- Computadores ou dispositivos móveis para os participantes.
+- Acesso a plataforma EventPass.
+- Gravador de tela e câmera para registrar a interação dos participantes.
+- Questionários pós-teste para coletar feedback.
 
 #### Procedimento:
 
-Apresentar o cenário de tarefa aos participantes e observar suas interações enquanto eles navegam pela plataforma.
+1. Apresentar o cenário de tarefa aos participantes e observar suas interações enquanto eles navegam pela plataforma.
 
-Incentivar os participantes a interagir com a plataforma e fornecer feedback à medida que realizam as tarefas.
+1. Incentivar os participantes a interagir com a plataforma e fornecer feedback à medida que realizam as tarefas.
 
-Registrar o tempo de interação em cada etapa da tarefa e eventuais dificuldades dos participantes.
+1. Registrar o tempo de interação em cada etapa da tarefa e eventuais dificuldades dos participantes.
 
-Após a conclusão das tarefas, peça aos participantes que preencham um questionário pós-teste para avaliar sua satisfação e coletar comentários adicionais.
+1. Após a conclusão das tarefas, peça aos participantes que preencham um questionário pós-teste para avaliar sua satisfação e coletar comentários adicionais.
 
-Analisar os dados coletados e identificar áreas de melhoria na usabilidade da plataforma.
+1. Analisar os dados coletados e identificar áreas de melhoria na usabilidade da plataforma.
 
 #### Ações de Acompanhamento:
 
