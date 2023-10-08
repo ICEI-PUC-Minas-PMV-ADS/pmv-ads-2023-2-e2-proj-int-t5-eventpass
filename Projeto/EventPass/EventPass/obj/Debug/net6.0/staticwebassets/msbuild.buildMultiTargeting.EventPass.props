@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EventPass.props" />
+</Project>
