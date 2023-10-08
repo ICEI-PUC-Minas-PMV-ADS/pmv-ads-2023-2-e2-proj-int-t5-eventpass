@@ -53,7 +53,7 @@ namespace EventPass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPFouCNPJ,Tipo")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace EventPass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPFouCNPJ,Tipo")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF")] Usuario usuario)
         {
             if (id != usuario.Id)
             {
