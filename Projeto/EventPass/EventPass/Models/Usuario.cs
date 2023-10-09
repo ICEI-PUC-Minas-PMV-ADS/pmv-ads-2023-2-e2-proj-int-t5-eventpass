@@ -3,7 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EventPass.Models
 {
-   
+    public enum TipoUsuario
+    {
+        Espectador,
+        Gestor
+    }
+
 
     [Table("Usuarios")]
     public class Usuario
@@ -29,11 +34,16 @@ namespace EventPass.Models
         [Display(Name = "Confirmar a senha")]
         public string ConfirmarSenha { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório informar o seu CPF ")]
+        [Required(ErrorMessage = "Obrigatório informar o seu CPF ou CNPJ ")]
 
-        [Display(Name = "CPF")]
+        [Display(Name = "CPF ou CNPJ")]
         public string CPF { get; set; }
 
-       
+        [Required(ErrorMessage = "Obrigatório selecionar o tipo de usuário")]
+        [Display(Name = "Tipo de Usuário")]
+        public TipoUsuario Tipo { get; set; }
+
+
+
     }
 }

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EventPass.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
 
 namespace EventPass.Controllers
 {
@@ -23,6 +25,58 @@ namespace EventPass.Controllers
         {
               return View(await _context.Usuarios.ToListAsync());
         }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Login(Usuario usuario)
+        {
+            var dados = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
+
+            if (dados == null)
+            {
+                ViewBag.Message = "Usuário e/ou Senha inválidos! ";
+                return View();
+            }
+
+            bool senhaok = BCrypt.Net.BCrypt.Verify(usuario.Senha, dados.Senha);
+
+            if (senhaok)
+            {
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, dados.NomeUsuario),
+            new Claim(ClaimTypes.NameIdentifier, dados.Email.ToString()),
+            new Claim(ClaimTypes.Role, dados.Tipo.ToString()),
+        };
+
+                var usuarioIdentity = new ClaimsIdentity(claims, "login");
+                ClaimsPrincipal principal = new ClaimsPrincipal(usuarioIdentity);
+
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.UtcNow.ToLocalTime().AddHours(8),
+                    IsPersistent = true,
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+                return Redirect("/");
+            }
+            else
+            {
+                ViewBag.Message = "Usuário e/ou Senha inválidos! ";
+            }
+
+            return View();
+        }
+        public async Task <IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login", "Usuarios");
+        }
+
 
         // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -53,13 +107,20 @@ namespace EventPass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF,Tipo")] Usuario usuario)
         {
+            var existingUser = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
+
+            if (existingUser != null)
+            {
+                ModelState.AddModelError("Email", "O email já está em uso.");
+                return View(usuario);
+            }
+
             if (ModelState.IsValid)
             {
                 usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                 usuario.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(usuario.ConfirmarSenha);
-
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -88,7 +149,7 @@ namespace EventPass.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF,Tipo")] Usuario usuario)
         {
             if (id != usuario.Id)
             {

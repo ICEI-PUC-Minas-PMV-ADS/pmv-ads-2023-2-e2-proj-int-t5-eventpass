@@ -7,7 +7,7 @@
 <h1>Visualizar</h1>
 
 <div>
-    <h4>Usuario</h4>
+    <h4>Usuário</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -16,12 +16,6 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.NomeUsuario)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CPF)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CPF)
-        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Email)
         </dt>
@@ -29,11 +23,21 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
         
-        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
     </dl>
 </div>
 <div>
-    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
     <a class="btn btn-info" asp-action="Index">Voltar</a>
-    
 </div>

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Usuarios</h1>
+<h1>Usuários</h1>
 
 
 <table class="table">
@@ -16,9 +16,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-           
             <th>
                 @Html.DisplayNameFor(model => model.CPF)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
             </th>
             <th></th>
         </tr>
@@ -32,9 +35,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            
+           
             <td>
                 @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
@@ -43,5 +50,5 @@
             </td>
         </tr>
 }
-    </tbody>    
+    </tbody>
 </table>

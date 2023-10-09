@@ -13,6 +13,12 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="Tipo" class="control-label"></label>
+                <select asp-for="Tipo" class="form-control" asp-items="Html.GetEnumSelectList<TipoUsuario>()"></select>
+                <span asp-validation-for="Tipo" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="NomeUsuario" class="control-label"></label>
                 <input asp-for="NomeUsuario" class="form-control" />
@@ -38,8 +44,9 @@
                 <input asp-for="CPF" class="form-control" />
                 <span asp-validation-for="CPF" class="text-danger"></span>
             </div>
+           
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-primary" />
                 <a class="btn btn-info" asp-action="Index">Voltar</a>
             </div>
         </form>

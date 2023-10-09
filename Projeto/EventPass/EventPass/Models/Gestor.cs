@@ -3,6 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EventPass.Models
 {
+    public enum TipoGestor
+    {
+        Gestor
+    }
+
     [Table("Gestor")]
     public class Gestor
     {
@@ -25,5 +30,10 @@ namespace EventPass.Models
         [Required(ErrorMessage = "Obrigatório confirmar a senha!")]
         [Display(Name = "Confirmar senha")]
         public string ConfirmarSenha { get; set;}
+
+       
+        [Display(Name = "Tipo de Usuário")]
+        public TipoGestor Tipo { get; set; }
+
     }
 }

@@ -9,22 +9,22 @@ using EventPass.Models;
 
 namespace EventPass.Controllers
 {
-    public class GestoresController : Controller
+    public class GestorsController : Controller
     {
         private readonly AppDbContext _context;
 
-        public GestoresController(AppDbContext context)
+        public GestorsController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: Gestores
+        // GET: Gestors
         public async Task<IActionResult> Index()
         {
               return View(await _context.Gestor.ToListAsync());
         }
 
-        // GET: Gestores/Details/5
+        // GET: Gestors/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Gestor == null)
@@ -42,23 +42,21 @@ namespace EventPass.Controllers
             return View(gestor);
         }
 
-        // GET: Gestores/Create
+        // GET: Gestors/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Gestores/Create
+        // POST: Gestors/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,CNPJ,Email,Senha,ConfirmarSenha")] Gestor gestor)
+        public async Task<IActionResult> Create([Bind("Id,Nome,CNPJ,Email,Senha,ConfirmarSenha,Tipo")] Gestor gestor)
         {
             if (ModelState.IsValid)
             {
-                gestor.Senha = BCrypt.Net.BCrypt.HashPassword(gestor.Senha);
-                gestor.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(gestor.ConfirmarSenha);
                 _context.Add(gestor);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -66,7 +64,7 @@ namespace EventPass.Controllers
             return View(gestor);
         }
 
-        // GET: Gestores/Edit/5
+        // GET: Gestors/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Gestor == null)
@@ -82,12 +80,12 @@ namespace EventPass.Controllers
             return View(gestor);
         }
 
-        // POST: Gestores/Edit/5
+        // POST: Gestors/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,CNPJ,Email,Senha,ConfirmarSenha")] Gestor gestor)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,CNPJ,Email,Senha,ConfirmarSenha,Tipo")] Gestor gestor)
         {
             if (id != gestor.Id)
             {
@@ -98,8 +96,6 @@ namespace EventPass.Controllers
             {
                 try
                 {
-                    gestor.Senha = BCrypt.Net.BCrypt.HashPassword(gestor.Senha);
-                    gestor.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(gestor.ConfirmarSenha);
                     _context.Update(gestor);
                     await _context.SaveChangesAsync();
                 }
@@ -119,7 +115,7 @@ namespace EventPass.Controllers
             return View(gestor);
         }
 
-        // GET: Gestores/Delete/5
+        // GET: Gestors/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Gestor == null)
@@ -137,7 +133,7 @@ namespace EventPass.Controllers
             return View(gestor);
         }
 
-        // POST: Gestores/Delete/5
+        // POST: Gestors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
