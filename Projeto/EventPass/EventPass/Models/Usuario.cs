@@ -35,7 +35,6 @@ namespace EventPass.Models
         public string ConfirmarSenha { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o seu CPF ou CNPJ ")]
-
         [Display(Name = "CPF ou CNPJ")]
         public string CPF { get; set; }
 
