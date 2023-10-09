@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using EventPass.Models;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EventPass.Controllers
 {
+    [Authorize(Roles ="Gestor")]
     public class UsuariosController : Controller
     {
         private readonly AppDbContext _context;
@@ -21,15 +23,24 @@ namespace EventPass.Controllers
         }
 
         // GET: Usuarios
+        
         public async Task<IActionResult> Index()
         {
               return View(await _context.Usuarios.ToListAsync());
         }
+        [AllowAnonymous]
+        public IActionResult AcessDenied()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(Usuario usuario)
         {
             var dados = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
@@ -71,10 +82,11 @@ namespace EventPass.Controllers
 
             return View();
         }
+        [AllowAnonymous]
         public async Task <IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
-            return RedirectToAction("Login", "Usuarios");
+            return RedirectToAction("Index", "Home");
         }
 
 
@@ -97,14 +109,12 @@ namespace EventPass.Controllers
         }
 
         // GET: Usuarios/Create
+        [AllowAnonymous]
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Usuarios/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF,Tipo")] Usuario usuario)
@@ -144,9 +154,7 @@ namespace EventPass.Controllers
             return View(usuario);
         }
 
-        // POST: Usuarios/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF,Tipo")] Usuario usuario)
