@@ -57,6 +57,8 @@ namespace EventPass.Controllers
         {
             if (ModelState.IsValid)
             {
+                gestor.Senha = BCrypt.Net.BCrypt.HashPassword(gestor.Senha);
+                gestor.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(gestor.ConfirmarSenha);
                 _context.Add(gestor);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -96,6 +98,8 @@ namespace EventPass.Controllers
             {
                 try
                 {
+                    gestor.Senha = BCrypt.Net.BCrypt.HashPassword(gestor.Senha);
+                    gestor.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(gestor.ConfirmarSenha);
                     _context.Update(gestor);
                     await _context.SaveChangesAsync();
                 }

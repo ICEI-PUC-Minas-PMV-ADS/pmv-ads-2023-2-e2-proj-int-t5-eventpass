@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/q9CFiZApSnN2XYyB+9O3pF+DLztczFZHeCC6bukCJuHkGnCJYX+YLl9dORHlkBNFSNJTW/5NvjRf0U0eV5gvg==",
+  "dgSpecHash": "SzV7nTgK7wKPLRFOg/C6krhhT1s7XjTtEQ/IYFioF5P7qXloe1VUjc4u7vl2T/+Bk+K8hR5PGfClLJzhLekTXQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\sandr\\OneDrive\\Documentos\\Puc\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass\\EventPass\\EventPass.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sandr\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\sandr\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\sandr\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\sandr\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

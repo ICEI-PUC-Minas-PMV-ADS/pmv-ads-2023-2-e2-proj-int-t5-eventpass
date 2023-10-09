@@ -566,3 +566,4 @@ C:\Users\sandr\OneDrive\Documentos\Puc\pmv-ads-2023-2-e2-proj-int-t5-eventpass\P
 C:\Users\sandr\OneDrive\Documentos\Puc\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass\EventPass\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\sandr\OneDrive\Documentos\Puc\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass\EventPass\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\sandr\OneDrive\Documentos\Puc\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass\EventPass\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\sandr\OneDrive\Documentos\Puc\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass\EventPass\bin\Debug\net6.0\BCrypt.Net-Next.dll
