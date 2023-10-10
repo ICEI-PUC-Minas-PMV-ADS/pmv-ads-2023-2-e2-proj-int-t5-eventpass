@@ -38,6 +38,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model?.Id">Excluir</a> |
     <a class="btn btn-info" asp-action="Index">Voltar</a>
 </div>

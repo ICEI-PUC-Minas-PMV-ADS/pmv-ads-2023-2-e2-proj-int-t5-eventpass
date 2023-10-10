@@ -13,8 +13,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace EventPass1.Controllers
 {
-   
 
+   
     public class Usuarios1Controller : Controller
     {
         private readonly AppDbContext _context;
@@ -25,24 +25,24 @@ namespace EventPass1.Controllers
         }
 
         // GET: Usuarios
-
+        [Authorize(Roles = "Gestor")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Usuarios.ToListAsync());
         }
-        
+       
         public IActionResult AcessDenied()
         {
             return View();
         }
 
-        
+       
         public IActionResult Login()
         {
             return View();
         }
         [HttpPost]
-        
+       
         public async Task<IActionResult> Login(Usuario usuario)
         {
             var dados = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
@@ -93,7 +93,9 @@ namespace EventPass1.Controllers
 
 
         // GET: Usuarios/Details/5
-        public async Task<IActionResult> Details(int? id)
+
+        // GET: Usuarios/Details/5
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null || _context.Usuarios == null)
             {
@@ -101,17 +103,24 @@ namespace EventPass1.Controllers
             }
 
             var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.Email == id);
+
             if (usuario == null)
             {
                 return NotFound();
             }
 
+            var userId = usuario.Id;
+
+            ViewData["UserId"] = userId;
+
             return View(usuario);
         }
 
+
+
         // GET: Usuarios/Create
-       
+
         public IActionResult Create()
         {
             return View();
@@ -119,6 +128,7 @@ namespace EventPass1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+       
         public async Task<IActionResult> Create([Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF,Tipo")] Usuario usuario)
         {
             var existingUser = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
