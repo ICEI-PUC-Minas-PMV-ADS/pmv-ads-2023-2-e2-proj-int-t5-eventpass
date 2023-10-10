@@ -24,9 +24,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios1"
-                                asp-action="Create">Cadastrar</a>
+                        
                         </li>
                         @if (User.IsInRole("Gestor"))
                         {
@@ -35,10 +33,6 @@
                                     asp-action="Index">Usuários</a>
                             </li>
                         }
-
-
-
-
 
 
                     </ul>

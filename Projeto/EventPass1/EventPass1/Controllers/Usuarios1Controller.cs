@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace EventPass1.Controllers
 {
-    [Authorize(Roles = "Gestor")]
+   
 
     public class Usuarios1Controller : Controller
     {
@@ -30,19 +30,19 @@ namespace EventPass1.Controllers
         {
             return View(await _context.Usuarios.ToListAsync());
         }
-        [AllowAnonymous]
+        
         public IActionResult AcessDenied()
         {
             return View();
         }
 
-        [AllowAnonymous]
+        
         public IActionResult Login()
         {
             return View();
         }
         [HttpPost]
-        [AllowAnonymous]
+        
         public async Task<IActionResult> Login(Usuario usuario)
         {
             var dados = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
@@ -84,7 +84,7 @@ namespace EventPass1.Controllers
 
             return View();
         }
-        [AllowAnonymous]
+       
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
@@ -111,7 +111,7 @@ namespace EventPass1.Controllers
         }
 
         // GET: Usuarios/Create
-        [AllowAnonymous]
+       
         public IActionResult Create()
         {
             return View();
