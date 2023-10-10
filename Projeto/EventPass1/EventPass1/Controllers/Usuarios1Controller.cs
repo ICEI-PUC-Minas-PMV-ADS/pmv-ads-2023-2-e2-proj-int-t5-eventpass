@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace EventPass1.Controllers
 {
     [Authorize(Roles = "Gestor")]
+
     public class Usuarios1Controller : Controller
     {
         private readonly AppDbContext _context;
