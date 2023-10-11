@@ -8,7 +8,7 @@ namespace EventPass1.Models
         Espectador,
         Gestor
     }
-    
+
 
 
     [Table("Usuarios")]
@@ -36,13 +36,28 @@ namespace EventPass1.Models
         public string ConfirmarSenha { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o seu CPF ou CNPJ ")]
-       
+
         [Display(Name = "CPF ou CNPJ")]
         public string CPF { get; set; }
 
         [Required(ErrorMessage = "Obrigatório selecionar o tipo de usuário")]
         [Display(Name = "Tipo de Usuário")]
         public TipoUsuario Tipo { get; set; }
+        public void DefineDisplayDeCPFOuCNPJ()
+        {
+            if (Tipo == TipoUsuario.Gestor)
+            {
+                // Se for um Gestor, defina o display como "CNPJ"
+                var cpfCnpjDisplayAttribute = GetType().GetProperty("CPF")
+                    .GetCustomAttributes(typeof(DisplayAttribute), true)
+                    .FirstOrDefault() as DisplayAttribute;
+
+                if (cpfCnpjDisplayAttribute != null)
+                {
+                    cpfCnpjDisplayAttribute.Name = "CNPJ";
+                }
+            }
+        }
 
 
 
