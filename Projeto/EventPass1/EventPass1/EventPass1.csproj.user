@@ -12,6 +12,7 @@
     <WebStackScaffolding_DbContextTypeFullName>EventPass1.Models.AppDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
+    <NameOfLastUsedPublishProfile>C:\Users\sandr\OneDrive\Documentos\Puc\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass1\EventPass1\Properties\PublishProfiles\EventPass23 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
