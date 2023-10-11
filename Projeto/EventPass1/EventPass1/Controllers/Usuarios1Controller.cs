@@ -125,18 +125,21 @@ namespace EventPass1.Controllers
         {
             return View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-       
         public async Task<IActionResult> Create([Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF,Tipo")] Usuario usuario)
         {
-            var existingUser = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
+            var existingUserByEmail = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
+            var existingUserByCPF = await _context.Usuarios.FirstOrDefaultAsync(u => u.CPF == usuario.CPF);
 
-            if (existingUser != null)
+            if (existingUserByEmail != null)
             {
                 ModelState.AddModelError("Email", "O email já está em uso.");
-                return View(usuario);
+            }
+
+            if (existingUserByCPF != null)
+            {
+                ModelState.AddModelError("CPF", "O CPF ou CNPJ já está em uso.");
             }
 
             if (ModelState.IsValid)
@@ -149,6 +152,7 @@ namespace EventPass1.Controllers
             }
             return View(usuario);
         }
+
 
         // GET: Usuarios/Edit/5
         public async Task<IActionResult> Edit(int? id)
