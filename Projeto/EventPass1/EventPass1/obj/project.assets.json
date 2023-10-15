@@ -11551,11 +11551,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pedro\\OneDrive\\Documentos\\GitHub\\Eixo 2\\EventPass_Group\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj",
+      "projectUniqueName": "C:\\Users\\pedro\\OneDrive\\Documentos\\GitHub\\Eixo 2\\EventPass_Group\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj",
       "projectName": "EventPass1",
-      "projectPath": "C:\\Users\\pedro\\OneDrive\\Documentos\\GitHub\\Eixo 2\\EventPass_Group\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj",
+      "projectPath": "C:\\Users\\pedro\\OneDrive\\Documentos\\GitHub\\Eixo 2\\EventPass_Group\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pedro\\OneDrive\\Documentos\\GitHub\\Eixo 2\\EventPass_Group\\Projeto\\EventPass1\\EventPass1\\obj\\",
+      "outputPath": "C:\\Users\\pedro\\OneDrive\\Documentos\\GitHub\\Eixo 2\\EventPass_Group\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",

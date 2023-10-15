@@ -1,14 +1,16 @@
 ﻿using EventPass.Models;
 using EventPass1.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.Operations;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventPass1.Controllers
 {
+
+    [Authorize(Roles = "Gestor")]
     public class EventosController : Controller
     {
-
         private readonly AppDbContext _context;
         public EventosController(AppDbContext context)
         {
@@ -49,6 +51,8 @@ namespace EventPass1.Controllers
             if (dados == null)
                 return NotFound();
 
+            ViewBag.Evento = dados;
+
             return View(dados);
         }
 
@@ -78,6 +82,8 @@ namespace EventPass1.Controllers
             if (dados == null)
                 return NotFound();
 
+            ViewBag.Evento = dados;
+
             return View(dados);
         }
 
@@ -90,6 +96,8 @@ namespace EventPass1.Controllers
 
             if (dados == null)
                 return NotFound();
+
+            ViewBag.Evento = dados;
 
             return View(dados);
         }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using EventPass.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EventPass1.Models
@@ -43,8 +44,5 @@ namespace EventPass1.Models
         [Required(ErrorMessage = "Obrigatório selecionar o tipo de usuário")]
         [Display(Name = "Tipo de Usuário")]
         public TipoUsuario Tipo { get; set; }
-
-
-
     }
 }

@@ -9,85 +9,85 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EventPass1
 build_property.RootNamespace = EventPass1
-build_property.ProjectDir = C:\Users\pedro\OneDrive\Documentos\GitHub\Eixo 2\EventPass_Group\Projeto\EventPass1\EventPass1\
+build_property.ProjectDir = C:\Users\pedro\OneDrive\Documentos\GitHub\Eixo 2\EventPass_Group\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass1\EventPass1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\pedro\OneDrive\Documentos\GitHub\Eixo 2\EventPass_Group\Projeto\EventPass1\EventPass1
+build_property.MSBuildProjectDirectory = C:\Users\pedro\OneDrive\Documentos\GitHub\Eixo 2\EventPass_Group\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass1\EventPass1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Eventos/Create.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Eventos/Delete.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Eventos/Details.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Eventos/Edit.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Eventos/Index.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Home/Index.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Home/Privacy.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Shared/Error.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Usuarios1/AcessDenied.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/AcessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXEFjZXNzRGVuaWVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Usuarios1/Create.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Usuarios1/Delete.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Usuarios1/Details.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Usuarios1/Edit.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Usuarios1/Index.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Usuarios1/Login.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/_ViewImports.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/_ViewStart.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Shared/_Layout.cshtml]
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hcf99nufsg

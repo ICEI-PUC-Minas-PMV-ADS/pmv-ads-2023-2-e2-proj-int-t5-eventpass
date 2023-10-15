@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kEOt7DG4F4dPKX0CliQBfC6UTkEZcd++9q3uuECc9cGqFEpc/FSdHRTquR2dJsu1Pj8s7gcFUNDThZn6oyYEtg==",
+  "dgSpecHash": "NvFAdjsiic2xgUTGeBSv5CgzX1xg7uxVxMxiWpv+SXZQ5yQ246JCSRIfoiMA+F2UlGldB0jrRTbVtKXhuAalbQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pedro\\OneDrive\\Documentos\\GitHub\\Eixo 2\\EventPass_Group\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj",
+  "projectFilePath": "C:\\Users\\pedro\\OneDrive\\Documentos\\GitHub\\Eixo 2\\EventPass_Group\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedro\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\azure.identity\\1.10.2\\azure.identity.1.10.2.nupkg.sha512",
