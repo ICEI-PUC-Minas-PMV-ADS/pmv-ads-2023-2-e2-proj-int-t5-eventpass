@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\pedro\OneDrive\Documentos\GitHub\Eixo 2\EventPass_Group\Projeto\EventPass1\EventPass1
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Eventos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Eventos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Eventos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Eventos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Eventos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/EventPass_Group/Projeto/EventPass1/EventPass1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

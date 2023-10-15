@@ -1,0 +1,65 @@
+﻿@model EventPass.Models.Evento
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastrar evento</h1>
+
+<h4>Informe os dados do evento</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nomeEvento" class="control-label"></label>
+                <input asp-for="nomeEvento" class="form-control" />
+                <span asp-validation-for="nomeEvento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dataHora" class="control-label"></label>
+                <input asp-for="dataHora" class="form-control" />
+                <span asp-validation-for="dataHora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="totalIngressos" class="control-label"></label>
+                <input asp-for="totalIngressos" class="form-control" />
+                <span asp-validation-for="totalIngressos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="uf" class="control-label"></label>
+                <input asp-for="uf" class="form-control" />
+                <span asp-validation-for="uf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cidade" class="control-label"></label>
+                <input asp-for="cidade" class="form-control" />
+                <span asp-validation-for="cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bairro" class="control-label"></label>
+                <input asp-for="bairro" class="form-control" />
+                <span asp-validation-for="bairro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cep" class="control-label"></label>
+                <input asp-for="cep" class="form-control" />
+                <span asp-validation-for="cep" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="numero" class="control-label"></label>
+                <input asp-for="numero" class="form-control" />
+                <span asp-validation-for="numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" /> | 
+                <a asp-action="Index" class="btn btn-info">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
