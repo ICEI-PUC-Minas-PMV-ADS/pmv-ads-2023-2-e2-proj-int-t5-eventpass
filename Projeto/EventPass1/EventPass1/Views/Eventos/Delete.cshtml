@@ -6,9 +6,9 @@
 
 <h1>Deletar</h1>
 
-<h3>Deseja realent deletar os dados do evento?</h3>
+<h3>Deseja deletar o evento?</h3>
 <div>
-    <h4> @ViewBag.Eventos.nomeEvento</h4>
+    <h4>@ViewBag.Evento.nomeEvento</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -62,7 +62,7 @@
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden"  asp-for="IdEvento" />
+        <input type="hidden" asp-for="IdEvento" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index" class="btn btn-info">Voltar</a>
     </form>
