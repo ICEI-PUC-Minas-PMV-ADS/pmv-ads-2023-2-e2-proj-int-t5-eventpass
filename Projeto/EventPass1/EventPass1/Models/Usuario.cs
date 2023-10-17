@@ -14,6 +14,10 @@ namespace EventPass1.Models
     [Table("Usuarios")]
     public class Usuario
     {
+        [Required(ErrorMessage = "Obrigatório selecionar o tipo de usuário")]
+        [Display(Name = "Tipo de Usuário")]
+        public TipoUsuario Tipo { get; set; }
+
         [Key]
         public int Id { get; set; }
 
@@ -40,9 +44,7 @@ namespace EventPass1.Models
         [Display(Name = "CPF ou CNPJ")]
         public string CPF { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório selecionar o tipo de usuário")]
-        [Display(Name = "Tipo de Usuário")]
-        public TipoUsuario Tipo { get; set; }
+       
         public void DefineDisplayDeCPFOuCNPJ()
         {
             if (Tipo == TipoUsuario.Gestor)
