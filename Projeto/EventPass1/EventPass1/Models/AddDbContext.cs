@@ -11,5 +11,6 @@ namespace EventPass1.Models
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Evento> Eventos { get; set; }
 
+       
     }
 }

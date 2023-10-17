@@ -5,10 +5,28 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EventPass1.Migrations
 {
-    public partial class M07 : Migration
+    public partial class M01 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Usuarios",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Tipo = table.Column<int>(type: "int", nullable: false),
+                    NomeUsuario = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Senha = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ConfirmarSenha = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CPF = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Usuarios", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Eventos",
                 columns: table => new
@@ -41,6 +59,9 @@ namespace EventPass1.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Eventos");
+
+            migrationBuilder.DropTable(
+                name: "Usuarios");
         }
     }
 }

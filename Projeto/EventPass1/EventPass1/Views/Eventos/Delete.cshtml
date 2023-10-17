@@ -1,0 +1,47 @@
+﻿@model EventPass1.Models.Evento
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar</h1>
+
+<h3>Você tem certeza quer deletar ?</h3>
+<div>
+    <h4>Evento</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.nomeEvento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.nomeEvento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.dataHora)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.dataHora)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.totalIngressos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.totalIngressos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Usuarios)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Usuarios.CPF)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+
+        <input type="hidden" asp-for="IdEvento" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a class="btn btn-info" asp-area="" asp-controller="Home"
+           asp-action="Index">Voltar</a>
+    </form>
+</div>

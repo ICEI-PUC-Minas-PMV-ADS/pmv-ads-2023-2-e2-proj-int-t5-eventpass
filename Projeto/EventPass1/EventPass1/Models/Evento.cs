@@ -22,7 +22,7 @@ namespace EventPass1.Models
         public int totalIngressos { get; set; }
 
         [Required(ErrorMessage = "Informe o número do Cnpj ")]
-        [Display(Name = "Gestor")]
+        [Display(Name = "CNPJ")]
         public int GestorId { get; set; }
 
         [ForeignKey("GestorId")]
