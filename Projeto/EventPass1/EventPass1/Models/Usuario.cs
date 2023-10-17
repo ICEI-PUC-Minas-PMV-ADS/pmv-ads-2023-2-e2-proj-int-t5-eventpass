@@ -44,7 +44,11 @@ namespace EventPass1.Models
         [Display(Name = "CPF ou CNPJ")]
         public string CPF { get; set; }
 
-       
+        public ICollection<Evento> Eventos { get; set; }
+
+
+
+
         public void DefineDisplayDeCPFOuCNPJ()
         {
             if (Tipo == TipoUsuario.Gestor)
