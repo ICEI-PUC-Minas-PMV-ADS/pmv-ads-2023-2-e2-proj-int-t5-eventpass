@@ -4,57 +4,63 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Cadastrar</h1>
+<link rel="stylesheet" href="~/css/style-login.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h4>Usuário</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Tipo" class="control-label"></label>
-                <select asp-for="Tipo" class="form-control" asp-items="Html.GetEnumSelectList<TipoUsuario>()"></select>
-                <span asp-validation-for="Tipo" class="text-danger"></span>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 right-section">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <p>Cadastre-se</p>
+                <div class="form-group">
+                    <select asp-for="Tipo" class="form-control" aria-placeholder="Teste" asp-items="Html.GetEnumSelectList<TipoUsuario>()">
+                        <option value="">Selecione o tipo</option>
+                    </select>
+                    <span asp-validation-for="Tipo" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="NomeUsuario" class="control-label"></label>
-                <input asp-for="NomeUsuario" class="form-control" />
-                <span asp-validation-for="NomeUsuario" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CPF" class="control-label"></label>
-                <input asp-for="CPF" class="form-control" />
-                <span asp-validation-for="CPF" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <input asp-for="NomeUsuario" class="form-control" placeholder="Nome completo" />
+                    <span asp-validation-for="NomeUsuario" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="CPF" class="form-control" placeholder="CPF ou CNPJ" />
+                    <span asp-validation-for="CPF" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <div class="form-group">
+                    <input asp-for="Email" class="form-control" placeholder="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Senha" class="form-control" placeholder="Senha" />
+                    <span asp-validation-for="Senha" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="ConfirmarSenha" class="form-control" placeholder="Confirmar senha" />
+                    <span asp-validation-for="ConfirmarSenha" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Cadastrar-se" class="btn btn-primary" />
+                     <a class="btn btn-info" asp-area="" asp-controller="Home"
+                    asp-action="Index">Voltar</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 left-section">
+            <h4>Cadastre-se agora e comece a viver cada momento!</h4>
+            <div class="bottom-content">
+                <p><b>Já possui cadastro?</b></p>
+                <p>
+                    <a class="text-white" asp-action="Login">Entrar</a>
+                </p>
             </div>
-            <div class="form-group">
-                <label asp-for="Senha" class="control-label"></label>
-                <input asp-for="Senha" class="form-control" />
-                <span asp-validation-for="Senha" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ConfirmarSenha" class="control-label"></label>
-                <input asp-for="ConfirmarSenha" class="form-control" />
-                <span asp-validation-for="ConfirmarSenha" class="text-danger"></span>
-            </div>
-           
-           
-            <div class="form-group">
-                <input type="submit" value="Criar" class="btn btn-primary" />
-                <a class="btn btn-info" asp-action="Login">Voltar</a>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-
+<h3>@ViewBag.Message</h3>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
