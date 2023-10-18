@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventPass1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231018125549_M01")]
+    [Migration("20231018150041_M01")]
     partial class M01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,17 +32,28 @@ namespace EventPass1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdEvento"), 1L, 1);
 
-                    b.Property<int>("GestorId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("dataHora")
+                    b.Property<DateTime>("Data")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("nomeEvento")
+                    b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("totalIngressos")
+                    b.Property<int>("GestorId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Hora")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Local")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NomeEvento")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TotalIngressos")
                         .HasColumnType("int");
 
                     b.HasKey("IdEvento");
@@ -60,8 +71,9 @@ namespace EventPass1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CPF")
-                        .HasColumnType("int");
+                    b.Property<string>("CPF")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConfirmarSenha")
                         .IsRequired()

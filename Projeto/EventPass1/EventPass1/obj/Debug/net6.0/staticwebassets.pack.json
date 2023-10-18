@@ -17,12 +17,28 @@
       "PackagePath": "staticwebassets/css/style-header.css"
     },
     {
+      "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/css/style-home.css",
+      "PackagePath": "staticwebassets/css/style-home.css"
+    },
+    {
       "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/css/style-login.css",
       "PackagePath": "staticwebassets/css/style-login.css"
     },
     {
       "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/img/1.png",
+      "PackagePath": "staticwebassets/img/1.png"
+    },
+    {
+      "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/img/2.png",
+      "PackagePath": "staticwebassets/img/2.png"
+    },
+    {
+      "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/img/3.png",
+      "PackagePath": "staticwebassets/img/3.png"
     },
     {
       "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/img/logo-white.png",

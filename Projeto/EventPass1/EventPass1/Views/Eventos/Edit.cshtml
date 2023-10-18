@@ -14,19 +14,34 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdEvento" />
             <div class="form-group">
-                <label asp-for="nomeEvento" class="control-label"></label>
-                <input asp-for="nomeEvento" class="form-control" />
-                <span asp-validation-for="nomeEvento" class="text-danger"></span>
+                <label asp-for="NomeEvento" class="control-label"></label>
+                <input asp-for="NomeEvento" class="form-control" />
+                <span asp-validation-for="NomeEvento" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="dataHora" class="control-label"></label>
-                <input asp-for="dataHora" class="form-control" />
-                <span asp-validation-for="dataHora" class="text-danger"></span>
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="totalIngressos" class="control-label"></label>
-                <input asp-for="totalIngressos" class="form-control" />
-                <span asp-validation-for="totalIngressos" class="text-danger"></span>
+                <label asp-for="Hora" class="control-label"></label>
+                <input asp-for="Hora" class="form-control" />
+                <span asp-validation-for="Hora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalIngressos" class="control-label"></label>
+                <input asp-for="TotalIngressos" class="form-control" />
+                <span asp-validation-for="TotalIngressos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Local" class="control-label"></label>
+                <input asp-for="Local" class="form-control" />
+                <span asp-validation-for="Local" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="GestorId" class="control-label"></label>
@@ -41,11 +56,7 @@
 </div>
 
 <div>
-<<<<<<< HEAD
     <a asp-action="Index">Back to List</a>
-=======
-    <a asp-action="Index">Voltar</a>
->>>>>>> 362d006aa8eea624361b5884da3d6ce098067e28
 </div>
 
 @section Scripts {

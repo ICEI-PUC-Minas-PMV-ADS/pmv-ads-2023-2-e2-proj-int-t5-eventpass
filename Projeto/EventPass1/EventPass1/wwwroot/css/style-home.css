@@ -1,0 +1,62 @@
+.carousel {
+  width: 95%;
+  max-height: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.carousel img {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.nav-link-carousel {
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.horizontal-space {
+  margin: 30px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-details p,
+a {
+  font-weight: bold;
+  color: #f15a24;
+  text-decoration: none;
+}
+
+.card-name h5 {
+  font-weight: bold;
+}
+
+.card-name p {
+  font-weight: bold;
+  color: #4f4f4f;
+}
+
+.card-name {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-title {
+  text-align: justify;
+}

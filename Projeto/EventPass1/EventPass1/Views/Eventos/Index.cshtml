@@ -4,22 +4,31 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Eventos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Cadastrar Eventos</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.nomeEvento)
+                @Html.DisplayNameFor(model => model.NomeEvento)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.dataHora)
+                @Html.DisplayNameFor(model => model.Data)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.totalIngressos)
+                @Html.DisplayNameFor(model => model.Hora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalIngressos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Local)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Usuarios)
@@ -31,13 +40,22 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.nomeEvento)
+                @Html.DisplayFor(modelItem => item.NomeEvento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.dataHora)
+                @Html.DisplayFor(modelItem => item.Data)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.totalIngressos)
+                @Html.DisplayFor(modelItem => item.Hora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalIngressos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Local)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Usuarios.NomeUsuario)
