@@ -2,7 +2,89 @@
     ViewData["Title"] = "Home Page";
 }
 
+<link rel="stylesheet" href="~/css/style-home.css">
+
 <div class="text-center">
-    <h1 class="display-4">Event Pass</h1>
-   
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/img/1.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <a class="nav-link-carousel" asp-area="" asp-controller="" asp-action="">Nome do evento 1</a>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="~/img/2.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <a class="nav-link-carousel" asp-area="" asp-controller="" asp-action="">Nome do evento 2 </a>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="~/img/3.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <a class="nav-link-carousel" asp-area="" asp-controller="" asp-action="">Nome do evento 3</a>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>  
+    <div class="horizontal-space"/>
+    <h2 class="text-title">Eventos em destaque!</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card">
+            <img src="~/img/1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <div class="card-details">
+                    <p>DD/MM/AA</p>
+                    <a href="#" >Ver detalhes</a>
+                </div>
+                <div class="card-name">
+                    <h5 class="card-title">Nome do evento 1</h5>
+                    <p class="card-text">Localização do evento</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+            <img src="~/img/2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <div class="card-details">
+                    <p>DD/MM/AA</p>
+                    <a href="#" >Ver detalhes</a>
+                </div>
+                <div class="card-name">
+                    <h5 class="card-title">Nome do evento 2</h5>
+                    <p class="card-text">Localização do evento</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+            <img src="~/img/3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <div class="card-details">
+                    <p>DD/MM/AA</p>
+                    <a href="#" >Ver detalhes</a>
+                </div>
+                <div class="card-name">
+                    <h5 class="card-title">Nome do evento 3</h5>
+                    <p class="card-text">Localização do evento</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 </div>
