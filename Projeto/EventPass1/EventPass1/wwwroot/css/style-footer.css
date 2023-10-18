@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  font-size: small;
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+}
+
+.coluna {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.coluna img {
+  max-width: 150px;
+  height: auto;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.formulario input {
+  padding: 5px;
+  width: auto;
+  margin-bottom: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  background: rgb(197, 197, 197);
+  height: 35px;
+}
+
+.formulario button {
+  padding: 5px 10px;
+  background-color: #f15a24;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  max-width: 140px;
+  height: 35px;
+  flex-shrink: 0;
+  color: #000000;
+  font-size: small;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    flex-direction: column; /* Altera a direção do flex para coluna em telas menores */
+    align-items: center; /* Alinha os itens no centro */
+  }
+
+  .coluna {
+    width: 100%; /* Define a largura das colunas para 100% */
+    margin-bottom: 10px;
+  }
+
+  .coluna img {
+    text-align: center;
+    max-width: 150px;
+    height: auto;
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Header</title>
+    <link rel="stylesheet" href="~/css/style-header.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/img/logo.png" alt="Logo" width="80"> 
+                </a>
+
+                <div class="input-group busca d-none d-sm-flex">
+                    <input type="text" class="form-control" placeholder="Pesquisar..." aria-label="Pesquisar" aria-describedby="basic-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="basic-addon2">Buscar</button>
+                </div>
+
+                <ul class="navbar-nav">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            Olá, @User.Identity.Name
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Usuarios1" asp-action="Logout">Sair</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item" id="loginButton">
+                            <a class="nav-link" asp-area="" asp-controller="Usuarios1" asp-action="Login">Login</a>
+                        </li>
+                    }
+                </ul>
+
+                <div class="input-group busca d-flex d-sm-none">
+                    <input type="text" class="form-control" placeholder="Pesquisar..." aria-label="Pesquisar" aria-describedby="basic-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="basic-addon2">Buscar</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

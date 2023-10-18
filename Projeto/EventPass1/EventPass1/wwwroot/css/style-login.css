@@ -1,0 +1,120 @@
+.container {
+  margin-top: auto;
+  border-radius: 24px;
+}
+
+.home {
+  background-color: #ddd;
+}
+
+.bg-black {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  height: 650px;
+}
+.right-section {
+  background-color: #ffffff;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section p {
+  color: #000000;
+  text-align: center;
+  font-family: "Just Another Hand", cursive;
+  font-size: x-large;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.left-section {
+  background-color: #000;
+  border-radius: 0 10px 10px 0;
+  color: aliceblue;
+  flex-direction: column;
+  display: flex;
+}
+
+.left-section h4 {
+  color: #f15a24;
+  text-align: center;
+  font-family: "Just Another Hand", cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 50px 0;
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 20px 0;
+}
+
+.bottom-content a {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.right-section input[type="submit"] {
+  border-radius: 5px;
+  background: #f15a24;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.right-section .btn-info {
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #f15a24;
+  color: #f15a24;
+  font-size: medium;
+}
+
+.text-white {
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.btn-primary {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .left-section {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .right-section {
+    border-radius: 10px 10px 0 0;
+  }
+}
