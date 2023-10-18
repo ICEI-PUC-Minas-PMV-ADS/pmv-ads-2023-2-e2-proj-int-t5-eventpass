@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventPass1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231018125549_M01")]
+    [Migration("20231018134336_M01")]
     partial class M01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,8 +60,9 @@ namespace EventPass1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CPF")
-                        .HasColumnType("int");
+                    b.Property<string>("CPF")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConfirmarSenha")
                         .IsRequired()
