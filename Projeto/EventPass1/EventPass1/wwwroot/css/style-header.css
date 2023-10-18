@@ -10,18 +10,13 @@
   display: flex;
   align-items: center;
   width: max-content;
+  padding-left: 30px;
 }
 
 .nav-link-perfil {
-  border-radius: 5px;
-  color: #000000 !important;
+  color: #f15a24 !important;
+  font-weight: bold;
   font-size: medium;
-  font-style: normal;
-  line-height: 16px;
-  padding: 5px 15px;
-  margin: 0 5px;
-  margin-left: 10px;
-  text-decoration: none;
 }
 
 .nav-link {
@@ -57,8 +52,30 @@
   font-size: medium;
 }
 
+.perfil-spacer {
+  margin-right: 10px;
+}
+
+.nowrap {
+  white-space: nowrap;
+  font-size: medium;
+}
+
 @media screen and (max-width: 768px) {
   .input-group {
     padding-top: 10px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 10px 0 10px 10px;
+  }
+
+  .navbar-nav {
+    align-items: flex-end;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
   }
 }
