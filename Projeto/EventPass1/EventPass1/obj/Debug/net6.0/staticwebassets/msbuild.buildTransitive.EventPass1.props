@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="../buildMultiTargeting/EventPass1.props" />
+  <Import Project="..\buildMultiTargeting\EventPass1.props" />
 </Project>
