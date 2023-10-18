@@ -12,9 +12,29 @@ build_property.RootNamespace = EventPass1
 build_property.ProjectDir = C:\Users\sandr\OneDrive\Documentos\Puc\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass1\EventPass1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\sandr\OneDrive\Documentos\Puc\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass1\EventPass1
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/sandr/OneDrive/Documentos/Puc/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/OneDrive/Documentos/Puc/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/OneDrive/Documentos/Puc/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/OneDrive/Documentos/Puc/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/OneDrive/Documentos/Puc/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sandr/OneDrive/Documentos/Puc/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
@@ -26,6 +46,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/sandr/OneDrive/Documentos/Puc/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/OneDrive/Documentos/Puc/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/footer/footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZvb3Rlclxmb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/OneDrive/Documentos/Puc/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/header/header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhlYWRlclxoZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sandr/OneDrive/Documentos/Puc/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/_ValidationScriptsPartial.cshtml]
