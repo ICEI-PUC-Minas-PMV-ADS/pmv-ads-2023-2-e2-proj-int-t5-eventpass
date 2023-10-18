@@ -10,6 +10,12 @@
     <h4>Usuário</h4>
     <hr />
     <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.NomeUsuario)
         </dt>
@@ -40,5 +46,5 @@
 <div>
     <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model?.Id">Excluir</a> |
-    <a class="btn btn-info" asp-action="Index">Voltar</a>
+    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
 </div>

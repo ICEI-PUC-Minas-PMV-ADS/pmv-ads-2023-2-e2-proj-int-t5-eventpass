@@ -25,7 +25,7 @@ namespace EventPass1.Controllers
         }
 
         // GET: Usuarios
-        [Authorize(Roles = "Gestor")]
+      
         public async Task<IActionResult> Index()
         {
             return View(await _context.Usuarios.ToListAsync());
@@ -92,7 +92,7 @@ namespace EventPass1.Controllers
         }
 
 
-        // GET: Usuarios/Details/5
+       
 
         // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(string id)
@@ -148,7 +148,7 @@ namespace EventPass1.Controllers
                 usuario.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(usuario.ConfirmarSenha);
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Login));
             }
             return View(usuario);
         }
@@ -200,7 +200,7 @@ namespace EventPass1.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index","Home");
             }
             return View(usuario);
         }
@@ -239,7 +239,7 @@ namespace EventPass1.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Login));
         }
 
         private bool UsuarioExists(int id)

@@ -8,13 +8,16 @@ namespace EventPass1.Models
         Espectador,
         Gestor
     }
-    
-
 
     [Table("Usuarios")]
     public class Usuario
     {
+        [Required(ErrorMessage = "Obrigatório selecionar o tipo de usuário")]
+        [Display(Name = "Tipo de Usuário")]
+        public TipoUsuario Tipo { get; set; }
+
         [Key]
+        [Display(Name = "Codigo usuario")]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o seu Nome")]
@@ -35,16 +38,18 @@ namespace EventPass1.Models
         [Display(Name = "Confirmar a senha")]
         public string ConfirmarSenha { get; set; }
 
+
         [Required(ErrorMessage = "Obrigatório informar o seu CPF ou CNPJ ")]
-       
+
         [Display(Name = "CPF ou CNPJ")]
+        
         public string CPF { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório selecionar o tipo de usuário")]
-        [Display(Name = "Tipo de Usuário")]
-        public TipoUsuario Tipo { get; set; }
-
-
+        public ICollection<Evento> Eventos { get; set; }
 
     }
+
+
+
 }
+

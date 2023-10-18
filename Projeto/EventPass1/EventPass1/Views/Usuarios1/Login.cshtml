@@ -4,47 +4,45 @@
     ViewData["Title"] = "Login";
 }
 
-<h1>Login</h1>
+<link rel="stylesheet" href="~/css/style-login.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h4>Usuário</h4>
-<p>
-    <a asp-action="Create">Cadastrar</a>
-</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 right-section">
+            <form asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <p>Faça o login</p>
+                <div class="form-group">
+                    <input asp-for="Email" class="form-control" placeholder="Email"/>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Senha" class="form-control" placeholder="Senha"/>
+                    <span asp-validation-for="Senha" class="text-danger"></span>
+                </div>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Login">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <div class="form-group">
+                    <input type="submit" value="Entrar" class="btn btn-primary" />
+                    <a class="btn btn-info" asp-area="" asp-controller="Home"
+                    asp-action="Index">Voltar</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 left-section">
+            <h4>Seu passaporte para diversão sem limites começa aqui. Faça o login agora!</h4>
+            <div class="bottom-content">
+                <p><b>Ainda não é cadastrado?</b></p>
+                <p>
+                    <a asp-action="Create" class="text-white">Cadastrar</a>
+                </p>
             </div>
-            <div class="form-group">
-                <label asp-for="Senha" class="control-label"></label>
-                <input asp-for="Senha" class="form-control" />
-                <span asp-validation-for="Senha" class="text-danger"></span>
-            </div>
-
-
-            <div class="form-group">
-                <input type="submit" value="Acessar" class="btn btn-primary" />
-                <a class="btn btn-info" asp-area="" asp-controller="Home"
-                   asp-action="Index">Voltar</a>
-            </div>
-        </form>
-
+        </div>
     </div>
 </div>
 
-
-       
 <h3>@ViewBag.Message</h3>
-   
-
-
 
 @section Scripts {
     @{
