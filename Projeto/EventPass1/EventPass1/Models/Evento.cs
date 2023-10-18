@@ -16,12 +16,14 @@ namespace EventPass1.Models
 
         [Required(ErrorMessage = "Informe a data da realização")]
         [Display(Name = "Data")]
-        [DataType(DataType.Date)] // Anotação para data
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Data { get; set; }
 
         [Required(ErrorMessage = "Informe a data e hora de realização")]
         [Display(Name = "Hora")]
         [DataType(DataType.Time)] // Anotação para hora
+        [DisplayFormat(DataFormatString = "{0:HH:mm:ss}", ApplyFormatInEditMode = true)]
         public DateTime Hora { get; set; }
 
         [Required(ErrorMessage = "Informe o número de ingressos disponíveis")]
