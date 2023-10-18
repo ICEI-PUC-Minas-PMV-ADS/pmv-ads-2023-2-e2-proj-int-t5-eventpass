@@ -30,17 +30,28 @@ namespace EventPass1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdEvento"), 1L, 1);
 
-                    b.Property<int>("GestorId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("dataHora")
+                    b.Property<DateTime>("Data")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("nomeEvento")
+                    b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("totalIngressos")
+                    b.Property<int>("GestorId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Hora")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Local")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NomeEvento")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TotalIngressos")
                         .HasColumnType("int");
 
                     b.HasKey("IdEvento");

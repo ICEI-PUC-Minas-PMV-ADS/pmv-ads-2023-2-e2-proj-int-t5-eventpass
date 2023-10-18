@@ -33,9 +33,12 @@ namespace EventPass1.Migrations
                 {
                     IdEvento = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nomeEvento = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    dataHora = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    totalIngressos = table.Column<int>(type: "int", nullable: false),
+                    NomeEvento = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Data = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Hora = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TotalIngressos = table.Column<int>(type: "int", nullable: false),
+                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Local = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     GestorId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

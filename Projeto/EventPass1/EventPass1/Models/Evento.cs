@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
 
 namespace EventPass1.Models
 {
@@ -12,14 +12,29 @@ namespace EventPass1.Models
 
         [Required(ErrorMessage = "Informe o nome do evento")]
         [Display(Name = "Nome do Evento")]
-        public string nomeEvento { get; set; }
+        public string NomeEvento { get; set; }
+
+        [Required(ErrorMessage = "Informe a data da realização")]
+        [Display(Name = "Data")]
+        [DataType(DataType.Date)] // Anotação para data
+        public DateTime Data { get; set; }
 
         [Required(ErrorMessage = "Informe a data e hora de realização")]
-        [Display(Name = "Data e hora")]
-        public DateTime dataHora { get; set; }
+        [Display(Name = "Hora")]
+        [DataType(DataType.Time)] // Anotação para hora
+        public DateTime Hora { get; set; }
+
         [Required(ErrorMessage = "Informe o número de ingressos disponíveis")]
         [Display(Name = "Total de ingressos")]
-        public int totalIngressos { get; set; }
+        public int TotalIngressos { get; set; }
+
+        [Required(ErrorMessage = "Informe a descrição do evento")]
+        [Display(Name = "Descrição")]
+        public string Descricao { get; set; }
+
+        [Required(ErrorMessage = "Informe o local do evento")]
+        [Display(Name = "Local")]
+        public string Local { get; set; }
 
         [Required(ErrorMessage = "Informe o número do Cnpj ")]
         [Display(Name = "CNPJ")]
@@ -27,8 +42,5 @@ namespace EventPass1.Models
 
         [ForeignKey("GestorId")]
         public Usuario Usuarios { get; set; }
-
-
-
     }
 }
