@@ -32,7 +32,7 @@ namespace EventPass1.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("IdEvento", "nomeEvento", "dataHora", "totalIngressos", "GestorId")] Evento evento)
+        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data","Hora", "TotalIngressos","Descricao","Local", "GestorId")] Evento evento)
         {
             if (ModelState.IsValid)
             {
@@ -61,7 +61,7 @@ namespace EventPass1.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("IdEvento", "nomeEvento", "dataHora", "totalIngressos", "GestorId")] Evento evento)
+        public async Task<IActionResult> Edit(int id, [Bind("IdEvento", "NomeEvento", "Data","Hora", "TotalIngressos","Descricao","Local", "GestorId")] Evento evento)
         {
             if (id != evento.IdEvento)
                 return NotFound();
