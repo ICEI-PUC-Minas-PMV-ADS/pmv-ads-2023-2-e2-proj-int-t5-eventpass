@@ -127,7 +127,7 @@ namespace EventPass1.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF,Tipo")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id,Tipo,NomeUsuario,Email,Senha,ConfirmarSenha,CPF")] Usuario usuario)
         {
             var existingUserByEmail = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
             var existingUserByCPF = await _context.Usuarios.FirstOrDefaultAsync(u => u.CPF == usuario.CPF);
@@ -155,6 +155,7 @@ namespace EventPass1.Controllers
 
 
         // GET: Usuarios/Edit/5
+
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Usuarios == null)
@@ -173,7 +174,7 @@ namespace EventPass1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeUsuario,Email,Senha,ConfirmarSenha,CPF,Tipo")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Tipo,NomeUsuario,Email,Senha,ConfirmarSenha")] Usuario usuario)
         {
             if (id != usuario.Id)
             {
@@ -184,8 +185,18 @@ namespace EventPass1.Controllers
             {
                 try
                 {
+                    
+                    var usuarioOriginal = await _context.Usuarios.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
+                    if (usuarioOriginal == null)
+                    {
+                        return NotFound();
+                    }
+
+                    
                     usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     usuario.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(usuario.ConfirmarSenha);
+                    usuario.CPF = usuarioOriginal.CPF;                  
+
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
@@ -200,10 +211,11 @@ namespace EventPass1.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
             return View(usuario);
         }
+
 
         // GET: Usuarios/Delete/5
         public async Task<IActionResult> Delete(int? id)
