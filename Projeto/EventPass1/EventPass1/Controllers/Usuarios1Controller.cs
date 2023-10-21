@@ -174,7 +174,7 @@ namespace EventPass1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Tipo,NomeUsuario,Email,Senha,ConfirmarSenha")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Tipo,NomeUsuario,Email,Senha,ConfirmarSenha,CPF")] Usuario usuario)
         {
             if (id != usuario.Id)
             {
