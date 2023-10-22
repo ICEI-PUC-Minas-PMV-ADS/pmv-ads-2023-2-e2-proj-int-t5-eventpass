@@ -33,4 +33,4 @@ Para as funcionaliadades propostar foram realizados os <a href="8-Plano de Teste
 
 ## Avaliação
 
-Os testes propostos com as funcionalidades desenvolvidas até o momento obtiveram resultados satisfatórios pois não ocorreram erros durante a execulção do software.
+Os testes realizados nas funcionalidades desenvolvidas até o momento apresentaram resultados satisfatórios, uma vez que não foram observados quaisquer erros durante a execução do software.
