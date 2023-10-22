@@ -14,7 +14,8 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <p>Cadastre-se</p>
                 <div class="form-group">
-                    <select asp-for="Tipo" class="form-control" aria-placeholder="Teste" asp-items="Html.GetEnumSelectList<TipoUsuario>()">
+                    <select asp-for="Tipo" class="form-control" aria-placeholder="Teste"
+                        asp-items="Html.GetEnumSelectList<TipoUsuario>()">
                         <option value="">Selecione o tipo</option>
                     </select>
                     <span asp-validation-for="Tipo" class="text-danger"></span>
@@ -43,8 +44,7 @@
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Cadastrar-se" class="btn btn-primary" />
-                     <a class="btn btn-info" asp-area="" asp-controller="Home"
-                    asp-action="Index">Voltar</a>
+                    <a class="btn btn-info" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
                 </div>
             </form>
         </div>

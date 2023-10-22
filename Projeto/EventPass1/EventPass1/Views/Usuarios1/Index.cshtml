@@ -6,7 +6,6 @@
 
 <h1>Usuários</h1>
 
-
 <table class="table">
     <thead>
         <tr>
@@ -22,7 +21,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.CPF)
             </th>
-            
+
             <th>
                 @Html.DisplayNameFor(model => model.Tipo)
             </th>
@@ -30,22 +29,22 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model) {
         <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NomeUsuario)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-           
+
             <td>
                 @Html.DisplayFor(modelItem => item.CPF)
             </td>
-            
+
             <td>
                 @Html.DisplayFor(modelItem => item.Tipo)
             </td>
@@ -53,6 +52,6 @@
                 <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>

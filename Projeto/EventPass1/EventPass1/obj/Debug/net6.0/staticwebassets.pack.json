@@ -17,12 +17,16 @@
       "PackagePath": "staticwebassets\\css\\style-header.css"
     },
     {
-      "Id": "C:\\Users\\sandr\\OneDrive\\Documentos\\Puc\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\wwwroot\\css\\style-home.css",
-      "PackagePath": "staticwebassets\\css\\style-home.css"
+      "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/css/style-home.css",
+      "PackagePath": "staticwebassets/css/style-home.css"
     },
     {
-      "Id": "C:\\Users\\sandr\\OneDrive\\Documentos\\Puc\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\wwwroot\\css\\style-login.css",
-      "PackagePath": "staticwebassets\\css\\style-login.css"
+      "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/css/style-login.css",
+      "PackagePath": "staticwebassets/css/style-login.css"
+    },
+    {
+      "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/css/style-user.css",
+      "PackagePath": "staticwebassets/css/style-user.css"
     },
     {
       "Id": "C:\\Users\\sandr\\OneDrive\\Documentos\\Puc\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\wwwroot\\favicon.ico",
