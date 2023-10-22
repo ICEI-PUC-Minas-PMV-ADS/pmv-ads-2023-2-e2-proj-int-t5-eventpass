@@ -4,47 +4,212 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Visualizar</h1>
 
-<div>
-    <h4>Usuário</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NomeUsuario)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NomeUsuario)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Guias Verticais</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha384-gDk/ryi8ZpM2iDqAMowXWzsOT2wzU/6lWOSM9VR9iN/MRHMz0bT6aSWtI6k7D3Vhp"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="~/css/style-profile.css" />
+    </head>
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CPF)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CPF)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Tipo)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Tipo)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
-    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model?.Id">Excluir</a> |
-    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
-</div>
+    <body class="profile">
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                    <div class="position-sticky">
+                        <ul class="nav flex-column">
+                            <li class="user-tabs">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="50"
+                                    height="50"
+                                    fill="currentColor"
+                                    class="bi bi-person-circle"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                                    />
+                                </svg>
+                                <p class="user-text">JULIA CHAVES @User.Identity.Name</p>
+                            </li>
+                            <li class="nav-item-tab">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-person-fill"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                    />
+                                </svg>
+                                <a class="nav-link-tab" id="tab2-tab" data-bs-toggle="pill" href="#tab1">MEU PERFIL</a>
+                            </li>
+                            @if (User.IsInRole("Gestor")) {
+                            <li class="nav-item-tab">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-ticket-detailed-fill"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5Zm4 1a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5Zm0 5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5ZM4 8a1 1 0 0 0 1 1h6a1 1 0 1 0 0-2H5a1 1 0 0 0-1 1Z"
+                                    />
+                                </svg>
+                                <a class="nav-link-tab" id="tab3-tab" data-bs-toggle="pill" href="#tab2">
+                                    MEUS EVENTOS
+                                </a>
+                            </li>
+                            <li class="nav-item-tab">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-plus-square-fill"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"
+                                    />
+                                </svg>
+                                <a class="nav-link-tab" id="tab3-tab" data-bs-toggle="pill" href="#tab3">
+                                    CRIAR EVENTO
+                                </a>
+                            </li>
+                            <li class="nav-item-tab">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-house-door-fill"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"
+                                    />
+                                </svg>
+                                <a class="nav-link-tab active" asp-area="" asp-controller="Home" asp-action="Index">
+                                    PÁGINA INICIAL
+                                </a>
+                            </li>
+                            }
+                            <li class="nav-item-tab">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-ticket-detailed-fill"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5Zm4 1a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5Zm0 5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5ZM4 8a1 1 0 0 0 1 1h6a1 1 0 1 0 0-2H5a1 1 0 0 0-1 1Z"
+                                    />
+                                </svg>
+                                <a class="nav-link-tab" id="tab3-tab" data-bs-toggle="pill" href="#tab2">
+                                    MEUS INGRESSOS
+                                </a>
+                            </li>
+                            <li class="nav-item-tab">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-house-door-fill"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"
+                                    />
+                                </svg>
+                                <a class="nav-link-tab active" asp-area="" asp-controller="Home" asp-action="Index">
+                                    PÁGINA INICIAL
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="content-tabs col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <div class="content-container">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="tab1">
+                                <div>
+                                    <h4>DADOS DO CADASTRO</h4>
+                                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
+                                    <hr />
+                                    <dl class="row">
+                                        <dt class="col-sm-2">
+                                            @Html.DisplayNameFor(model => model.Id)
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Html.DisplayFor(model => model.Id)
+                                        </dd>
+                                        <dt class="col-sm-2">
+                                            @Html.DisplayNameFor(model => model.NomeUsuario)
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Html.DisplayFor(model => model.NomeUsuario)
+                                        </dd>
+                                        <dt class="col-sm-2">
+                                            @Html.DisplayNameFor(model => model.Email)
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Html.DisplayFor(model => model.Email)
+                                        </dd>
+
+                                        <dt class="col-sm-2">
+                                            @Html.DisplayNameFor(model => model.CPF)
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Html.DisplayFor(model => model.CPF)
+                                        </dd>
+                                        <dt class="col-sm-2">
+                                            @Html.DisplayNameFor(model => model.Tipo)
+                                        </dt>
+                                        <dd class="col-sm-10">
+                                            @Html.DisplayFor(model => model.Tipo)
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            @if (User.IsInRole("Gestor")) {
+                            <div class="tab-pane fade" id="tab2">
+                                <h2>Meus eventos</h2>
+                            </div>
+                            <div class="tab-pane fade" id="tab3">
+                                <h2>Criar evento</h2>
+                            </div>
+                            }
+                            <div class="tab-pane fade" id="tab2">
+                                <h2>Meus ingressos</h2>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

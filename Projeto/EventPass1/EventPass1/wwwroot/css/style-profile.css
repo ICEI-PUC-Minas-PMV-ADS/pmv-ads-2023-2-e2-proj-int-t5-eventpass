@@ -5,16 +5,15 @@
   display: contents;
 }
 
-.home {
+.profile {
   background-color: #ddd;
 }
 
 .sidebar {
   background-color: #ffffff !important;
-  border-radius: 0 8px 8px 0;
   top: 56px;
   height: calc(100vh - 56px);
-  position: static;
+  position: absolute;
 }
 
 .content-tabs {
@@ -50,6 +49,7 @@ svg {
 
 .nav-item-tab {
   padding: 10px 0;
+  white-space: nowrap;
 }
 
 .nav-link-tab {
