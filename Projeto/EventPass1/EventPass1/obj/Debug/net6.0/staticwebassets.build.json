@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dF4Dncg8OdxciTkp8DKHvq++Y7zBOf0QCAFMCs8Wvqs=",
+  "Hash": "D/1Jk8duzrqyyCj6ZhIxPbob4yuQBqUdMfVNqISP9Vs=",
   "Source": "EventPass1",
   "BasePath": "_content/EventPass1",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/style-login.css"
+    },
+    {
+      "Identity": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/css/style-user.css",
+      "SourceId": "EventPass1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/",
+      "BasePath": "_content/EventPass1",
+      "RelativePath": "css/style-user.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/style-user.css"
     },
     {
       "Identity": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/favicon.ico",

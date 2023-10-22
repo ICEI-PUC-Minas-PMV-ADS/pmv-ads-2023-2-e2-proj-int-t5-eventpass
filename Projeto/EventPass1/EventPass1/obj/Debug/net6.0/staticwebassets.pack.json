@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets/css/style-login.css"
     },
     {
+      "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/css/style-user.css",
+      "PackagePath": "staticwebassets/css/style-user.css"
+    },
+    {
       "Id": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },

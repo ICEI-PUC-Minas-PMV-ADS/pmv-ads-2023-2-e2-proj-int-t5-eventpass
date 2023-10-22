@@ -29,21 +29,20 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Email)
         </dd>
-                
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.CPF)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.CPF)
         </dd>
-       
+
     </dl>
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Deletar" class="btn btn-danger" /> |
-        <a class="btn btn-info" asp-area="" asp-controller="Home"
-           asp-action="Index">Voltar</a>
+        <a class="btn btn-info" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
 
     </form>
 </div>

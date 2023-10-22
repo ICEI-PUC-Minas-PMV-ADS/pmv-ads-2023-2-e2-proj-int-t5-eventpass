@@ -37,7 +37,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.NomeEvento)
@@ -66,6 +66,6 @@
                 <a asp-action="Delete" asp-route-id="@item.IdEvento">Delete</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
