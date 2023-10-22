@@ -9,93 +9,93 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EventPass1
 build_property.RootNamespace = EventPass1
-build_property.ProjectDir = /home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/
+build_property.ProjectDir = c:\Users\pedro\OneDrive\Documentos\GitHub\Eixo 2\Progeto_versão final_2\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass1\EventPass1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = /home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\pedro\OneDrive\Documentos\GitHub\Eixo 2\Progeto_versão final_2\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass1\EventPass1
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnRvcy9DcmVhdGUuY3NodG1s
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnRvcy9EZWxldGUuY3NodG1s
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnRvcy9EZXRhaWxzLmNzaHRtbA==
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnRvcy9FZGl0LmNzaHRtbA==
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnRvcy9JbmRleC5jc2h0bWw=
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Eventos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/footer/footer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL2Zvb3Rlci9mb290ZXIuY3NodG1s
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/footer/footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZvb3Rlclxmb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/header/header.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL2hlYWRlci9oZWFkZXIuY3NodG1s
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/header/header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhlYWRlclxoZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/AcessDenied.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MxL0FjZXNzRGVuaWVkLmNzaHRtbA==
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/AcessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXEFjZXNzRGVuaWVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MxL0NyZWF0ZS5jc2h0bWw=
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MxL0RlbGV0ZS5jc2h0bWw=
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MxL0RldGFpbHMuY3NodG1s
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MxL0VkaXQuY3NodG1s
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MxL0luZGV4LmNzaHRtbA==
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpb3MxL0xvZ2luLmNzaHRtbA==
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Usuarios1/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3MxXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-q79npxjn33
+[c:/Users/pedro/OneDrive/Documentos/GitHub/Eixo 2/Progeto_versão final_2/pmv-ads-2023-2-e2-proj-int-t5-eventpass/Projeto/EventPass1/EventPass1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-hcf99nufsg
