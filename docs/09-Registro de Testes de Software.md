@@ -10,11 +10,13 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |      Login       | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/c15ee9c8-9868-4da4-8a61-41a2d666ca55"> |
 |                  |                                                                                                                                                       |
 |      Teste       |                                                                CT-02 – Tipos de perfil                                                                |
-|      Vídeo       |                                                                    <video src="">                                                                     |
+|   Tipos perfil   | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/bb7a7232-645e-4f54-a7e5-f11628f0d4fb"> |
 |                  |                                                                                                                                                       |
 |      Teste       |                                                               CT-03 – Gerenciar evento                                                                |
-|      Vídeo       |                                                                    <video src="">                                                                     |
-|                  |                                                                                                                                                       |
+|    Cadastrar     | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/11e097ad-5fe7-4d07-8d8e-a90ecd94529e"> |
+|      Editar      | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/40ec09f8-7dd6-46ce-b01c-b2a4bc24da72"> |
+|     Excluir      | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/7e7c5a91-d33c-4ad4-9c73-a2a9a1656a0f"> |
+|                  |
 |      Teste       |                                                               CT-04 – Pesquisar evento                                                                |
 |      Vídeo       |                                                                    <video src="">                                                                     |
 |                  |                                                                                                                                                       |
