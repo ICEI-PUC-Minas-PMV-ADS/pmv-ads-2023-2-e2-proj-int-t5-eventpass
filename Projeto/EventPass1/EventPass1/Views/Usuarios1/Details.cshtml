@@ -192,146 +192,14 @@
                             </div>
                             @if (User.IsInRole("Gestor")) {
                             <div class="tab-pane fade" id="tab2">
-                                <p>
-                                    <a asp-action="Create">Meus Eventos</a>
-                                </p>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.NomeEvento)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Data)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Hora)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.TotalIngressos)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Descricao)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Local)
-                                            </th>
-                                            <th>
-                                                @Html.DisplayNameFor(model => model.Usuarios)
-                                            </th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach (var item in Model) {
-                                        <tr>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.NomeEvento)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Data)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Hora)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.TotalIngressos)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Descricao)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Local)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Usuarios.NomeUsuario)
-                                            </td>
-                                            <td>
-                                                <a
-                                                    class="btn btn-primary"
-                                                    asp-action="Edit"
-                                                    asp-route-id="@item.IdEvento"
-                                                >
-                                                    Editar
-                                                </a>
-                                                |
-                                                <a
-                                                    class="btn btn-info"
-                                                    asp-action="Details"
-                                                    asp-route-id="@item.IdEvento"
-                                                >
-                                                    Detalhes
-                                                </a>
-                                                |
-                                                <a
-                                                    class="btn btn-danger"
-                                                    asp-action="Delete"
-                                                    asp-route-id="@item.IdEvento"
-                                                >
-                                                    Excluir
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        }
-                                    </tbody>
-                                </table>
+                                <h2>Meus eventos (Em desenvolvimento)</h2>
                             </div>
                             <div class="tab-pane fade" id="tab3">
-                                <h4>Evento</h4>
-                                <hr />
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <form asp-action="Create">
-                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                                            <div class="form-group">
-                                                <label asp-for="NomeEvento" class="control-label"></label>
-                                                <input asp-for="NomeEvento" class="form-control" />
-                                                <span asp-validation-for="NomeEvento" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Data" class="control-label"></label>
-                                                <input asp-for="Data" class="form-control" />
-                                                <span asp-validation-for="Data" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Hora" class="control-label"></label>
-                                                <input asp-for="Hora" class="form-control" />
-                                                <span asp-validation-for="Hora" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="TotalIngressos" class="control-label"></label>
-                                                <input asp-for="TotalIngressos" class="form-control" />
-                                                <span asp-validation-for="TotalIngressos" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Descricao" class="control-label"></label>
-                                                <input asp-for="Descricao" class="form-control" />
-                                                <span asp-validation-for="Descricao" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Local" class="control-label"></label>
-                                                <input asp-for="Local" class="form-control" />
-                                                <span asp-validation-for="Local" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="GestorId" class="control-label"></label>
-                                                <select
-                                                    asp-for="GestorId"
-                                                    class="form-control"
-                                                    asp-items="ViewBag.GestorId"
-                                                ></select>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="submit" value="Cadastrar" class="btn btn-primary" />
-                                                <a class="btn btn-info" asp-action="Index">Voltar</a>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                                <h2>Criar evento (Em desenvolvimento)</h2>
                             </div>
                             } else {
                             <div class="tab-pane fade" id="tab2">
-                                <h2>Em desenvolvimento</h2>
+                                <h2>Meus ingressos (Em desenvolvimento)</h2>
                             </div>
                             }
                         </div>
