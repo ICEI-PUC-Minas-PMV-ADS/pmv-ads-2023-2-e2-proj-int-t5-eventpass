@@ -2,7 +2,7 @@
   "dependencies": {
     "mssql1": {
       "restored": true,
-      "restoreTime": "2023-10-10T15:24:42.7827428Z"
+      "restoreTime": "2023-10-22T00:02:16.0382989Z"
     }
   },
   "parameters": {
@@ -14,7 +14,7 @@
     "mssql1.resourceGroupName": {
       "Name": "mssql1.resourceGroupName",
       "Type": "resourceGroup",
-      "Value": "EventPassRG"
+      "Value": "EventPass"
     }
   }
 }
