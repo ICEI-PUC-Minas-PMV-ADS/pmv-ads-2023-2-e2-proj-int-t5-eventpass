@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/EventPass1.csproj": {}
+    "C:\\Users\\sandr\\OneDrive\\Documentos\\Puc\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj": {}
   },
   "projects": {
-    "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/EventPass1.csproj": {
+    "C:\\Users\\sandr\\OneDrive\\Documentos\\Puc\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/EventPass1.csproj",
+        "projectUniqueName": "C:\\Users\\sandr\\OneDrive\\Documentos\\Puc\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj",
         "projectName": "EventPass1",
-        "projectPath": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/EventPass1.csproj",
-        "packagesPath": "/home/jchaves/.nuget/packages/",
-        "outputPath": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/obj/",
+        "projectPath": "C:\\Users\\sandr\\OneDrive\\Documentos\\Puc\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj",
+        "packagesPath": "C:\\Users\\sandr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sandr\\OneDrive\\Documentos\\Puc\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/jchaves/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\sandr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -100,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

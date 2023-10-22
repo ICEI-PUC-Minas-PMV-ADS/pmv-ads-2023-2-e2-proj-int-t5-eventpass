@@ -1,2 +1,13 @@
 **/bin
 **/obj
+*.dll
+*.pdb
+/bin/
+/obj/
+*.cache
+*.csproj.user
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+*.suo
+*.user
+*.sln.docstates
