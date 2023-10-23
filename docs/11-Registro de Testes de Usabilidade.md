@@ -21,6 +21,6 @@ Os testes de usabilidades foram feitos de forma remota e seus resultados estão 
 | **Usuário** 	| **Caso de teste** 	| **Tempo** | **Ações** | **Qtd. Erros** | **Se recuperou do erro** | **Comentários e observações** |
 | --- 	| --- 	| --- | ---  | --- | --- | --- |
 | Usuário 1	 | CT-03	| 00:02:30 | 7  | 0 | --- | Usuário não gostou do fluxo para cadastrar/gerenciar os eventos, achou o menu lateral confuso |
-| Usuário 2 | CT-03 	| 00:02:30 | 7  | 0 | --- | Usuário gostou da experiência de cadastrar/gerenciar seus eventos mas reclamou que a data previamente definida não veio pré preenchida na edição |
+| Usuário 2 | CT-03 	| 00:02:30 | 7  | 0 | --- | Usuário gostou da experiência de cadastrar/gerenciar seus eventos mas reclamou que a data previamente definida não veio pré preenchida na edição|
 | Usuário 3	| CT-03	 | 00:02:30 | 7  | 0 | --- | Usuário achou a experiência de gerenciamento satisfatória de forma geral|
 
