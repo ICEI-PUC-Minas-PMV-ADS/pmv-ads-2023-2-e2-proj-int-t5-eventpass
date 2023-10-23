@@ -13,7 +13,7 @@ Os testes de usabilidades foram feitos de forma remota e seus resultados estão 
 | **Usuário** 	| **Caso de teste** 	| **Tempo** | **Ações** | **Qtd. Erros** | **Se recuperou do erro** | **Comentários e observações** |
 | --- 	| --- 	| --- | ---  | --- | --- | --- |
 | Usuário 1	 | CT-02 	| 00:01:30 | 4  | 0 | --- | Usuário um pouco desatento, realizou o cadastro rápido mas não observou o tipo de perfil no formulário e teve que editar o perfil |
-| Usuário 2 | CT-02 	| 00:01:00 | 4  | 0 | --- | Usuário achou a experiência de cadastro intuitiva, realizando corretamente |
+| Usuário 2 | CT-02 	| 00:01:00 | 4  | 0 | --- | Usuário achou a experiência de cadastro intuitiva e conseguiu realizar corretamente |
 | Usuário 3	| CT-02	 | 00:01:10 | 4 | 0 | --- | Usuário não teve nada a pontuar, achou o processo bem simples |
 
 ### CT-03: Gerenciar evento
