@@ -12,7 +12,7 @@ build_property.RootNamespace = EventPass1
 build_property.ProjectDir = c:\Users\pedro\OneDrive\Documentos\GitHub\Eixo 2\Progeto_versão final_2\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass1\EventPass1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = c:\Users\pedro\OneDrive\Documentos\GitHub\Eixo 2\Progeto_versão final_2\pmv-ads-2023-2-e2-proj-int-t5-eventpass\Projeto\EventPass1\EventPass1
 build_property._RazorSourceGeneratorDebug = 
 
