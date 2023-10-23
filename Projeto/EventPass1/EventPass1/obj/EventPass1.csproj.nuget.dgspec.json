@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/EventPass1.csproj": {}
+    "D:\\Thiago\\silencioEstudo\\faculdade\\2 periodo\\Projeto\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj": {}
   },
   "projects": {
-    "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/EventPass1.csproj": {
+    "D:\\Thiago\\silencioEstudo\\faculdade\\2 periodo\\Projeto\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/EventPass1.csproj",
+        "projectUniqueName": "D:\\Thiago\\silencioEstudo\\faculdade\\2 periodo\\Projeto\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj",
         "projectName": "EventPass1",
-        "projectPath": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/EventPass1.csproj",
-        "packagesPath": "/home/jchaves/.nuget/packages/",
-        "outputPath": "/home/jchaves/Área de Trabalho/Projeto-Eventpass/ads-project-eventpass/Projeto/EventPass1/EventPass1/obj/",
+        "projectPath": "D:\\Thiago\\silencioEstudo\\faculdade\\2 periodo\\Projeto\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\EventPass1.csproj",
+        "packagesPath": "C:\\Users\\Thiago\\.nuget\\packages\\",
+        "outputPath": "D:\\Thiago\\silencioEstudo\\faculdade\\2 periodo\\Projeto\\pmv-ads-2023-2-e2-proj-int-t5-eventpass\\Projeto\\EventPass1\\EventPass1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/jchaves/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Thiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -100,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
