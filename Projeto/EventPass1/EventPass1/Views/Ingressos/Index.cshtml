@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<EventPass1.Models.Ingresso>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Ingressos";
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Reservar</a>
 </p>
 <table class="table">
     <thead>
@@ -15,7 +15,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Quantidade)
             </th>
-            <th>
+            <th>    
                 @Html.DisplayNameFor(model => model.Evento)
             </th>
             <th>
@@ -31,10 +31,10 @@
                 @Html.DisplayFor(modelItem => item.Quantidade)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Evento.Descricao)
+                @Html.DisplayFor(modelItem => item.Evento.NomeEvento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Usuario.CPF)
+                @Html.DisplayFor(modelItem => item.Usuario.NomeUsuario)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
