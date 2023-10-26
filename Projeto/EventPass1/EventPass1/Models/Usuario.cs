@@ -46,6 +46,8 @@ namespace EventPass1.Models
         public string CPF { get; set; }
 
         public ICollection<Evento> Eventos { get; set; }
+        public ICollection<Ingresso> Ingressos { get; set; }
+        
 
     }
 

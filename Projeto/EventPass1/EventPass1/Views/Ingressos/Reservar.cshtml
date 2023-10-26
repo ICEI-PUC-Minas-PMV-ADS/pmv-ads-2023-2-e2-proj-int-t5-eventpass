@@ -1,0 +1,41 @@
+﻿@model EventPass1.Models.Ingresso
+
+@{
+    ViewData["Title"] = "Reservar";
+}
+
+<h1>Reservar</h1>
+
+<h4>Ingresso</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Reservar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EventoId" class="control-label"></label>
+                <select asp-for="EventoId" class ="form-control" asp-items="ViewBag.EventoId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioId" class="control-label"></label>
+                <select asp-for="UsuarioId" class ="form-control" asp-items="ViewBag.UsuarioId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantidade" class="control-label"></label>
+                <input asp-for="Quantidade" class="form-control" />
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

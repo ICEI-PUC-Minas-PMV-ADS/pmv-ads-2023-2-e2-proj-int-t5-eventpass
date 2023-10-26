@@ -52,14 +52,74 @@ namespace EventPass1.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Ingressos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EventoId = table.Column<int>(type: "int", nullable: false),
+                    UsuarioId = table.Column<int>(type: "int", nullable: false),
+                    Quantidade = table.Column<int>(type: "int", nullable: false),
+                    EventoIdEvento = table.Column<int>(type: "int", nullable: true),
+                    UsuarioId1 = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Ingressos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Ingressos_Eventos_EventoId",
+                        column: x => x.EventoId,
+                        principalTable: "Eventos",
+                        principalColumn: "IdEvento");
+                    table.ForeignKey(
+                        name: "FK_Ingressos_Eventos_EventoIdEvento",
+                        column: x => x.EventoIdEvento,
+                        principalTable: "Eventos",
+                        principalColumn: "IdEvento");
+                    table.ForeignKey(
+                        name: "FK_Ingressos_Usuarios_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "Usuarios",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Ingressos_Usuarios_UsuarioId1",
+                        column: x => x.UsuarioId1,
+                        principalTable: "Usuarios",
+                        principalColumn: "Id");
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Eventos_GestorId",
                 table: "Eventos",
                 column: "GestorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ingressos_EventoId",
+                table: "Ingressos",
+                column: "EventoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ingressos_EventoIdEvento",
+                table: "Ingressos",
+                column: "EventoIdEvento");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ingressos_UsuarioId",
+                table: "Ingressos",
+                column: "UsuarioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ingressos_UsuarioId1",
+                table: "Ingressos",
+                column: "UsuarioId1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Ingressos");
+
             migrationBuilder.DropTable(
                 name: "Eventos");
 
