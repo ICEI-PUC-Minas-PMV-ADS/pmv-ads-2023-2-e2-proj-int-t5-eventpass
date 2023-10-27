@@ -13,12 +13,14 @@
         <form asp-action="Reservar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="EventoId" class="control-label"></label>
-                <select asp-for="EventoId" class ="form-control" asp-items="ViewBag.EventoId"></select>
+                <label asp-for="IdEvento" class="control-label"></label>
+                <input asp-for="IdEvento" class="form-control" />
+                <span asp-validation-for="IdEvento" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UsuarioId" class="control-label"></label>
-                <select asp-for="UsuarioId" class ="form-control" asp-items="ViewBag.UsuarioId"></select>
+                <label asp-for="IdUsuario" class="control-label"></label>
+                <input asp-for="IdUsuario" class="form-control" />
+                <span asp-validation-for="IdUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Quantidade" class="control-label"></label>

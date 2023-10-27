@@ -43,7 +43,8 @@ namespace EventPass1.Models
         public int GestorId { get; set; }
 
         [ForeignKey("GestorId")]
-        public Usuario Usuarios { get; set; }
+        public Usuario Usuario { get; set; }
         public ICollection<Ingresso> Ingressos { get; set; }
     }
 }
+''

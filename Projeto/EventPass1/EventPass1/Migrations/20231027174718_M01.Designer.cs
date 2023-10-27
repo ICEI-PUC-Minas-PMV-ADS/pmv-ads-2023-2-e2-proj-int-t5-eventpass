@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventPass1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231026144425_M10")]
-    partial class M10
+    [Migration("20231027174718_M01")]
+    partial class M01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,43 +60,45 @@ namespace EventPass1.Migrations
 
                     b.HasIndex("GestorId");
 
-                    b.ToTable("Eventos");
+                    b.ToTable("Evento");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Ingresso", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("EventoId")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
 
                     b.Property<int?>("EventoIdEvento")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdEvento")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdUsuario")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UsuarioId1")
+                    b.Property<int?>("UsuarioId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EventoId");
-
                     b.HasIndex("EventoIdEvento");
+
+                    b.HasIndex("IdEvento");
+
+                    b.HasIndex("IdUsuario");
 
                     b.HasIndex("UsuarioId");
 
-                    b.HasIndex("UsuarioId1");
-
-                    b.ToTable("Ingressos");
+                    b.ToTable("Ingresso");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Usuario", b =>
@@ -132,13 +134,13 @@ namespace EventPass1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Evento", b =>
                 {
                     b.HasOne("EventPass1.Models.Usuario", "Usuarios")
-                        .WithMany("Eventos")
+                        .WithMany("Evento")
                         .HasForeignKey("GestorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -148,25 +150,25 @@ namespace EventPass1.Migrations
 
             modelBuilder.Entity("EventPass1.Models.Ingresso", b =>
                 {
-                    b.HasOne("EventPass1.Models.Evento", "Evento")
-                        .WithMany()
-                        .HasForeignKey("EventoId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
                     b.HasOne("EventPass1.Models.Evento", null)
                         .WithMany("Ingressos")
                         .HasForeignKey("EventoIdEvento");
 
+                    b.HasOne("EventPass1.Models.Evento", "Evento")
+                        .WithMany()
+                        .HasForeignKey("IdEvento")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("EventPass1.Models.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId")
+                        .HasForeignKey("IdUsuario")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("EventPass1.Models.Usuario", null)
-                        .WithMany("Ingressos")
-                        .HasForeignKey("UsuarioId1");
+                        .WithMany("Ingresso")
+                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("Evento");
 
@@ -180,9 +182,9 @@ namespace EventPass1.Migrations
 
             modelBuilder.Entity("EventPass1.Models.Usuario", b =>
                 {
-                    b.Navigation("Eventos");
+                    b.Navigation("Evento");
 
-                    b.Navigation("Ingressos");
+                    b.Navigation("Ingresso");
                 });
 #pragma warning restore 612, 618
         }

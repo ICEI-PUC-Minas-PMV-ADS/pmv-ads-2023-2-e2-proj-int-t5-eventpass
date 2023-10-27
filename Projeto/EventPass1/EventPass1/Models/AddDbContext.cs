@@ -19,14 +19,15 @@ namespace EventPass1.Models
             modelBuilder.Entity<Ingresso>()
                 .HasOne(i => i.Evento)
                 .WithMany()
-                .HasForeignKey(i => i.EventoId)
+                .HasForeignKey(i => i.IdEvento)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Ingresso>()
                 .HasOne(i => i.Usuario)
                 .WithMany()
-                .HasForeignKey(i => i.UsuarioId)
+                .HasForeignKey(i => i.IdUsuario)
                 .OnDelete(DeleteBehavior.NoAction);
         }
+
     }
 }

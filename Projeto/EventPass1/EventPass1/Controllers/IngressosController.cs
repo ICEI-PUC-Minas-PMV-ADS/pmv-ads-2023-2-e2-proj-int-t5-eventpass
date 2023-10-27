@@ -21,37 +21,39 @@ namespace EventPass1.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Ingressos.ToListAsync());
+            var ingressos = await _context.Ingressos
+            .Include(i => i.Evento)
+            .Include(i => i.Usuario)
+            .ToListAsync();
+
+            return View(ingressos);
         }
         public IActionResult Reservar()
 
         {
-            ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "IdEvento");
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "NomeUsuario");
+            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "Id", "IdUsuario");
             return View();
-            
+
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> Reservar([Bind("IdEvento", "UsuarioId", "Quantidade")] Ingresso ingresso)
+        public async Task<IActionResult> Reservar([Bind("IdEvento","IdUsuario","Quantidade")] Ingresso ingresso)
         {
-           
             if (ModelState.IsValid)
             {
+                
+                
                 _context.Ingressos.Add(ingresso);
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "IdEvento");
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "NomeUsuario", ingresso.UsuarioId);
+
+            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "Id", "NomeUsuario", ingresso.IdUsuario);
+
 
             return View(ingresso);
-
-
-            
         }
-
-
     }
 }

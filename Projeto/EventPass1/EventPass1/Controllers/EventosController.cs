@@ -21,7 +21,7 @@ namespace EventPass1.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Eventos.Include(c => c.Usuarios);
+            var appDbContext = _context.Eventos.Include(c => c.Usuario);
             return View(await appDbContext.ToListAsync());
         }
 

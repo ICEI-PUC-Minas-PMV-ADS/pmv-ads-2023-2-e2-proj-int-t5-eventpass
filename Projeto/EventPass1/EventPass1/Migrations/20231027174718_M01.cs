@@ -10,7 +10,7 @@ namespace EventPass1.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Usuarios",
+                name: "Usuario",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -24,11 +24,11 @@ namespace EventPass1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuarios", x => x.Id);
+                    table.PrimaryKey("PK_Usuario", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Eventos",
+                name: "Evento",
                 columns: table => new
                 {
                     IdEvento = table.Column<int>(type: "int", nullable: false)
@@ -43,88 +43,88 @@ namespace EventPass1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Eventos", x => x.IdEvento);
+                    table.PrimaryKey("PK_Evento", x => x.IdEvento);
                     table.ForeignKey(
-                        name: "FK_Eventos_Usuarios_GestorId",
+                        name: "FK_Evento_Usuario_GestorId",
                         column: x => x.GestorId,
-                        principalTable: "Usuarios",
+                        principalTable: "Usuario",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Ingressos",
+                name: "Ingresso",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    EventoId = table.Column<int>(type: "int", nullable: false),
-                    UsuarioId = table.Column<int>(type: "int", nullable: false),
+                    IdEvento = table.Column<int>(type: "int", nullable: false),
+                    IdUsuario = table.Column<int>(type: "int", nullable: false),
                     Quantidade = table.Column<int>(type: "int", nullable: false),
                     EventoIdEvento = table.Column<int>(type: "int", nullable: true),
-                    UsuarioId1 = table.Column<int>(type: "int", nullable: true)
+                    UsuarioId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Ingressos", x => x.Id);
+                    table.PrimaryKey("PK_Ingresso", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Ingressos_Eventos_EventoId",
-                        column: x => x.EventoId,
-                        principalTable: "Eventos",
-                        principalColumn: "IdEvento");
-                    table.ForeignKey(
-                        name: "FK_Ingressos_Eventos_EventoIdEvento",
+                        name: "FK_Ingresso_Evento_EventoIdEvento",
                         column: x => x.EventoIdEvento,
-                        principalTable: "Eventos",
+                        principalTable: "Evento",
                         principalColumn: "IdEvento");
                     table.ForeignKey(
-                        name: "FK_Ingressos_Usuarios_UsuarioId",
-                        column: x => x.UsuarioId,
-                        principalTable: "Usuarios",
+                        name: "FK_Ingresso_Evento_IdEvento",
+                        column: x => x.IdEvento,
+                        principalTable: "Evento",
+                        principalColumn: "IdEvento");
+                    table.ForeignKey(
+                        name: "FK_Ingresso_Usuario_IdUsuario",
+                        column: x => x.IdUsuario,
+                        principalTable: "Usuario",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Ingressos_Usuarios_UsuarioId1",
-                        column: x => x.UsuarioId1,
-                        principalTable: "Usuarios",
+                        name: "FK_Ingresso_Usuario_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "Usuario",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Eventos_GestorId",
-                table: "Eventos",
+                name: "IX_Evento_GestorId",
+                table: "Evento",
                 column: "GestorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ingressos_EventoId",
-                table: "Ingressos",
-                column: "EventoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Ingressos_EventoIdEvento",
-                table: "Ingressos",
+                name: "IX_Ingresso_EventoIdEvento",
+                table: "Ingresso",
                 column: "EventoIdEvento");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ingressos_UsuarioId",
-                table: "Ingressos",
-                column: "UsuarioId");
+                name: "IX_Ingresso_IdEvento",
+                table: "Ingresso",
+                column: "IdEvento");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ingressos_UsuarioId1",
-                table: "Ingressos",
-                column: "UsuarioId1");
+                name: "IX_Ingresso_IdUsuario",
+                table: "Ingresso",
+                column: "IdUsuario");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ingresso_UsuarioId",
+                table: "Ingresso",
+                column: "UsuarioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Ingressos");
+                name: "Ingresso");
 
             migrationBuilder.DropTable(
-                name: "Eventos");
+                name: "Evento");
 
             migrationBuilder.DropTable(
-                name: "Usuarios");
+                name: "Usuario");
         }
     }
 }
