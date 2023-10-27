@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventPass1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231026184526_M04")]
-    partial class M04
+    [Migration("20231027174718_M01")]
+    partial class M01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,7 +60,7 @@ namespace EventPass1.Migrations
 
                     b.HasIndex("GestorId");
 
-                    b.ToTable("Eventos");
+                    b.ToTable("Evento");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Ingresso", b =>
@@ -98,7 +98,7 @@ namespace EventPass1.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Ingressos");
+                    b.ToTable("Ingresso");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Usuario", b =>
@@ -134,13 +134,13 @@ namespace EventPass1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Evento", b =>
                 {
                     b.HasOne("EventPass1.Models.Usuario", "Usuarios")
-                        .WithMany("Eventos")
+                        .WithMany("Evento")
                         .HasForeignKey("GestorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -167,7 +167,7 @@ namespace EventPass1.Migrations
                         .IsRequired();
 
                     b.HasOne("EventPass1.Models.Usuario", null)
-                        .WithMany("Ingressos")
+                        .WithMany("Ingresso")
                         .HasForeignKey("UsuarioId");
 
                     b.Navigation("Evento");
@@ -182,9 +182,9 @@ namespace EventPass1.Migrations
 
             modelBuilder.Entity("EventPass1.Models.Usuario", b =>
                 {
-                    b.Navigation("Eventos");
+                    b.Navigation("Evento");
 
-                    b.Navigation("Ingressos");
+                    b.Navigation("Ingresso");
                 });
 #pragma warning restore 612, 618
         }
