@@ -50,8 +50,5 @@ namespace EventPass1.Models
         
 
     }
-
-
-    '
 }
 

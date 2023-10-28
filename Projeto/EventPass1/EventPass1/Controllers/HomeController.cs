@@ -7,10 +7,12 @@ namespace EventPass1.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -27,6 +29,19 @@ namespace EventPass1.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Pesquisar(string textoBusca)
+        {
+            if (!string.IsNullOrEmpty(textoBusca))
+            {
+                var resultado = _context.Eventos
+                .Where(registro => registro.NomeEvento.Contains(textoBusca))
+                .ToList();
+
+                return View(resultado);
+            }
+            return View();
         }
     }
 }

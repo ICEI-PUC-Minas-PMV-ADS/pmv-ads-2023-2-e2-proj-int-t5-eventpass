@@ -47,4 +47,3 @@ namespace EventPass1.Models
         public ICollection<Ingresso> Ingressos { get; set; }
     }
 }
-''
