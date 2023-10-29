@@ -38,8 +38,8 @@ namespace EventPass1.Models
         [Display(Name = "Local")]
         public string Local { get; set; }
 
-        [Required(ErrorMessage = "Informe o número do Cnpj ")]
-        [Display(Name = "CNPJ")]
+        [Required(ErrorMessage = "Informe o nome do Gestor ")]
+        [Display(Name = "Gestor")]
         public int GestorId { get; set; }
 
         [ForeignKey("GestorId")]
@@ -47,4 +47,3 @@ namespace EventPass1.Models
         public ICollection<Ingresso> Ingressos { get; set; }
     }
 }
-''

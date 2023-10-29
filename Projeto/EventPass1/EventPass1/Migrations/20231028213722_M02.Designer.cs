@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventPass1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231027174718_M01")]
-    partial class M01
+    [Migration("20231028213722_M02")]
+    partial class M02
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,7 +60,7 @@ namespace EventPass1.Migrations
 
                     b.HasIndex("GestorId");
 
-                    b.ToTable("Evento");
+                    b.ToTable("Eventos");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Ingresso", b =>
@@ -98,7 +98,7 @@ namespace EventPass1.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Ingresso");
+                    b.ToTable("Ingressos");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Usuario", b =>
@@ -134,18 +134,18 @@ namespace EventPass1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Evento", b =>
                 {
-                    b.HasOne("EventPass1.Models.Usuario", "Usuarios")
-                        .WithMany("Evento")
+                    b.HasOne("EventPass1.Models.Usuario", "Usuario")
+                        .WithMany("Eventos")
                         .HasForeignKey("GestorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Usuarios");
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Ingresso", b =>
@@ -167,7 +167,7 @@ namespace EventPass1.Migrations
                         .IsRequired();
 
                     b.HasOne("EventPass1.Models.Usuario", null)
-                        .WithMany("Ingresso")
+                        .WithMany("Ingressos")
                         .HasForeignKey("UsuarioId");
 
                     b.Navigation("Evento");
@@ -182,9 +182,9 @@ namespace EventPass1.Migrations
 
             modelBuilder.Entity("EventPass1.Models.Usuario", b =>
                 {
-                    b.Navigation("Evento");
+                    b.Navigation("Eventos");
 
-                    b.Navigation("Ingresso");
+                    b.Navigation("Ingressos");
                 });
 #pragma warning restore 612, 618
         }

@@ -10,7 +10,7 @@ namespace EventPass1.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Usuario",
+                name: "Usuarios",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -24,11 +24,11 @@ namespace EventPass1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuario", x => x.Id);
+                    table.PrimaryKey("PK_Usuarios", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Evento",
+                name: "Eventos",
                 columns: table => new
                 {
                     IdEvento = table.Column<int>(type: "int", nullable: false)
@@ -43,17 +43,17 @@ namespace EventPass1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Evento", x => x.IdEvento);
+                    table.PrimaryKey("PK_Eventos", x => x.IdEvento);
                     table.ForeignKey(
-                        name: "FK_Evento_Usuario_GestorId",
+                        name: "FK_Eventos_Usuarios_GestorId",
                         column: x => x.GestorId,
-                        principalTable: "Usuario",
+                        principalTable: "Usuarios",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Ingresso",
+                name: "Ingressos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -66,65 +66,65 @@ namespace EventPass1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Ingresso", x => x.Id);
+                    table.PrimaryKey("PK_Ingressos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Ingresso_Evento_EventoIdEvento",
+                        name: "FK_Ingressos_Eventos_EventoIdEvento",
                         column: x => x.EventoIdEvento,
-                        principalTable: "Evento",
+                        principalTable: "Eventos",
                         principalColumn: "IdEvento");
                     table.ForeignKey(
-                        name: "FK_Ingresso_Evento_IdEvento",
+                        name: "FK_Ingressos_Eventos_IdEvento",
                         column: x => x.IdEvento,
-                        principalTable: "Evento",
+                        principalTable: "Eventos",
                         principalColumn: "IdEvento");
                     table.ForeignKey(
-                        name: "FK_Ingresso_Usuario_IdUsuario",
+                        name: "FK_Ingressos_Usuarios_IdUsuario",
                         column: x => x.IdUsuario,
-                        principalTable: "Usuario",
+                        principalTable: "Usuarios",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Ingresso_Usuario_UsuarioId",
+                        name: "FK_Ingressos_Usuarios_UsuarioId",
                         column: x => x.UsuarioId,
-                        principalTable: "Usuario",
+                        principalTable: "Usuarios",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Evento_GestorId",
-                table: "Evento",
+                name: "IX_Eventos_GestorId",
+                table: "Eventos",
                 column: "GestorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ingresso_EventoIdEvento",
-                table: "Ingresso",
+                name: "IX_Ingressos_EventoIdEvento",
+                table: "Ingressos",
                 column: "EventoIdEvento");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ingresso_IdEvento",
-                table: "Ingresso",
+                name: "IX_Ingressos_IdEvento",
+                table: "Ingressos",
                 column: "IdEvento");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ingresso_IdUsuario",
-                table: "Ingresso",
+                name: "IX_Ingressos_IdUsuario",
+                table: "Ingressos",
                 column: "IdUsuario");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ingresso_UsuarioId",
-                table: "Ingresso",
+                name: "IX_Ingressos_UsuarioId",
+                table: "Ingressos",
                 column: "UsuarioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Ingresso");
+                name: "Ingressos");
 
             migrationBuilder.DropTable(
-                name: "Evento");
+                name: "Eventos");
 
             migrationBuilder.DropTable(
-                name: "Usuario");
+                name: "Usuarios");
         }
     }
 }
