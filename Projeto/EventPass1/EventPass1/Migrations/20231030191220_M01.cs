@@ -60,44 +60,29 @@ namespace EventPass1.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdEvento = table.Column<int>(type: "int", nullable: false),
                     IdUsuario = table.Column<int>(type: "int", nullable: false),
-                    Quantidade = table.Column<int>(type: "int", nullable: false),
-                    EventoIdEvento = table.Column<int>(type: "int", nullable: true),
-                    UsuarioId = table.Column<int>(type: "int", nullable: true)
+                    Quantidade = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Ingressos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Ingressos_Eventos_EventoIdEvento",
-                        column: x => x.EventoIdEvento,
-                        principalTable: "Eventos",
-                        principalColumn: "IdEvento");
-                    table.ForeignKey(
                         name: "FK_Ingressos_Eventos_IdEvento",
                         column: x => x.IdEvento,
                         principalTable: "Eventos",
-                        principalColumn: "IdEvento");
+                        principalColumn: "IdEvento",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Ingressos_Usuarios_IdUsuario",
                         column: x => x.IdUsuario,
                         principalTable: "Usuarios",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Ingressos_Usuarios_UsuarioId",
-                        column: x => x.UsuarioId,
-                        principalTable: "Usuarios",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Eventos_GestorId",
                 table: "Eventos",
                 column: "GestorId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Ingressos_EventoIdEvento",
-                table: "Ingressos",
-                column: "EventoIdEvento");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Ingressos_IdEvento",
@@ -108,11 +93,6 @@ namespace EventPass1.Migrations
                 name: "IX_Ingressos_IdUsuario",
                 table: "Ingressos",
                 column: "IdUsuario");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Ingressos_UsuarioId",
-                table: "Ingressos",
-                column: "UsuarioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

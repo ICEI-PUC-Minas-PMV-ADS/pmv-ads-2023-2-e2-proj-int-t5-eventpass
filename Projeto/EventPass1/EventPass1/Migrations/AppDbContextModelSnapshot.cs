@@ -69,9 +69,6 @@ namespace EventPass1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
 
-                    b.Property<int?>("EventoIdEvento")
-                        .HasColumnType("int");
-
                     b.Property<int?>("IdEvento")
                         .IsRequired()
                         .HasColumnType("int");
@@ -83,18 +80,11 @@ namespace EventPass1.Migrations
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UsuarioId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("EventoIdEvento");
 
                     b.HasIndex("IdEvento");
 
                     b.HasIndex("IdUsuario");
-
-                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Ingressos");
                 });
@@ -148,25 +138,17 @@ namespace EventPass1.Migrations
 
             modelBuilder.Entity("EventPass1.Models.Ingresso", b =>
                 {
-                    b.HasOne("EventPass1.Models.Evento", null)
-                        .WithMany("Ingressos")
-                        .HasForeignKey("EventoIdEvento");
-
                     b.HasOne("EventPass1.Models.Evento", "Evento")
-                        .WithMany()
+                        .WithMany("Ingressos")
                         .HasForeignKey("IdEvento")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EventPass1.Models.Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("IdUsuario")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("EventPass1.Models.Usuario", null)
                         .WithMany("Ingressos")
-                        .HasForeignKey("UsuarioId");
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Evento");
 

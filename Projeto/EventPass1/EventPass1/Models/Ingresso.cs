@@ -22,12 +22,10 @@ namespace EventPass1.Models
         [Display(Name = "Numero de ingressos")]
         public int Quantidade { get; set; }
 
-        [ForeignKey("IdEvento")]
-        [OnDelete(DeleteBehavior.NoAction)]
+        
         public Evento Evento { get; set; }
 
-        [ForeignKey("IdUsuario")]
-        [OnDelete(DeleteBehavior.NoAction)]
+        
         public Usuario Usuario { get; set; }
 
     }
