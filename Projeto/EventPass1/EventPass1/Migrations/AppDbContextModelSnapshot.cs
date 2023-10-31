@@ -58,7 +58,7 @@ namespace EventPass1.Migrations
 
                     b.HasIndex("GestorId");
 
-                    b.ToTable("Evento");
+                    b.ToTable("Eventos");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Ingresso", b =>
@@ -68,9 +68,6 @@ namespace EventPass1.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
-
-                    b.Property<int?>("EventoIdEvento")
-                        .HasColumnType("int");
 
                     b.Property<int?>("IdEvento")
                         .IsRequired()
@@ -83,20 +80,13 @@ namespace EventPass1.Migrations
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UsuarioId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("EventoIdEvento");
 
                     b.HasIndex("IdEvento");
 
                     b.HasIndex("IdUsuario");
 
-                    b.HasIndex("UsuarioId");
-
-                    b.ToTable("Ingresso");
+                    b.ToTable("Ingressos");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Usuario", b =>
@@ -132,41 +122,33 @@ namespace EventPass1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Evento", b =>
                 {
-                    b.HasOne("EventPass1.Models.Usuario", "Usuarios")
-                        .WithMany("Evento")
+                    b.HasOne("EventPass1.Models.Usuario", "Usuario")
+                        .WithMany("Eventos")
                         .HasForeignKey("GestorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Usuarios");
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("EventPass1.Models.Ingresso", b =>
                 {
-                    b.HasOne("EventPass1.Models.Evento", null)
-                        .WithMany("Ingressos")
-                        .HasForeignKey("EventoIdEvento");
-
                     b.HasOne("EventPass1.Models.Evento", "Evento")
-                        .WithMany()
+                        .WithMany("Ingressos")
                         .HasForeignKey("IdEvento")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EventPass1.Models.Usuario", "Usuario")
-                        .WithMany()
+                        .WithMany("Ingressos")
                         .HasForeignKey("IdUsuario")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("EventPass1.Models.Usuario", null)
-                        .WithMany("Ingresso")
-                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("Evento");
 
@@ -180,9 +162,9 @@ namespace EventPass1.Migrations
 
             modelBuilder.Entity("EventPass1.Models.Usuario", b =>
                 {
-                    b.Navigation("Evento");
+                    b.Navigation("Eventos");
 
-                    b.Navigation("Ingresso");
+                    b.Navigation("Ingressos");
                 });
 #pragma warning restore 612, 618
         }

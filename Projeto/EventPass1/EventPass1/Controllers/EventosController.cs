@@ -27,7 +27,7 @@ namespace EventPass1.Controllers
 
         public IActionResult Create()
         {
-            ViewData["GestorId"] = new SelectList(_context.Usuarios, "Id", "CPF");
+            ViewData["GestorId"] = new SelectList(_context.Usuarios, "Id", "NomeUsuario");
             return View();
         }
 

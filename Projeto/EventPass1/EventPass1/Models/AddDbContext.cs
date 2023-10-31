@@ -18,15 +18,22 @@ namespace EventPass1.Models
 
             modelBuilder.Entity<Ingresso>()
                 .HasOne(i => i.Evento)
-                .WithMany()
+                .WithMany(i => i.Ingressos)
                 .HasForeignKey(i => i.IdEvento)
-                .OnDelete(DeleteBehavior.NoAction);
+                .IsRequired();
 
             modelBuilder.Entity<Ingresso>()
                 .HasOne(i => i.Usuario)
-                .WithMany()
+                .WithMany(i => i.Ingressos)
                 .HasForeignKey(i => i.IdUsuario)
-                .OnDelete(DeleteBehavior.NoAction);
+                .IsRequired();
+
+            modelBuilder.Entity<Evento>()
+               .HasOne(e => e.Usuario)
+               .WithMany(u => u.Eventos)
+               .HasForeignKey(e => e.GestorId)
+               .IsRequired();
+            base.OnModelCreating(modelBuilder);
         }
 
     }

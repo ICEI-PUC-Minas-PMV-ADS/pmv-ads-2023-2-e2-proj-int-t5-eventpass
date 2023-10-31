@@ -11,22 +11,21 @@ namespace EventPass1.Models
         public int? Id { get; set; }
 
         [Required]
-       [ Display(Name = "Numero do Evento")]
+       [ Display(Name = "Nome do Evento")]
         public int? IdEvento { get; set; }
 
         [Required]
-        [Display(Name = "Numero usuario")]
+        [Display(Name = "Nome do usuario")]
         public int? IdUsuario{ get; set; }
 
         [Required]
+        [Display(Name = "Numero de ingressos")]
         public int Quantidade { get; set; }
 
-        [ForeignKey("IdEvento")]
-        [OnDelete(DeleteBehavior.NoAction)]
+        
         public Evento Evento { get; set; }
 
-        [ForeignKey("IdUsuario")]
-        [OnDelete(DeleteBehavior.NoAction)]
+        
         public Usuario Usuario { get; set; }
 
     }
