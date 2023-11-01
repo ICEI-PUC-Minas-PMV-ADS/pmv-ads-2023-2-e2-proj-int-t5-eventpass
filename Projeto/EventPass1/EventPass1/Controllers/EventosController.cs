@@ -31,12 +31,17 @@ namespace EventPass1.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local", "GestorId")] Evento evento)
+        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local")] Evento evento)
         {
             if (ModelState.IsValid)
             {
+                var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                
+                evento.GestorId = userId;
+
                 _context.Eventos.Add(evento);
                 await _context.SaveChangesAsync();
+
 
                 for (int i = 1; i <= evento.TotalIngressos; i++)
                 {

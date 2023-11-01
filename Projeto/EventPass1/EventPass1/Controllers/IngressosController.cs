@@ -20,19 +20,21 @@ namespace EventPass1.Controllers
         {
             _context = context;
         }
+
+
         public async Task<IActionResult> Index()
         {
-            var ingressos = _context.Ingressos
-            .Include(i => i.Evento)
-            .Include(i => i.Usuario);
+            var ingressos = _context.Ingressos.Include(i => i.Evento)
+                                              .Include(i => i.Usuario).ToList();
 
+            var primeiroIngressoDisponivel = _context.Ingressos
+                .FirstOrDefault(i => i.Status == 0);
 
-            return View(await ingressos.ToListAsync());
+            return View(primeiroIngressoDisponivel);
         }
 
 
 
-       
 
         public async Task<IActionResult> Edit(int? id)
         {
@@ -66,7 +68,7 @@ namespace EventPass1.Controllers
                     .Where(i => i.IdEvento == ingresso.IdEvento && i.IdUsuario == ingresso.IdUsuario && i.Id != id)
                     .Sum(i => i.Quantidade);
                 var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-                Console.WriteLine(userId);
+               
                 if (ingressosReservados + ingresso.Quantidade <= 3)
                 {
                     existingIngresso.IdEvento = ingresso.IdEvento;
@@ -77,7 +79,7 @@ namespace EventPass1.Controllers
                     _context.Ingressos.Update(existingIngresso);
                     await _context.SaveChangesAsync();
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {

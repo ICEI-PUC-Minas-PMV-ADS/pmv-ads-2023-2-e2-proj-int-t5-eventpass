@@ -1,8 +1,4 @@
-﻿@model IEnumerable<EventPass1.Models.Ingresso>
-
-@{
-    ViewData["Title"] = "Index";
-}
+﻿@model EventPass1.Models.Ingresso
 
 <h1>Ingressos</h1>
 
@@ -10,36 +6,31 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Quantidade)
+                Quantidade
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Evento)
+                Evento
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Usuario)
+                Usuario
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quantidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Evento.NomeEvento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usuario.NomeUsuario)
-                </td>
-                <td>
-                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Retirar</a>
-                   
-
-                </td>
-            </tr>
-        }
+        <tr>
+            <td>
+                @Model.Quantidade
+            </td>
+            <td>
+                @Model.Evento.NomeEvento
+            </td>
+            <td>
+                @Model.Usuario.NomeUsuario
+            </td>
+            <td>
+                <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model.Id">Retirar ingresso</a>
+                
+            </td>
+        </tr>
     </tbody>
 </table>
