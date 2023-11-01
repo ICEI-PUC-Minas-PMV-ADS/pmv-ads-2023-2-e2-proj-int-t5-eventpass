@@ -30,13 +30,26 @@ namespace EventPass1.Controllers
             ViewData["GestorId"] = new SelectList(_context.Usuarios, "Id", "NomeUsuario");
             return View();
         }
-
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data","Hora", "TotalIngressos","Descricao","Local", "GestorId")] Evento evento)
+        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local", "GestorId")] Evento evento)
         {
             if (ModelState.IsValid)
             {
                 _context.Eventos.Add(evento);
+                await _context.SaveChangesAsync();
+
+                for (int i = 1; i <= evento.TotalIngressos; i++)
+                {
+                    Ingresso ingresso = new Ingresso
+                    {
+                        IdEvento = evento.IdEvento,
+                        IdUsuario = evento.GestorId,
+                        Status = 0,
+                        Quantidade = 0
+                    };
+                    _context.Ingressos.Add(ingresso);
+                }
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
@@ -44,7 +57,7 @@ namespace EventPass1.Controllers
 
             return View(evento);
         }
-
+       
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)

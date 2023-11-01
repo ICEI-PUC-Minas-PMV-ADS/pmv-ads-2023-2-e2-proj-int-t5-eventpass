@@ -16,7 +16,9 @@ namespace EventPass1.Models
 
         [Required]
         [Display(Name = "Nome do usuario")]
-        public int? IdUsuario{ get; set; }
+        public int IdUsuario{ get; set; }
+
+        public int Status { get; set; }
 
         [Required]
         [Display(Name = "Numero de ingressos")]

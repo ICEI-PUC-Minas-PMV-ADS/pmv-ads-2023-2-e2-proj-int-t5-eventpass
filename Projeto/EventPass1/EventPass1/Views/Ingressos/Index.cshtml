@@ -6,9 +6,6 @@
 
 <h1>Ingressos</h1>
 
-<p>
-    <a asp-action="Reservar">Reservar</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -38,8 +35,8 @@
                     @Html.DisplayFor(modelItem => item.Usuario.NomeUsuario)
                 </td>
                 <td>
-                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Retirar</a>
+                   
 
                 </td>
             </tr>

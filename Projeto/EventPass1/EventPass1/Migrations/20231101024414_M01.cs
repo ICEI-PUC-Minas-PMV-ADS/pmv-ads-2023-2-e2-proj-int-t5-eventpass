@@ -60,6 +60,7 @@ namespace EventPass1.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdEvento = table.Column<int>(type: "int", nullable: false),
                     IdUsuario = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
                     Quantidade = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

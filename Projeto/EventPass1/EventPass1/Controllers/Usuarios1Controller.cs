@@ -60,7 +60,7 @@ namespace EventPass1.Controllers
                 var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, dados.NomeUsuario),
-            new Claim(ClaimTypes.NameIdentifier, dados.Email.ToString()),
+            new Claim(ClaimTypes.NameIdentifier, dados.Id.ToString()),
             new Claim(ClaimTypes.Role, dados.Tipo.ToString()),
         };
 
@@ -95,7 +95,7 @@ namespace EventPass1.Controllers
        
 
         // GET: Usuarios/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null || _context.Usuarios == null)
             {
@@ -103,7 +103,7 @@ namespace EventPass1.Controllers
             }
 
             var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Email == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
 
             if (usuario == null)
             {
