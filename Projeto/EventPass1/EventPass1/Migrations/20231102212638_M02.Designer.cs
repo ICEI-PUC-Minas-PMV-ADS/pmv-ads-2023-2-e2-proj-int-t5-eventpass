@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventPass1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231101144146_M18")]
-    partial class M18
+    [Migration("20231102212638_M02")]
+    partial class M02
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -75,8 +75,7 @@ namespace EventPass1.Migrations
                         .IsRequired()
                         .HasColumnType("int");
 
-                    b.Property<int?>("IdUsuario")
-                        .IsRequired()
+                    b.Property<int>("IdUsuario")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantidade")

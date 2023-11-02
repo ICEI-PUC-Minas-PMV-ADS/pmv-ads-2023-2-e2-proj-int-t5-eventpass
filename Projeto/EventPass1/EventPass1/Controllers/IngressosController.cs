@@ -20,19 +20,18 @@ namespace EventPass1.Controllers
         {
             _context = context;
         }
-
-
         public async Task<IActionResult> Index()
         {
-            var ingressos = _context.Ingressos.Include(i => i.Evento)
-                                              .Include(i => i.Usuario).ToList();
+            var ingressos = _context.Ingressos
+                .Include(i => i.Evento)
+                .Include(i => i.Usuario)
+                .Where(i => i.Status == 0)
+                .GroupBy(i => i.IdEvento)
+                .Select(group => group.OrderBy(i => i.Id).First())
+                .ToList();
 
-            var primeiroIngressoDisponivel = _context.Ingressos
-                .FirstOrDefault(i => i.Status == 0);
-
-            return View(primeiroIngressoDisponivel);
+            return View(ingressos);
         }
-
 
 
 
@@ -46,7 +45,7 @@ namespace EventPass1.Controllers
             if (ingresso == null)
                 return NotFound();
             ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "NomeEvento");
-            
+
 
             return View(ingresso);
         }
@@ -68,7 +67,7 @@ namespace EventPass1.Controllers
                     .Where(i => i.IdEvento == ingresso.IdEvento && i.IdUsuario == ingresso.IdUsuario && i.Id != id)
                     .Sum(i => i.Quantidade);
                 var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-               
+
                 if (ingressosReservados + ingresso.Quantidade <= 3)
                 {
                     existingIngresso.IdEvento = ingresso.IdEvento;
