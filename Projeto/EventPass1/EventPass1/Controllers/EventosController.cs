@@ -19,10 +19,17 @@ namespace EventPass1.Controllers
             _context = context;
         }
 
+        
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Eventos.Include(c => c.Usuario);
-            return View(await appDbContext.ToListAsync());
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var eventos = _context.Eventos
+                
+                .Include(i => i.Usuario)
+                .Where(i => i.GestorId == userId)
+                .ToList();
+
+            return View(eventos);
         }
 
         public IActionResult Create()

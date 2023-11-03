@@ -21,7 +21,7 @@ namespace EventPass1.Models
         public int Status { get; set; }
 
         [Required]
-        [Display(Name = "Numero de ingressos")]
+        [Display(Name = "Ingresso")]
         public int Quantidade { get; set; }
 
         

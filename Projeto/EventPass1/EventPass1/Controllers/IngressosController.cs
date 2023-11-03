@@ -32,6 +32,17 @@ namespace EventPass1.Controllers
 
             return View(ingressos);
         }
+        public async Task<IActionResult> MeusIngressos()
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var ingressos1 = _context.Ingressos
+            .Include(i => i.Evento)
+            .Include(i => i.Usuario)
+            .Where(i => i.IdUsuario == userId)
+            .ToList();
+
+            return View(ingressos1);
+        }
 
 
 

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventPass1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231102210931_M01")]
-    partial class M01
+    [Migration("20231103005121_M03")]
+    partial class M03
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
