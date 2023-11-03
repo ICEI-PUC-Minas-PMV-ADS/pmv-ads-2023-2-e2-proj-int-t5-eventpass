@@ -92,9 +92,6 @@ namespace EventPass1.Controllers
         }
 
 
-       
-
-        // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(int id)
         {
             if (id == null || _context.Usuarios == null)
@@ -117,10 +114,7 @@ namespace EventPass1.Controllers
             return View(usuario);
         }
 
-
-
-        // GET: Usuarios/Create
-
+    
         public IActionResult Create()
         {
             return View();

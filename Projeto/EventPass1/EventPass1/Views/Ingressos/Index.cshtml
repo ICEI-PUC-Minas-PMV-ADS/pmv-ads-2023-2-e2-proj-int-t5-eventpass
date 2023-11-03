@@ -9,7 +9,7 @@
 <table class="table">
     <thead>
         <tr>
-           
+
             <th>
                 @Html.DisplayNameFor(model => model.Evento)
             </th>
@@ -20,20 +20,21 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.Evento.NomeEvento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Evento.Local)
-            </td>
-            <td>
-                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Retirar</a> 
-                
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Evento.NomeEvento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Evento.Local)
+                </td>
+                <td>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Retirar</a>
+                    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

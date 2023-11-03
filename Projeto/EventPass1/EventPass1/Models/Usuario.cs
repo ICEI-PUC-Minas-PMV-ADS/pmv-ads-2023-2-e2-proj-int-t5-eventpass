@@ -41,7 +41,7 @@ namespace EventPass1.Models
 
         [Required(ErrorMessage = "Obrigatório informar o seu CPF ou CNPJ ")]
 
-        [Display(Name = "CPF ou CNPJ")]
+        [Display(Name = "Indentificação")]
         
         public string CPF { get; set; }
 
