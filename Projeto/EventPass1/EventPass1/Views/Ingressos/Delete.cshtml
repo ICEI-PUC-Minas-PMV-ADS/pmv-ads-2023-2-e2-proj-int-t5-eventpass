@@ -1,0 +1,19 @@
+﻿@model EventPass1.Models.Ingresso
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Excluir</h1>
+
+<h3>Você tem certeza quer excluir?</h3>
+<div>
+    <h4>Ingresso</h4>
+    <hr />
+        
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Exluir" class="btn btn-danger" /> 
+        <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
+    </form>
+</div>

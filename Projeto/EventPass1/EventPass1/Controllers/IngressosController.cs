@@ -38,7 +38,7 @@ namespace EventPass1.Controllers
             var ingressos1 = _context.Ingressos
             .Include(i => i.Evento)
             .Include(i => i.Usuario)
-            .Where(i => i.IdUsuario == userId)
+            .Where(i => i.IdUsuario == userId && i.Status != 0)
             .ToList();
 
             return View(ingressos1);
@@ -77,9 +77,11 @@ namespace EventPass1.Controllers
                 int ingressosReservados = _context.Ingressos
                     .Where(i => i.IdEvento == ingresso.IdEvento && i.IdUsuario == ingresso.IdUsuario && i.Id != id)
                     .Sum(i => i.Quantidade);
-                var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-                if (ingressosReservados + ingresso.Quantidade <= 3)
+                var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                int limiteIngressos = 3;
+
+                if (ingressosReservados + ingresso.Quantidade <= limiteIngressos)
                 {
                     existingIngresso.IdEvento = ingresso.IdEvento;
                     existingIngresso.IdUsuario = userId;
@@ -93,12 +95,13 @@ namespace EventPass1.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Você já atingiu o limite de 3 ingressos para este evento.");
+                    ModelState.AddModelError(string.Empty, "Você já atingiu o limite de " + limiteIngressos + " ingressos para este evento.");
                 }
             }
 
             return View(ingresso);
         }
+
 
 
         private bool IngressoExists(int? id)
@@ -135,7 +138,9 @@ namespace EventPass1.Controllers
             var ingresso = await _context.Ingressos.FindAsync(id);
             if (ingresso != null)
             {
-                _context.Ingressos.Remove(ingresso);
+                ingresso.Status = 0;
+                ingresso.Quantidade = 0;
+                _context.Ingressos.Update(ingresso);
             }
 
             await _context.SaveChangesAsync();
