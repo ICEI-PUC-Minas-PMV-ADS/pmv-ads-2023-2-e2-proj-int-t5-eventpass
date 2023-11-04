@@ -4,36 +4,16 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
+<h1>Excluir</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Você tem certeza quer excluir?</h3>
 <div>
     <h4>Ingresso</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Quantidade)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Quantidade)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Evento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Evento.Descricao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Usuario)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Usuario.CPF)
-        </dd>
-    </dl>
-    
+        
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Exluir" class="btn btn-danger" /> 
+        <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
     </form>
 </div>

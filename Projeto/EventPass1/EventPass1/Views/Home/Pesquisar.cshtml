@@ -1,0 +1,65 @@
+﻿@model IEnumerable<EventPass1.Models.Evento>
+
+@{
+    ViewData["title"] = "Resultados";
+}
+
+<h2>Eventos</h2>
+
+<table class="table"
+     <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeEvento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Local)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                        <tr>
+                            <td>
+                        @Html.DisplayFor(modelItem => item.NomeEvento)
+                            </td>
+                            <td>
+                        @Html.DisplayFor(modelItem => item.Data)
+                            </td>
+                            <td>
+                        @Html.DisplayFor(modelItem => item.Hora)
+                            </td>
+                            <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                            </td>
+                            <td>
+                        @Html.DisplayFor(modelItem => item.Local)
+                            </td>
+                        </tr>
+            }
+        }
+        else
+        {
+                <p>Nenhum resultado encontrado.</p>
+        }
+        
+    </tbody>
+    
+</table>
+<div class="form-group">
+    <a class="btn btn-success" asp-controller="Ingressos" asp-action="Index">Retirar</a> |
+    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
+</div>

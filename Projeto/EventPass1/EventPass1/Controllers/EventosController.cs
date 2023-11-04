@@ -19,10 +19,17 @@ namespace EventPass1.Controllers
             _context = context;
         }
 
+        
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Eventos.Include(c => c.Usuario);
-            return View(await appDbContext.ToListAsync());
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var eventos = _context.Eventos
+                
+                .Include(i => i.Usuario)
+                .Where(i => i.GestorId == userId)
+                .ToList();
+
+            return View(eventos);
         }
 
         public IActionResult Create()
@@ -30,13 +37,31 @@ namespace EventPass1.Controllers
             ViewData["GestorId"] = new SelectList(_context.Usuarios, "Id", "NomeUsuario");
             return View();
         }
-
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data","Hora", "TotalIngressos","Descricao","Local", "GestorId")] Evento evento)
+        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local")] Evento evento)
         {
             if (ModelState.IsValid)
             {
+                var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                
+                evento.GestorId = userId;
+
                 _context.Eventos.Add(evento);
+                await _context.SaveChangesAsync();
+
+
+                for (int i = 1; i <= evento.TotalIngressos; i++)
+                {
+                    Ingresso ingresso = new Ingresso
+                    {
+                        IdEvento = evento.IdEvento,
+                        IdUsuario = evento.GestorId,
+                        Status = 0,
+                        Quantidade = 0
+                    };
+                    _context.Ingressos.Add(ingresso);
+                }
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
@@ -44,7 +69,7 @@ namespace EventPass1.Controllers
 
             return View(evento);
         }
-
+       
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)

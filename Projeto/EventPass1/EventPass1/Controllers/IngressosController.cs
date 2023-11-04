@@ -23,51 +23,28 @@ namespace EventPass1.Controllers
         public async Task<IActionResult> Index()
         {
             var ingressos = _context.Ingressos
+                .Include(i => i.Evento)
+                .Include(i => i.Usuario)
+                .Where(i => i.Status == 0)
+                .GroupBy(i => i.IdEvento)
+                .Select(group => group.OrderBy(i => i.Id).First())
+                .ToList();
+
+            return View(ingressos);
+        }
+        public async Task<IActionResult> MeusIngressos()
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var ingressos1 = _context.Ingressos
             .Include(i => i.Evento)
-            .Include(i => i.Usuario);
+            .Include(i => i.Usuario)
+            .Where(i => i.IdUsuario == userId && i.Status != 0)
+            .ToList();
 
-
-            return View(await ingressos.ToListAsync());
-        }
-        public IActionResult Reservar()
-
-        {
-            ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "NomeEvento");
-            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "Id", "NomeUsuario");
-            return View();
-
+            return View(ingressos1);
         }
 
 
-        [HttpPost]
-        public async Task<IActionResult> Reservar([Bind("IdEvento, IdUsuario, Quantidade")] Ingresso ingresso)
-        {
-            if (ModelState.IsValid)
-            {
-
-                int ingressosReservados = _context.Ingressos
-     .Where(i => i.IdEvento == ingresso.IdEvento && i.IdUsuario == ingresso.IdUsuario)
-     .Sum(i => i.Quantidade);
-
-
-                if (ingressosReservados + ingresso.Quantidade <= 3)
-                {
-
-                    _context.Ingressos.Add(ingresso);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Você já atingiu o limite de 3 ingressos para este evento.");
-                }
-            }
-
-            ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "IdEvento", ingresso.IdEvento);
-            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "Id", "IdUsuario", ingresso.IdUsuario);
-
-            return View(ingresso);
-        }
 
         public async Task<IActionResult> Edit(int? id)
         {
@@ -78,12 +55,14 @@ namespace EventPass1.Controllers
 
             if (ingresso == null)
                 return NotFound();
+            ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "NomeEvento");
+
 
             return View(ingresso);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id, IdEvento, IdUsuario, Quantidade")] Ingresso ingresso)
+        public async Task<IActionResult> Edit(int id, [Bind("Id", "IdEvento")] Ingresso ingresso)
         {
             if (id != ingresso.Id)
                 return NotFound();
@@ -99,25 +78,30 @@ namespace EventPass1.Controllers
                     .Where(i => i.IdEvento == ingresso.IdEvento && i.IdUsuario == ingresso.IdUsuario && i.Id != id)
                     .Sum(i => i.Quantidade);
 
-                if (ingressosReservados + ingresso.Quantidade <= 3)
+                var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                int limiteIngressos = 3;
+
+                if (ingressosReservados + ingresso.Quantidade <= limiteIngressos)
                 {
                     existingIngresso.IdEvento = ingresso.IdEvento;
-                    existingIngresso.IdUsuario = ingresso.IdUsuario;
-                    existingIngresso.Quantidade = ingresso.Quantidade;
+                    existingIngresso.IdUsuario = userId;
+                    existingIngresso.Status = 1;
+                    existingIngresso.Quantidade = 1;
 
                     _context.Ingressos.Update(existingIngresso);
                     await _context.SaveChangesAsync();
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Você já atingiu o limite de 3 ingressos para este evento.");
+                    ModelState.AddModelError(string.Empty, "Você já atingiu o limite de " + limiteIngressos + " ingressos para este evento.");
                 }
             }
 
             return View(ingresso);
         }
+
 
 
         private bool IngressoExists(int? id)
@@ -154,7 +138,9 @@ namespace EventPass1.Controllers
             var ingresso = await _context.Ingressos.FindAsync(id);
             if (ingresso != null)
             {
-                _context.Ingressos.Remove(ingresso);
+                ingresso.Status = 0;
+                ingresso.Quantidade = 0;
+                _context.Ingressos.Update(ingresso);
             }
 
             await _context.SaveChangesAsync();

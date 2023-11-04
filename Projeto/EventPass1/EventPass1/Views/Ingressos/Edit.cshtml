@@ -4,7 +4,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Retirar</h1>
 
 <h4>Ingresso</h4>
 <hr />
@@ -15,22 +15,12 @@
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="IdEvento" class="control-label"></label>
-                <input asp-for="IdEvento" class="form-control" readonly="readonly" />
-                <span asp-validation-for="IdEvento" class="text-danger"></span>
+                <select asp-for="IdEvento" class="form-control" asp-items="ViewBag.IdEvento"></select>
             </div>
+                       
             <div class="form-group">
-                <label asp-for="IdUsuario" class="control-label"></label>
-                <input asp-for="IdUsuario" class="form-control" readonly="readonly" />
-                <span asp-validation-for="IdUsuario" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Quantidade" class="control-label"></label>
-                <input asp-for="Quantidade" class="form-control" />
-                <span asp-validation-for="Quantidade" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
-                <a class="btn btn-info" asp-action="Index">Voltar</a>
+                <input type="submit" value="Retirar" class="btn btn-success" />
+                <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
             </div>
         </form>
     </div>
