@@ -22,16 +22,15 @@
 						<img src="~/img/logo.png" alt="Logo" width="80" />
 					</a>
 
-					<div class="input-group busca d-none d-sm-flex">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Pesquisar..."
-							aria-label="Pesquisar"
-							aria-describedby="basic-addon2"
-						/>
-						<button class="btn btn-outline-secondary" type="button" id="basic-addon2">Buscar</button>
-					</div>
+				<form asp-controller="Home" asp-action="Pesquisar" method="get" class="input-group busca d-none d-sm-flex">
+					<input type="text"
+						   class="form-control"
+						   name="textoBusca"
+						   placeholder="Pesquisar..."
+						   aria-label="Pesquisar"
+						   aria-describedby="basic-addon2" />
+					<button class="btn btn-outline-secondary" type="submit">Buscar</button>
+				</form>
 
 					<button
 						class="navbar-toggler"
