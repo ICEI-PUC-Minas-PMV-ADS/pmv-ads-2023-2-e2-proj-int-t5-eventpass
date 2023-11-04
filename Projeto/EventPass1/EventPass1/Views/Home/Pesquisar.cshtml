@@ -19,7 +19,7 @@
                 @Html.DisplayNameFor(model => model.Hora)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TotalIngressos)
+                @Html.DisplayNameFor(model => model.Descricao)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Local)
@@ -32,29 +32,34 @@
         {
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
+                        <tr>
+                            <td>
                         @Html.DisplayFor(modelItem => item.NomeEvento)
-                    </td>
-                    <td>
+                            </td>
+                            <td>
                         @Html.DisplayFor(modelItem => item.Data)
-                    </td>
-                    <td>
+                            </td>
+                            <td>
                         @Html.DisplayFor(modelItem => item.Hora)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.TotalIngressos)
-                    </td>
-                    <td>
+                            </td>
+                            <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                            </td>
+                            <td>
                         @Html.DisplayFor(modelItem => item.Local)
-                    </td>
-                </tr>
+                            </td>
+                        </tr>
             }
         }
         else
         {
-            <p>Nenhum resultado encontrado.</p>
+                <p>Nenhum resultado encontrado.</p>
         }
+        
     </tbody>
+    
 </table>
-<a class="btn btn-primary" asp-controller="Home" asp-action="Index">Voltar</a>
+<div class="form-group">
+    <a class="btn btn-success" asp-controller="Ingressos" asp-action="Index">Retirar</a> |
+    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
+</div>
