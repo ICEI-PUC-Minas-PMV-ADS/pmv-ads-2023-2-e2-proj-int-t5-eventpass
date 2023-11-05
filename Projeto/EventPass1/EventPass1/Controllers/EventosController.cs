@@ -32,6 +32,32 @@ namespace EventPass1.Controllers
             return View(eventos);
         }
 
+ 
+
+        public async Task<IActionResult> Relatorio(int id)
+        {
+            var dados = await _context.Eventos.FindAsync(id);
+
+            if (dados == null)
+                return NotFound();
+
+            var reservados = _context.Ingressos
+                .Where(i => i.IdEvento == id && i.Status == 1)
+                .Count();
+
+            var disponiveis = _context.Ingressos
+                .Where(i => i.IdEvento == id && i.Status == 0)
+                .Count();
+            
+            double percent = ((double)reservados / dados.TotalIngressos) * 100;
+            
+            ViewBag.Reservados = reservados;
+            ViewBag.Disponiveis = disponiveis;
+            ViewBag.Percentual = percent;
+
+            return View(dados);
+        }
+
         public IActionResult Create()
         {
             ViewData["GestorId"] = new SelectList(_context.Usuarios, "Id", "NomeUsuario");
