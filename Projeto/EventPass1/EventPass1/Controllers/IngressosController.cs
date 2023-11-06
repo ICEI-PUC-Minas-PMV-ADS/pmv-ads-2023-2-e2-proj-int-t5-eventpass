@@ -38,7 +38,7 @@ namespace EventPass1.Controllers
             var ingressos1 = _context.Ingressos
             .Include(i => i.Evento)
             .Include(i => i.Usuario)
-            .Where(i => i.IdUsuario == userId && i.Status != 0)
+            .Where(i => i.UsuarioReservaId == userId && i.Status != 0)
             .ToList();
 
             return View(ingressos1);
@@ -84,7 +84,7 @@ namespace EventPass1.Controllers
                 if (ingressosReservados + ingresso.Quantidade <= limiteIngressos)
                 {
                     existingIngresso.IdEvento = ingresso.IdEvento;
-                    existingIngresso.IdUsuario = userId;
+                    existingIngresso.UsuarioReservaId = userId;
                     existingIngresso.Status = 1;
                     existingIngresso.Quantidade = 1;
 
@@ -140,6 +140,7 @@ namespace EventPass1.Controllers
             {
                 ingresso.Status = 0;
                 ingresso.Quantidade = 0;
+                ingresso.UsuarioReservaId = null;
                 _context.Ingressos.Update(ingresso);
             }
 

@@ -8,6 +8,7 @@ namespace EventPass1.Models
     public class Ingresso
     {
         [Key]
+        [Display(Name = "Id do Ingresso")]
         public int? Id { get; set; }
 
         [Required]
@@ -24,11 +25,14 @@ namespace EventPass1.Models
         [Display(Name = "Ingresso")]
         public int Quantidade { get; set; }
 
-        
+    
         public Evento Evento { get; set; }
 
         
         public Usuario Usuario { get; set; }
+
+
+        public int? UsuarioReservaId { get; set; }
 
     }
 }

@@ -4,6 +4,7 @@ using EventPass1.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventPass1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231106201004_M10")]
+    partial class M10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,6 +75,9 @@ namespace EventPass1.Migrations
                         .IsRequired()
                         .HasColumnType("int");
 
+                    b.Property<int>("IdGestor")
+                        .HasColumnType("int");
+
                     b.Property<int>("IdUsuario")
                         .HasColumnType("int");
 
@@ -80,9 +85,6 @@ namespace EventPass1.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UsuarioReservaId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
