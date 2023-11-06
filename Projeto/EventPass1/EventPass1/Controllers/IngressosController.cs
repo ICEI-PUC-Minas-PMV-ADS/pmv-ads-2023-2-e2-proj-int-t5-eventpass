@@ -74,19 +74,18 @@ namespace EventPass1.Controllers
                 if (existingIngresso == null)
                     return NotFound();
 
-                int ingressosReservados = _context.Ingressos
-                    .Where(i => i.IdEvento == ingresso.IdEvento && i.IdUsuario == ingresso.IdUsuario && i.Id != id)
-                    .Sum(i => i.Quantidade);
-
                 var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
                 int limiteIngressos = 3;
 
-                if (ingressosReservados + ingresso.Quantidade <= limiteIngressos)
+                var numeroIngressos = _context.Ingressos
+                 .Where(i => i.IdUsuario == userId )
+                 .Count();
+
+                if (numeroIngressos <= 3)
                 {
                     existingIngresso.IdEvento = ingresso.IdEvento;
                     existingIngresso.IdUsuario = userId;
                     existingIngresso.Status = 1;
-                    existingIngresso.Quantidade = 1;
 
                     _context.Ingressos.Update(existingIngresso);
                     await _context.SaveChangesAsync();
@@ -139,7 +138,6 @@ namespace EventPass1.Controllers
             if (ingresso != null)
             {
                 ingresso.Status = 0;
-                ingresso.Quantidade = 0;
                 _context.Ingressos.Update(ingresso);
             }
 

@@ -83,7 +83,6 @@ namespace EventPass1.Controllers
                         IdEvento = evento.IdEvento,
                         IdUsuario = evento.GestorId,
                         Status = 0,
-                        Quantidade = 0
                     };
                     _context.Ingressos.Add(ingresso);
                 }

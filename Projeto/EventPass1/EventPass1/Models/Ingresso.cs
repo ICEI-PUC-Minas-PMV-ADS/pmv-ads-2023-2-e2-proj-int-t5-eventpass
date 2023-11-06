@@ -20,14 +20,8 @@ namespace EventPass1.Models
 
         public int Status { get; set; }
 
-        [Required]
-        [Display(Name = "Ingresso")]
-        public int Quantidade { get; set; }
-
-        
         public Evento Evento { get; set; }
 
-        
         public Usuario Usuario { get; set; }
 
     }
