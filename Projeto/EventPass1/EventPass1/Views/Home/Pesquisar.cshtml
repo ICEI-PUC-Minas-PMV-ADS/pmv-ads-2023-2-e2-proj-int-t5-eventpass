@@ -10,6 +10,9 @@
      <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.IdEvento)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.NomeEvento)
             </th>
             <th>
@@ -32,34 +35,38 @@
         {
             @foreach (var item in Model)
             {
-                        <tr>
-                            <td>
+                                <tr>
+                                            <td>
+                        @Html.DisplayFor(modelItem => item.IdEvento)
+                                            </td>
+                                    <td>
                         @Html.DisplayFor(modelItem => item.NomeEvento)
-                            </td>
-                            <td>
+                                    </td>
+                                    <td>
                         @Html.DisplayFor(modelItem => item.Data)
-                            </td>
-                            <td>
+                                    </td>
+                                    <td>
                         @Html.DisplayFor(modelItem => item.Hora)
-                            </td>
-                            <td>
+                                    </td>
+                                    <td>
                         @Html.DisplayFor(modelItem => item.Descricao)
-                            </td>
-                            <td>
+                                    </td>
+                                    <td>
                         @Html.DisplayFor(modelItem => item.Local)
-                            </td>
-                        </tr>
+                                    </td>
+                                            <td>
+                    <a class="btn btn-success" asp-controller="Ingressos" asp-action="Index">Retirar</a> |
+                    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
+                </td>
+                                </tr>
             }
         }
         else
         {
-                <p>Nenhum resultado encontrado.</p>
+                    <p>Nenhum resultado encontrado.</p>
         }
-        
+
     </tbody>
-    
+
 </table>
-<div class="form-group">
-    <a class="btn btn-success" asp-controller="Ingressos" asp-action="Index">Retirar</a> |
-    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
-</div>
+
