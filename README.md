@@ -30,7 +30,7 @@ Este projeto busca redefinir a maneira como as pessoas se envolvem com eventos, 
 
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+Não deixe de informar o link onde a aplicação estiver disponível para acesso (https://eventpass.azurewebsites.net/).
 
 Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
 
