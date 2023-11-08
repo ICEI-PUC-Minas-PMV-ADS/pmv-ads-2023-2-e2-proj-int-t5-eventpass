@@ -44,4 +44,27 @@ public class EmailService
             clienteSmtp.Disconnect(true);
         }
     }
+
+    public void EnviarEmailRecuperarLogin(string destinatario, string nomeUsuario)
+    {
+        var mensagem = new MimeMessage();
+        mensagem.From.Add(new MailboxAddress(_remetente, _emailRemetente));
+        mensagem.To.Add(new MailboxAddress(nomeUsuario, destinatario));
+        mensagem.Subject = "Recuperação de login";
+
+        var corpoMensagem = new BodyBuilder();
+        corpoMensagem.HtmlBody = $@"
+            <h1>Olá {nomeUsuario},</h1>
+            <p>Parece que perdeu seu login?</p>";
+
+        mensagem.Body = corpoMensagem.ToMessageBody();
+
+        using (var clienteSmtp = new SmtpClient())
+        {
+            clienteSmtp.Connect(_servidorSmtp, _portaSmtp, SecureSocketOptions.StartTls);
+            clienteSmtp.Authenticate(_emailRemetente, _senhaEmail);
+            clienteSmtp.Send(mensagem);
+            clienteSmtp.Disconnect(true);
+        }
+    }
 }
