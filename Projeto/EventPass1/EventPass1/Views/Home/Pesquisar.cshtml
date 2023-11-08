@@ -54,10 +54,7 @@
                                     <td>
                         @Html.DisplayFor(modelItem => item.Local)
                                     </td>
-                                            <td>
-                    <a class="btn btn-success" asp-controller="Ingressos" asp-action="Index">Retirar</a> |
-                    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
-                </td>
+                                            
                                 </tr>
             }
         }
@@ -70,3 +67,7 @@
 
 </table>
 
+<td>
+    <a class="btn btn-success" asp-controller="Ingressos" asp-action="Index">Retirar</a> |
+    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
+</td>
