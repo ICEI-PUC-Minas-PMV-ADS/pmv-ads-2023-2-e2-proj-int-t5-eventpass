@@ -32,20 +32,6 @@ namespace EventPass1.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-		public IActionResult Pesquisar(string textoBusca)
-		{
-			if (!string.IsNullOrEmpty(textoBusca))
-			{
-				var resultado = _context.Eventos
-				.Where(registro => registro.NomeEvento.Contains(textoBusca))
-				.ToList();
-
-				if (resultado == null)
-                    return NotFound();
-
-				return View(resultado);
-			}
-			return View();
-		}
+		
 	}
 }
