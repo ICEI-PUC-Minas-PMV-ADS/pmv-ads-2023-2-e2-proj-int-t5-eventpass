@@ -37,8 +37,7 @@ namespace EventPass1.Controllers
 			if (!string.IsNullOrEmpty(textoBusca))
 			{
 				var resultado = _context.Eventos
-				.Where(registro => registro.NomeEvento.Contains(textoBusca) ||
-					   registro.Data.ToString().Contains(textoBusca))
+				.Where(registro => registro.NomeEvento.Contains(textoBusca))
 				.ToList();
 
 				if (resultado == null)
