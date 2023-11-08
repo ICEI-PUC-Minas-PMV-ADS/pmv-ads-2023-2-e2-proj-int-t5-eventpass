@@ -1,6 +1,8 @@
 using EventPass1.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -18,6 +20,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.AccessDeniedPath = "/Usuarios1 /AcessDenied/";
         options.LoginPath = "/Usuarios1/Login ";
     });
+builder.Services.AddScoped<EmailService>();
 
 var app = builder.Build();
 
