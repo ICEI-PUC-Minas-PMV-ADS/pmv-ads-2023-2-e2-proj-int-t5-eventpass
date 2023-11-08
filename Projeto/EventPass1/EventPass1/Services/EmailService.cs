@@ -16,9 +16,9 @@ public class EmailService
     public EmailService()
     {
         _remetente = "Suporte Event Pass";
-        _emailRemetente = "eventpasssuporte@gmail.com";
+        _emailRemetente = "suporte.eventpass@hotmail.com";
         _senhaEmail = "eventpass@puc2023";
-        _servidorSmtp = "smtp.gmail.com"; 
+        _servidorSmtp = "smtp-mail.outlook.com"; 
         _portaSmtp = 587;
     }
 
