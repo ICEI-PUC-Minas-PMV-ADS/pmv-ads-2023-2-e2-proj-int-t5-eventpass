@@ -252,5 +252,74 @@ namespace EventPass1.Controllers
         {
             return _context.Usuarios.Any(e => e.Id == id);
         }
+        public IActionResult EsqueciSenha()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> EsqueciSenha(string email)
+        {
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == email);
+
+            if (usuario == null)
+            {
+                // Trate o caso em que o e-mail não está registrado no sistema.
+                ViewBag.Message = "E-mail não encontrado.";
+                return View();
+            }
+
+            // Gere um token de redefinição de senha (por exemplo, um GUID).
+            string token = Guid.NewGuid().ToString();
+
+            // Armazene o token no banco de dados associado ao usuário.
+            usuario.TokenRedefinicaoSenha = token;
+            _context.Update(usuario);
+            await _context.SaveChangesAsync();
+
+            // Envie um e-mail ao usuário com um link para redefinir a senha, incluindo o token no link.
+            // Implemente a lógica de envio de e-mail aqui.
+
+            ViewBag.Message = "Um link para redefinir sua senha foi enviado para o seu e-mail.";
+            return View();
+        }
+        public IActionResult RedefinirSenha(string token)
+        {
+            // Verifique se o token é válido e se existe no banco de dados.
+            var usuario = _context.Usuarios.FirstOrDefault(u => u.TokenRedefinicaoSenha == token);
+
+            if (usuario == null)
+            {
+                // Trate o caso em que o token não é válido.
+                ViewBag.Message = "Token de redefinição de senha inválido.";
+                return View("EsqueciMinhaSenha");
+            }
+
+            ViewBag.Token = token;
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> RedefinirSenha(string token, string novaSenha)
+        {
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.TokenRedefinicaoSenha == token);
+
+            if (usuario == null)
+            {
+                // Trate o caso em que o token não é válido.
+                ViewBag.Message = "Token de redefinição de senha inválido.";
+                return View();
+            }
+
+            // Atualize a senha do usuário com a nova senha.
+            usuario.Senha = BCrypt.Net.BCrypt.HashPassword(novaSenha);
+            usuario.TokenRedefinicaoSenha = null; // Limpe o token de redefinição de senha.
+
+            _context.Update(usuario);
+            await _context.SaveChangesAsync();
+
+            ViewBag.Message = "Senha redefinida com sucesso. Agora você pode fazer login com a nova senha.";
+            return View();
+        }
+
+
     }
 }

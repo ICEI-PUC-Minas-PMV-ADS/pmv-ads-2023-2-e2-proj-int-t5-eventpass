@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <Content Remove="Views\Ingressos\Retirar.cshtml" />
+    <Content Remove="Views\Usuarios1\EsqueciMinhaSenha.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

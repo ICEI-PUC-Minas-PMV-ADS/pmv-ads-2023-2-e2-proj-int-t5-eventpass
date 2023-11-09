@@ -1,0 +1,33 @@
+﻿@model EventPass1.Models.Usuario
+
+@{
+    ViewData["Title"] = "Esqueci Senha";
+}
+
+<div class="container">
+    <h2>Esqueci Minha Senha</h2>
+
+    @if (!string.IsNullOrEmpty(ViewBag.Message))
+    {
+        <div class="alert alert-success">
+            @ViewBag.Message
+        </div>
+    }
+
+    <form asp-action="EsqueciSenha" method="post">
+        <div class="form-group">
+            <label for="email">Endereço de E-mail:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
