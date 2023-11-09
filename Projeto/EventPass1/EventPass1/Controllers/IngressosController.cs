@@ -14,10 +14,12 @@ namespace EventPass1.Controllers
 
     public class IngressosController : Controller
     {
+        private readonly EmailService _emailService;
         private readonly AppDbContext _context;
 
-        public IngressosController(AppDbContext context)
+        public IngressosController(EmailService emailService, AppDbContext context)
         {
+            _emailService = emailService;
             _context = context;
         }
         public async Task<IActionResult> Index()
@@ -91,6 +93,12 @@ namespace EventPass1.Controllers
 
                     _context.Ingressos.Update(existingIngresso);
                     await _context.SaveChangesAsync();
+
+                    var evento = _context.Eventos.Find(ingresso.IdEvento);
+                    var usuario = _context.Usuarios.Find(userId);
+
+                 
+                    _emailService.EnviarEmailConfirmacaoReserva(usuario.Email, ingresso.Id, evento.NomeEvento, usuario.NomeUsuario);
 
                     return RedirectToAction("Index", "Home");
                 }
