@@ -19,14 +19,15 @@
             <label for="email">Endereço de E-mail:</label>
             <input type="email" class="form-control" id="email" name="email" required>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <div>
+            <button type="submit" class="btn btn-primary">Enviar</button> |
+            <a class="btn btn-info" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
+        </div>
     </form>
 </div>
 
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
