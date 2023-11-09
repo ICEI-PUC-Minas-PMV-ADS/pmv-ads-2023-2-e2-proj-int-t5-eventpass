@@ -4,7 +4,7 @@
 
 namespace EventPass1.Migrations
 {
-    public partial class M30 : Migration
+    public partial class M37 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -22,7 +22,7 @@ public class EmailService
         _portaSmtp = 587;
     }
 
-    public void EnviarEmailConfirmacaoReserva(string destinatario, int idIngresso, string nomeEvento, string nomeUsuario)
+    public void EnviarEmailConfirmacaoReserva(string destinatario, int? idIngresso, string nomeEvento, string nomeUsuario)
     {
         var mensagem = new MimeMessage();
         mensagem.From.Add(new MailboxAddress(_remetente, _emailRemetente));
