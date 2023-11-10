@@ -146,9 +146,7 @@ namespace EventPass1.Controllers
             }
             return View(usuario);
         }
-
-
-        // GET: Usuarios/Edit/5
+      
 
         public async Task<IActionResult> Edit(int? id)
         {
@@ -211,7 +209,7 @@ namespace EventPass1.Controllers
         }
 
 
-        // GET: Usuarios/Delete/5
+       
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Usuarios == null)
@@ -229,7 +227,7 @@ namespace EventPass1.Controllers
             return View(usuario);
         }
 
-        // POST: Usuarios/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
