@@ -43,6 +43,8 @@ namespace EventPass1.Controllers
             .Where(i => i.IdUsuario == userId && i.Status != 0)
             .ToList();
 
+            ViewData["userId"] = userId;
+
             return View(ingressos1);
         }
 
@@ -98,9 +100,9 @@ namespace EventPass1.Controllers
                     var usuario = _context.Usuarios.Find(userId);
 
                  
-                    _emailService.EnviarEmailConfirmacaoReserva(usuario.Email, ingresso.Id, evento.NomeEvento, usuario.NomeUsuario);
+                    //_emailService.EnviarEmailConfirmacaoReserva(usuario.Email, ingresso.Id, evento.NomeEvento, usuario.NomeUsuario);
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("MeusIngressos");
                 }
                 else
                 {
@@ -154,7 +156,7 @@ namespace EventPass1.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("MeusIngressos");
         }
 
     }
