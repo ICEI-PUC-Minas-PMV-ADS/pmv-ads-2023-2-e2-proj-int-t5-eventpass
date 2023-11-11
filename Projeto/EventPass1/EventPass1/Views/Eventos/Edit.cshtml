@@ -4,55 +4,65 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Editar</h1>
-
-<h4>Evento</h4>
-<hr />
+<p style="padding: 0; margin-bottom: 20px; color: #000000; font-weight: bold; font-size: large;">
+    EDITAR EVENTO</p>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdEvento" />
-            <div class="form-group">
-                <label asp-for="NomeEvento" class="control-label"></label>
-                <input asp-for="NomeEvento" class="form-control" />
-                <span asp-validation-for="NomeEvento" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Data" class="control-label"></label>
-                <input asp-for="Data" class="form-control" />
-                <span asp-validation-for="Data" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Hora" class="control-label"></label>
-                <input asp-for="Hora" class="form-control" />
-                <span asp-validation-for="Hora" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TotalIngressos" class="control-label"></label>
-                <input asp-for="TotalIngressos" class="form-control" />
-                <span asp-validation-for="TotalIngressos" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Local" class="control-label"></label>
-                <input asp-for="Local" class="form-control" />
-                <span asp-validation-for="Local" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="GestorId" class="control-label"></label>
-                <input asp-for="GestorId" type="hidden" />
-                <input type="text" class="form-control" value="@ViewBag.GestorNome" readonly="readonly" />
-                <span asp-validation-for="GestorId" class="text-danger"></span>
+
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="NomeEvento" class="control-label"></label>
+                        <input asp-for="NomeEvento" class="form-control" />
+                        <span asp-validation-for="NomeEvento" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="Data" class="control-label"></label>
+                        <input asp-for="Data" class="form-control" />
+                        <span asp-validation-for="Data" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="Hora" class="control-label"></label>
+                        <input asp-for="Hora" class="form-control" />
+                        <span asp-validation-for="Hora" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
-                <a class="btn btn-info" asp-action="Index">Voltar</a>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="TotalIngressos" class="control-label"></label>
+                        <input asp-for="TotalIngressos" class="form-control" />
+                        <span asp-validation-for="TotalIngressos" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="Descricao" class="control-label"></label>
+                        <input asp-for="Descricao" class="form-control" />
+                        <span asp-validation-for="Descricao" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="Local" class="control-label"></label>
+                        <input asp-for="Local" class="form-control" />
+                        <span asp-validation-for="Local" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                <input type="submit" value="Salvar" style="margin-right: 10px; color: white; background-color: #f15a24; font-weight: bold; border: none; border-radius: 5px; padding: 8px;" />
+                <a asp-action="Index" style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">Voltar</a>
             </div>
         </form>
     </div>

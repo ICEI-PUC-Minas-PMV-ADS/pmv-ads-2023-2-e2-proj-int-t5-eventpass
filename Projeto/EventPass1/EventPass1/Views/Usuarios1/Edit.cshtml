@@ -4,56 +4,71 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Editar</h1>
+<p style="padding: 0; margin-bottom: 20px; color: #000000; font-weight: bold; font-size: large;">
+    EDITAR USUÁRIO</p>
 
-<h4>Usuário</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
 
-            <div class="form-group">
-                <label asp-for="Tipo" class="control-label"></label>
-                <input asp-for="Tipo" class="form-control" readonly="readonly" />
-                <span asp-validation-for="Tipo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NomeUsuario" class="control-label"></label>
-                <input asp-for="NomeUsuario" class="form-control" />
-                <span asp-validation-for="NomeUsuario" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Senha" class="control-label"></label>
-                <input asp-for="Senha" class="form-control" />
-                <span asp-validation-for="Senha" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ConfirmarSenha" class="control-label"></label>
-                <input asp-for="ConfirmarSenha" class="form-control" />
-                <span asp-validation-for="ConfirmarSenha" class="text-danger"></span>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="Tipo" class="control-label"></label>
+                        <input asp-for="Tipo" class="form-control" readonly="readonly" />
+                        <span asp-validation-for="Tipo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="NomeUsuario" class="control-label"></label>
+                        <input asp-for="NomeUsuario" class="form-control" />
+                        <span asp-validation-for="NomeUsuario" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="CPF" class="control-label"></label>
+                        <input asp-for="CPF" class="form-control" readonly="readonly" />
+                        <span asp-validation-for="CPF" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label asp-for="CPF" class="control-label"></label>
-                <input asp-for="CPF" class="form-control" readonly="readonly" />
-                <span asp-validation-for="CPF" class="text-danger"></span>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="Senha" class="control-label"></label>
+                        <input asp-for="Senha" class="form-control" />
+                        <span asp-validation-for="Senha" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="form-group">
+                        <label asp-for="ConfirmarSenha" class="control-label"></label>
+                        <input asp-for="ConfirmarSenha" class="form-control" />
+                        <span asp-validation-for="ConfirmarSenha" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
-                <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
+            <div class="form-group" style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                <input type="submit" value="Salvar" style="margin-right: 10px; color: white; background-color: #f15a24; font-weight: bold; border: none; border-radius: 5px; padding: 8px;"/>
+                <a  asp-controller="Usuarios1" asp-action="Details" style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;"
+                    asp-route-id="@Model?.Id">Voltar</a>
             </div>
         </form>
     </div>
 </div>
-
 
 @section Scripts {
     @{

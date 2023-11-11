@@ -4,54 +4,230 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Cadastrar</h1>
 
-<h4>Evento</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="NomeEvento" class="control-label"></label>
-                <input asp-for="NomeEvento" class="form-control" />
-                <span asp-validation-for="NomeEvento" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Data" class="control-label"></label>
-                <input asp-for="Data" class="form-control" />
-                <span asp-validation-for="Data" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Hora" class="control-label"></label>
-                <input asp-for="Hora" class="form-control" />
-                <span asp-validation-for="Hora" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TotalIngressos" class="control-label"></label>
-                <input asp-for="TotalIngressos" class="form-control" />
-                <span asp-validation-for="TotalIngressos" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Local" class="control-label"></label>
-                <input asp-for="Local" class="form-control" />
-                <span asp-validation-for="Local" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group">
-                <input type="submit" value="Cadastrar" class="btn btn-success" />
-                <a class="btn btn-primary" asp-action="Index">Voltar</a>
-            </div>
-        </form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Guias Verticais</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-gDk/ryi8ZpM2iDqAMowXWzsOT2wzU/6lWOSM9VR9iN/MRHMz0bT6aSWtI6k7D3Vhp" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/css/style-profile.css" />
+</head>
+
+<style>
+    .profile-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-item {
+        margin-bottom: 15px;
+    }
+
+    .profile-item dt {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 5px;
+    }
+
+    .profile-item dd a {
+        color: black;
+        text-decoration: none;
+        margin-left: 0;
+    }
+</style>
+
+<body class="profile">
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar" >
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="user-tabs">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                            <p class="user-text">@User.Identity.Name</p>
+                        </li>
+                        <li class="nav-item-tab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            </svg>
+                            <a class="nav-link-tab" asp-area="" asp-controller="Usuarios1" asp-action="Details" asp-route-id="@ViewData["userId"]">
+							    MEU PERFIL
+							</a>
+                        </li>
+                        @if (User.IsInRole("Gestor"))
+                        {
+                            <li class="nav-item-tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-ticket-detailed-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5Zm4 1a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5Zm0 5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5ZM4 8a1 1 0 0 0 1 1h6a1 1 0 1 0 0-2H5a1 1 0 0 0-1 1Z" />
+                                </svg>
+                                <a class="nav-link-tab active" asp-area="" asp-controller="Eventos" asp-action="Index">
+                                    MEUS EVENTOS
+                                </a>
+                            </li>
+                            <li class="nav-item-tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
+                                </svg>
+                                <a class="nav-link-tab active" asp-area="" asp-controller="Eventos" asp-action="Create">
+                                    CRIAR EVENTO
+                                </a>
+                            </li>
+                            <li class="nav-item-tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                                </svg>
+                                <a class="nav-link-tab active" asp-area="" asp-controller="Home" asp-action="Index">
+                                    PÁGINA INICIAL
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item-tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-ticket-detailed-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5Zm4 1a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5Zm0 5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5ZM4 8a1 1 0 0 0 1 1h6a1 1 0 1 0 0-2H5a1 1 0 0 0-1 1Z" />
+                                </svg>
+                                <a class="nav-link-tab active" asp-area="" asp-controller="Ingressos"
+                                    asp-action="Meusingressos">
+                                    MEUS INGRESSOS
+                                </a>
+                            </li>
+                            <li class="nav-item-tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                                </svg>
+                                <a class="nav-link-tab active" asp-area="" asp-controller="Home" asp-action="Index">
+                                    PÁGINA INICIAL
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content-tabs col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="content-container">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab1">
+                            <div>
+                                <p style="padding: 0; margin-bottom: 20px; color: #000000; font-weight: bold; font-size: large;">
+                                    CADASTRAR EVENTO
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form asp-action="Create">
+                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                            <div class="row">
+                                                <div class="col-md-4 col-12">
+                                                    <div class="form-group">
+                                                        <label asp-for="NomeEvento" class="control-label"></label>
+                                                        <input asp-for="NomeEvento" class="form-control" />
+                                                        <span asp-validation-for="NomeEvento" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-12">
+                                                    <div class="form-group">
+                                                        <label asp-for="Data" class="control-label"></label>
+                                                        <input asp-for="Data" class="form-control" />
+                                                        <span asp-validation-for="Data" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-12">
+                                                    <div class="form-group">
+                                                        <label asp-for="Hora" class="control-label"></label>
+                                                        <input asp-for="Hora" class="form-control" />
+                                                        <span asp-validation-for="Hora" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-4 col-12">
+                                                    <div class="form-group">
+                                                        <label asp-for="TotalIngressos" class="control-label"></label>
+                                                        <input asp-for="TotalIngressos" class="form-control" />
+                                                        <span asp-validation-for="TotalIngressos" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-12">
+                                                    <div class="form-group">
+                                                        <label asp-for="Descricao" class="control-label"></label>
+                                                        <input asp-for="Descricao" class="form-control" />
+                                                        <span asp-validation-for="Descricao" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-12">
+                                                    <div class="form-group">
+                                                        <label asp-for="Local" class="control-label"></label>
+                                                        <input asp-for="Local" class="form-control" />
+                                                        <span asp-validation-for="Local" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                                                <input type="submit" value="Cadastrar" style="margin-right: 10px; color: white; background-color: #f15a24; font-weight: bold; border: none; border-radius: 5px; padding: 8px;" />
+                                                <a asp-action="Index" style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">Voltar</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                                @section Scripts {
+                                    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+                                }
+
+                            </div>
+                        </div>
+                        @if (User.IsInRole("Gestor"))
+                        {
+                            <div class="tab-pane fade" id="tab2">
+                                <h2>Meus eventos (Em desenvolvimento)</h2>
+                            </div>
+                            <div class="tab-pane fade" id="tab3">
+                                <h2>Criar evento (Em desenvolvimento)</h2>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="tab-pane fade" id="tab2">
+                                <h2>Meus ingressos (Em desenvolvimento)</h2>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
-</div>
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+</html>

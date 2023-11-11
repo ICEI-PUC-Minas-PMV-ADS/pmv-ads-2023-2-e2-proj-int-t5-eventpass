@@ -27,10 +27,11 @@ namespace EventPass1.Controllers
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             var eventos = _context.Eventos
 
-                .Include(i => i.Usuario)
-                .Where(i => i.GestorId == userId)
-                .ToList();
+            .Include(i => i.Usuario)
+            .Where(i => i.GestorId == userId)
+            .ToList();
 
+            ViewData["userId"] = userId;
             return View(eventos);
         }
         public async Task<IActionResult> Relatorio(int id)
@@ -59,7 +60,12 @@ namespace EventPass1.Controllers
 
         public IActionResult Create()
         {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            ViewData["userId"] = userId;
+
             ViewData["GestorId"] = new SelectList(_context.Usuarios, "Id", "NomeUsuario");
+
             return View();
         }
         [HttpPost]
@@ -165,14 +171,20 @@ namespace EventPass1.Controllers
             if (id == null)
                 return NotFound();
 
-            var dados = await _context.Eventos.FindAsync(id);
+            var evento = await _context.Eventos
+                .Include(e => e.Ingressos)
+                .FirstOrDefaultAsync(e => e.IdEvento == id);
 
-            if (dados == null)
+            if (evento == null)
+            {
                 return NotFound();
+            }
 
-            _context.Eventos.Remove(dados);
+           _context.Ingressos.RemoveRange(evento.Ingressos);
+           _context.Eventos.Remove(evento);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+
+            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> Buscar(string nomeEvento)
@@ -192,9 +204,9 @@ namespace EventPass1.Controllers
             }
 
             var ingressoDisponivel = await _context.Ingressos
-     .Where(i => i.IdEvento == evento.IdEvento && i.Status == 0)
-     .OrderBy(i => i.Id)
-     .FirstAsync();
+                .Where(i => i.IdEvento == evento.IdEvento && i.Status == 0)
+                .OrderBy(i => i.Id)
+                .FirstAsync();
 
             if (ingressoDisponivel != null)
             {

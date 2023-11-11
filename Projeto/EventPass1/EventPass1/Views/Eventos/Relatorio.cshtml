@@ -4,67 +4,103 @@
     ViewData["Title"] = "Relatorio";
 }
 
-<h1>@Model.NomeEvento</h1>
+<link rel="stylesheet" href="~/css/style-relatorio.css" />
 
-<div>
-    <h4>Informações do evento</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NomeEvento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NomeEvento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Data)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Data)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Hora)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Hora)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TotalIngressos)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TotalIngressos)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Local)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Local)
-        </dd>
-        <dt class="col-sm-2">
-            Ingressos disponíveis:
-        </dt>
-        <dd class="col-sm-10">
-            @ViewBag.Disponiveis
-        </dd>
-        <dt class="col-sm-2">
-            Ingressos reservados
-        </dt>
-        <dd class="col-sm-10">
-            @ViewBag.Reservados
-        </dd>
-    </dl>
-</div>
-<h5>Progresso das reservas</h5>
-<div class="progress" style="height: 30px;">
-    <div class="progress-bar" role="progressbar" style="width: @ViewBag.Percentual%;" aria-valuenow="@ViewBag.Percentual" aria-valuemin="0" aria-valuemax="100">@ViewBag.Percentual%</div>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <dl class="column info">
+            <h4 class="title">Informações do evento</h4>
+            <div class="col-sm-6">
+                <dt>
+                    @Html.DisplayNameFor(model => model.NomeEvento)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.NomeEvento)
+                </dd>
+            </div>
+            <div class="col-sm-6">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Data)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Data)
+                </dd>
+            </div>
+            <div class="col-sm-6">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Hora)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Hora)
+                </dd>
+            </div>
+            <div class="col-sm-6">
+                <dt>
+                    @Html.DisplayNameFor(model => model.TotalIngressos)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.TotalIngressos)
+                </dd>
+            </div>
+            <div class="col-sm-6">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Descricao)
+                </dd>
+            </div>
+            <div class="col-sm-6">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Local)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Local)
+                </dd>
+            </div>
+            <a asp-action="Index" style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">Voltar</a>
+        </dl>
+    </div>
+
+    <div class="col-md-6 chart title">
+        <h4>Progresso das reservas</h4>
+        <div>
+            <canvas id="myDoughnutChart" width="400" height="400"></canvas>
+        </div>
+    </div>
 </div>
 
-<div>
-    <a class="btn btn-info" asp-action="Index">Voltar</a>
-</div>
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctxDoughnut = document.getElementById('myDoughnutChart').getContext('2d');
+        var myDoughnutChart = new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: {
+                labels: ['Reservados', 'Disponíveis'],
+                datasets: [{
+                    data: [@ViewBag.Reservados, @ViewBag.Disponiveis],
+                    backgroundColor: [
+                        'rgba(241, 90, 36, 0.6)',
+                        'rgba(0, 0, 0, 0.6)',
+                    ],
+                    borderColor: [
+                        'rgba(241, 90, 36, 1)',
+                        'rgba(0, 0, 0, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutoutPercentage: 50, // Ajuste o tamanho do furo (0 a 100)
+                legend: {
+                    position: 'center',
+                }
+            }
+        });
+    </script>
+}

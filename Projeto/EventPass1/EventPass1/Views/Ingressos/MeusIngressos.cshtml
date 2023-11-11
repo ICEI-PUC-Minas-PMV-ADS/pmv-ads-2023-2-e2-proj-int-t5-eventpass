@@ -4,50 +4,166 @@
     ViewData["Title"] = "MeusIngressos";
 }
 
-<h1>Meus Ingressos</h1>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Guias Verticais</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-gDk/ryi8ZpM2iDqAMowXWzsOT2wzU/6lWOSM9VR9iN/MRHMz0bT6aSWtI6k7D3Vhp" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/css/style-profile.css" />
+</head>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Quantidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Evento)
-            </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Evento.Data)
-            </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Evento.Local)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Evento.NomeEvento)
-            </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Evento.Data)
-                </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Evento.Local)
-            </td>
-            <td>
-                    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<style>
+    .profile-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-item {
+        margin-bottom: 15px;
+    }
+
+    .profile-item dt {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 5px;
+    }
+
+    .profile-item dd a {
+        color: black;
+        text-decoration: none;
+        margin-left: 0;
+    }
+</style>
+
+<body class="profile">
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar" >
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="user-tabs">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                            <p class="user-text">@User.Identity.Name</p>
+                        </li>
+                        <li class="nav-item-tab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            </svg>
+                            <a class="nav-link-tab" asp-area="" asp-controller="Usuarios1" asp-action="Details" asp-route-id="@ViewData["userId"]">
+							    MEU PERFIL
+							</a>
+                        </li>
+                        <li class="nav-item-tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-ticket-detailed-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5Zm4 1a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5Zm0 5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5ZM4 8a1 1 0 0 0 1 1h6a1 1 0 1 0 0-2H5a1 1 0 0 0-1 1Z" />
+                                </svg>
+                                <a class="nav-link-tab" id="tab2-tab" data-bs-toggle="pill" href="#tab2">MEUS INGRESSOS</a>
+                            </li>
+                            <li class="nav-item-tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                                </svg>
+                                <a class="nav-link-tab active" asp-area="" asp-controller="Home" asp-action="Index">
+                                    PÁGINA INICIAL
+                                </a>
+                            </li>
+                        </li>   
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content-tabs col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="content-container">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab2">
+                            <div>
+                                <p style="padding: 0; margin-bottom: 20px; color: #000000; font-weight: bold; font-size: large;">
+                                    MEUS INGRESSOS</p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Quantidade)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Evento)
+                                            </th>
+                                            
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Evento.Data)
+                                            </th>
+                                            
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Evento.Local)
+                                            </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                @foreach (var item in Model) {
+                                        <tr>
+                                            
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Quantidade)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Evento.NomeEvento)
+                                            </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Evento.Data)
+                                                </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Evento.Local)
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="16"
+                                                        height="16"
+                                                        fill="currentColor"
+                                                        class="bi bi-trash-fill"
+                                                        viewBox="0 0 16 16"
+                                                        style="margin: 0;"
+                                                    >
+                                                        <path
+                                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                                                        />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
