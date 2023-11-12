@@ -1,9 +1,10 @@
 {
   "dependencies": {
     "mssql1": {
-      "serviceConnectorResourceId": "",
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/eventpass/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsDefaultConnection_6F3F3B3DE6",
       "secretStore": "AzureAppSettings",
-      "type": "mssql.onprem",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/eventpass/databases/EventPassDb",
+      "type": "mssql.azure",
       "connectionId": "ConnectionStrings:DefaultConnection",
       "dynamicId": null
     }

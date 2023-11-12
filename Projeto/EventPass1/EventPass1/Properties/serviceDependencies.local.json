@@ -1,9 +1,10 @@
 {
   "dependencies": {
     "mssql1": {
-      "serviceConnectorResourceId": "",
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ServiceLinker/locations/eastus/connectors/ConnectionStringsDefaultConnection_6F3F3B3DE6",
       "secretStore": "LocalSecretsFile",
-      "type": "mssql.local",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/eventpass/databases/EventPassDb",
+      "type": "mssql.azure",
       "connectionId": "ConnectionStrings:DefaultConnection",
       "dynamicId": null
     }
