@@ -9,6 +9,8 @@ using EventPass1.Models;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using System.Net;
+using System.Net.Mail;
 
 
 namespace EventPass1.Controllers
@@ -18,10 +20,44 @@ namespace EventPass1.Controllers
     public class Usuarios1Controller : Controller
     {
         private readonly AppDbContext _context;
+        private readonly string _remetente;
+        private readonly string _emailRemetente;
+        private readonly string _senhaEmail;
+        private readonly string _servidorSmtp;
+        private readonly int _portaSmtp;
+
+        private async Task SendEmailAsync(string toEmail, string subject, string body)
+        {
+            using (var client = new SmtpClient(_servidorSmtp, _portaSmtp))
+            {
+                client.UseDefaultCredentials = false;
+                client.Credentials = new NetworkCredential(_emailRemetente, _senhaEmail);
+                client.EnableSsl = true;
+
+                var message = new MailMessage
+                {
+                    From = new MailAddress(_emailRemetente, _remetente),
+                    Subject = subject,
+                    Body = body,
+                    IsBodyHtml = true
+                };
+
+                message.To.Add(toEmail);
+
+                await client.SendMailAsync(message);
+            }
+        }
+
 
         public Usuarios1Controller(AppDbContext context)
         {
             _context = context;
+            _remetente = "Suporte Event Pass";
+            _emailRemetente = "luizeduardo0011@hotmail.com";
+            _senhaEmail = "eventpass@2023";
+            _servidorSmtp = "smtp-mail.outlook.com";
+            _portaSmtp = 587;
+            
         }
 
         // GET: Usuarios
@@ -256,32 +292,40 @@ namespace EventPass1.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public async Task<IActionResult> EsqueciSenha(string email)
-        {
-            var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == email);
-
-            if (usuario == null)
-            {
-                // Trate o caso em que o e-mail não está registrado no sistema.
-                ViewBag.Message = "E-mail não encontrado.";
-                return View();
-            }
-
-            // Gere um token de redefinição de senha (por exemplo, um GUID).
-            string token = Guid.NewGuid().ToString();
-
-            // Armazene o token no banco de dados associado ao usuário.
-            usuario.TokenRedefinicaoSenha = token;
-            _context.Update(usuario);
-            await _context.SaveChangesAsync();
-
+        
             // Envie um e-mail ao usuário com um link para redefinir a senha, incluindo o token no link.
             // Implemente a lógica de envio de e-mail aqui.
 
-            ViewBag.Message = "Um link para redefinir sua senha foi enviado para o seu e-mail.";
-            return View();
-        }
+            [HttpPost]
+            public async Task<IActionResult> EsqueciSenha(string email)
+            {
+                var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == email);
+
+                if (usuario == null)
+                {
+                    // Trate o caso em que o e-mail não está registrado no sistema.
+                    ViewBag.Message = "E-mail não encontrado.";
+                    return View();
+                }
+
+                // Gere um token de redefinição de senha (por exemplo, um GUID).
+                string token = Guid.NewGuid().ToString();
+
+                // Armazene o token no banco de dados associado ao usuário.
+                usuario.TokenRedefinicaoSenha = token;
+                _context.Update(usuario);
+                await _context.SaveChangesAsync();
+
+                // Envie um e-mail ao usuário com um link para redefinir a senha, incluindo o token no link.
+                await SendEmailAsync(usuario.Email, "Redefinição de Senha",
+                    $"Clique no link abaixo para redefinir sua senha:\n\n" +
+                    $"{Url.Action("RedefinirSenha", "Usuarios1", new { token = token }, Request.Scheme)}");
+
+                ViewBag.Message = "Um link para redefinir sua senha foi enviado para o seu e-mail.";
+                return View();
+            }
+
+           
         public IActionResult RedefinirSenha(string token)
         {
             // Verifique se o token é válido e se existe no banco de dados.
