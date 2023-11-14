@@ -22,7 +22,7 @@ namespace EventPass1.Models
 
         [Required(ErrorMessage = "Informe a data e hora de realização")]
         [Display(Name = "Hora")]
-        [DataType(DataType.Time)] // Anotação para hora
+        [DataType(DataType.Time)] 
         [DisplayFormat(DataFormatString = "{0:HH:mm:ss}", ApplyFormatInEditMode = true)]
         public DateTime Hora { get; set; }
 

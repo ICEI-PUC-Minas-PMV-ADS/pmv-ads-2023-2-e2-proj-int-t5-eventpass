@@ -9,10 +9,8 @@ public class EmailService
     private readonly string _emailRemetente;
     private readonly string _senhaEmail;
     private readonly string _servidorSmtp;
-    private readonly int _portaSmtp;
-
-    
-    //Configura as credenciais de email
+    private readonly int _portaSmtp;    
+   
     public EmailService()
     {
         _remetente = "Suporte Event Pass";
