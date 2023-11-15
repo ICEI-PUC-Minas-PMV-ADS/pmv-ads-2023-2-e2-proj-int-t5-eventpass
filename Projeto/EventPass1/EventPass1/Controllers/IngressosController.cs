@@ -22,7 +22,7 @@ namespace EventPass1.Controllers
             _emailService = emailService;
             _context = context;
         }
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var ingressos = _context.Ingressos
                 .Include(i => i.Evento)
@@ -34,7 +34,7 @@ namespace EventPass1.Controllers
 
             return View(ingressos);
         }
-        public async Task<IActionResult> MeusIngressos()
+        public IActionResult MeusIngressos()
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             var ingressos1 = _context.Ingressos
@@ -81,11 +81,11 @@ namespace EventPass1.Controllers
                 int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
                 int limiteIngressos = 3;
 
-                
+
                 int QuantidadeExistente = _context.Ingressos
                     .Where(i => i.IdEvento == ingresso.IdEvento && i.IdUsuario == userId && i.Id != id && i.Status != 0)
-                    .Sum(i => i.Quantidade);               
-                                            
+                    .Sum(i => i.Quantidade);
+
                 if (QuantidadeExistente < limiteIngressos)
                 {
                     existingIngresso.IdEvento = ingresso.IdEvento;
@@ -99,8 +99,8 @@ namespace EventPass1.Controllers
                     var evento = _context.Eventos.Find(ingresso.IdEvento);
                     var usuario = _context.Usuarios.Find(userId);
 
-                 
-                   // _emailService.EnviarEmailConfirmacaoReserva(usuario.Email, ingresso.Id, evento.NomeEvento, usuario.NomeUsuario);
+
+                    // _emailService.EnviarEmailConfirmacaoReserva(usuario.Email, ingresso.Id, evento.NomeEvento, usuario.NomeUsuario);
 
                     return RedirectToAction("MeusIngressos");
                 }
@@ -113,13 +113,6 @@ namespace EventPass1.Controllers
             return View(ingresso);
         }
 
-
-
-
-        private bool IngressoExists(int? id)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task<IActionResult> Delete(int? id)
         {

@@ -16,13 +16,14 @@ namespace EventPass1.Controllers
     public class EventosController : Controller
     {
         private readonly AppDbContext _context;
+
         public EventosController(AppDbContext context)
         {
             _context = context;
         }
 
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             var eventos = _context.Eventos
@@ -180,8 +181,8 @@ namespace EventPass1.Controllers
                 return NotFound();
             }
 
-           _context.Ingressos.RemoveRange(evento.Ingressos);
-           _context.Eventos.Remove(evento);
+            _context.Ingressos.RemoveRange(evento.Ingressos);
+            _context.Eventos.Remove(evento);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));

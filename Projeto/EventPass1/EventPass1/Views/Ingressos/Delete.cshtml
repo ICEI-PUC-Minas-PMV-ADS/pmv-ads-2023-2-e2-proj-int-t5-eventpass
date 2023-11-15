@@ -4,16 +4,17 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Excluir</h1>
+<link rel="stylesheet" href="~/css/style-delete.css" />
 
-<h3>Você tem certeza quer excluir?</h3>
+<h1 class="title-delete">Excluir</h1>
+
+<h3 class="description">Você tem certeza que deseja excluir o ingresso?</h3>
 <div>
-    <h4>Ingresso</h4>
-    <hr />
-        
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Exluir" class="btn btn-danger" /> 
-        <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
+        <div style="display: flex;">
+            <input type="submit" value="Excluir" class="button-delete" />
+            <a class="button-voltar" asp-controller="Ingressos" asp-action="MeusIngressos">Voltar</a>
+        </div>
     </form>
 </div>

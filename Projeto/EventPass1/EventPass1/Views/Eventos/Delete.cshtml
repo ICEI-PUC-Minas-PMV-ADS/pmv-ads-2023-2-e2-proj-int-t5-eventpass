@@ -4,60 +4,69 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Excluir</h1>
+<link rel="stylesheet" href="~/css/style-delete.css" />
 
-<h3>Você tem certeza quer Excluir? </h3>
+<h1 class="title-delete">Excluir</h1>
+
+<h3 class="description">Você tem certeza que deseja excluir evento? </h3>
+<hr />
 <div>
-    <h4>Evento</h4>
+    <div class="form-group">
+        <dl>
+            <div class="form-group">
+                <dt>
+                    @Html.DisplayNameFor(model => model.NomeEvento)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.NomeEvento)
+                </dd>
+            </div>
+
+            <div class="form-group">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Data)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Data)
+                </dd>
+            </div>
+
+            <div class="form-group">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Hora)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Hora)
+                </dd>
+            </div>
+
+            <div class="form-group">
+                <dt>
+                    @Html.DisplayNameFor(model => model.TotalIngressos)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.TotalIngressos)
+                </dd>
+            </div>
+
+            <div class="form-group">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Descricao)
+                </dd>
+            </div>
+        </dl>
+    </div>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NomeEvento)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NomeEvento)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Data)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Data)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Hora)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Hora)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TotalIngressos)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TotalIngressos)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Local)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Local)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Usuario)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Usuario.CPF)
-        </dd>
-    </dl>
+
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="IdEvento" />
-        <input type="submit" value="Excluir" class="btn btn-danger" /> |
-        <a class="btn btn-info" asp-action="Index">Voltar</a>
+        <div style="display: flex;">
+            <input type="submit" value="Excluir" class="button-delete" />
+            <a class="button-voltar" asp-action="Index">Voltar</a>
+        </div>
     </form>
 </div>

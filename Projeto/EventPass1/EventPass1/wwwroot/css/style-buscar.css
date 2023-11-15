@@ -1,0 +1,55 @@
+.title-buscar {
+  margin: 30px 0;
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.data-hora {
+  color: #f15a24;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.location {
+  color: #4f4f4f;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.description {
+  color: #000;
+  margin-top: 20px;
+  text-align: justify;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.button-retirar {
+  margin-right: 10px;
+  color: white;
+  background-color: #f15a24;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.button-voltar {
+  border: 1px solid black;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.custom-select {
+  background-color: transparent;
+  border: 1p solid #f15a24;
+  outline: none;
+  color: #000000;
+}
