@@ -1,7 +1,5 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
 ## Diagrama de Classes
@@ -24,10 +22,10 @@ Com base no diagrama de relacionamento ER realizado pela equipe, foi desenvolvid
 
 ## Tecnologias Utilizadas
 
-Para implementar a solução, foi concebida uma estrutura de aplicações que abrange tanto o front-end quanto o back-end. No front-end, serão empregadas as linguagens HTML, CSS e JavaScript, junto com a biblioteca REACT.TS. Para o desenvolvimento do back-end, serão utilizadas as linguagens C# em conjunto com o Framework da API Web do ASP.NET Core. O sistema de gerenciamento de dados (SGBD) escolhido será o SQL Server. Durante a fase de implementação e desenvolvimento, faremos uso da ferramenta Visual Studio Code para a criação de códigos, e o GitHub será a plataforma escolhida para hospedar o código-fonte.
+Para implementar a solução, foi concebida uma estrutura de aplicações que abrange tanto o front-end quanto o back-end. No front-end, serão empregadas as linguagens HTML, CSS e JavaScript, junto com a biblioteca REACT.TS. Para o desenvolvimento do back-end, serão utilizadas as linguagens C# em conjunto com o Framework da API Web do ASP.NET Core. O sistema de gerenciamento de dados (SGBD) escolhido será o SQL Server. Durante a fase de implementação e desenvolvimento, faremos uso da ferramenta Visual Studio 2022 para a criação de códigos, e o GitHub será a plataforma escolhida para hospedar o código-fonte.
 
 ![Tecnologias](img/Tecnologias.jpg)
 
 ## Hospedagem
 
-Para a hospedagem da aplicação, foi definido junto ao time de desenvolvimento a utilização da plataforma HEROKU, pois possui integração nativa com sistemas de controle de versão baseados em Git e oferece um processo de implantação simples e rápido.
+Para a hospedagem da aplicação, foi definido junto ao time de desenvolvimento a utilização da plataforma Azure, pois possui integração nativa com sistemas de controle de versão baseados em Git e oferece um processo de implantação simples e rápido.

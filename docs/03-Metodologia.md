@@ -1,7 +1,5 @@
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
 A metodologia ágil foi adotada pelo grupo, com foco na priorização do backlog, sprints de três semanas, reuniões diárias e entregas ao final de cada sprint. Iremos envolver os stakeholders na priorização do backlog e garantir que os itens selecionados possam ser concluídos em uma sprint. Serão revisadas as sprints para promover melhorias contínuas. A colaboração e comunicação eficaz são essenciais para o sucesso do projeto.
 
 ## Controle de Versão
@@ -54,7 +52,7 @@ Para a organização e distribuição das tarefas a equipe está utilizando o qu
 
 As ferramentas empregadas no projeto são:
 
-- Visual Studio Code.
+- Visual Studio 2022
 - Microsoft Teams
 - Github
 - Astah UML

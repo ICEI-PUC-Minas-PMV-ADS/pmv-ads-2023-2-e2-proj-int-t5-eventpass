@@ -1,6 +1,6 @@
 # Registro de Testes de Software
 
-Para as funcionaliadades propostar foram realizados os <a href="8-Plano de Testes de Software.md"> planos de Testes de Software</a>. Abaixo seguie os registros dos testes com a aplicação EventPass:
+Para as funcionaliadades propostar foram realizados os <a href="8-Plano de Testes de Software.md"> planos de Testes de Software</a>. Abaixo segue os registros dos testes com a aplicação EventPass:
 
 |       Testes        |                                                              CT-01 – Gerênciar cadastro                                                               |
 | :-----------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
