@@ -11,7 +11,7 @@ Para as funcionaliadades propostar foram realizados os <a href="8-Plano de Teste
 |    Tipos perfil     | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/bb7a7232-645e-4f54-a7e5-f11628f0d4fb"> |
 |                     |                                                                                                                                                       |
 |        Teste        |                                                               CT-03 – Gerenciar evento                                                                |
-|      Cadastrar      | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/11e097ad-5fe7-4d07-8d8e-a90ecd94529e"> |
+|      Cadastrar      | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/6ff47316-27d0-41d5-abb9-d7b6a9477487"> |
 |       Editar        | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/40ec09f8-7dd6-46ce-b01c-b2a4bc24da72"> |
 |       Excluir       | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/7e7c5a91-d33c-4ad4-9c73-a2a9a1656a0f"> |
 |                     |
@@ -20,14 +20,16 @@ Para as funcionaliadades propostar foram realizados os <a href="8-Plano de Teste
 |                     |                                                                                                                                                       |
 |        Teste        |                                                       CT-05 – Exibir eventos na pagina inicial                                                        |
 |   Exibir eventos    | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/a48bdc39-e5f9-4dc7-89b5-f0a0e8451704"> |
-|                     |
+|                     |                                                                                                                                                       |
 |        Teste        |                                                   CT-06 – Cadastro de evento - Campos obrigatórios                                                    |
 | Campos obrigatórios | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/9fac4ede-5c3c-4079-9a7a-102d8c594ab8"> |
-|                     |
+|                     |                                                                                                                                                       |
 |        Teste        |                                                     CT-07 – Número de ticket - Em desenvolvimento                                                     |
 |        Vídeo        |                                                     ![Logo](img/logo-eventpass.png)<video src="">                                                     |
+|                     |                                                                                                                                                       |
 |        Teste        |                                                  CT-08 – Gerar QR Code e e-mail - Em desenvolvimento                                                  |
 |        Vídeo        |                                                     ![Logo](img/logo-eventpass.png)<video src="">                                                     |
+|                     |                                                                                                                                                       |
 |        Teste        |                                                           CT-09 – Gerar relatório do evento                                                           |
 |   Tela relátorio    | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/d61b58ea-5d13-4534-a202-613f192fc46f"> |
 |                     |
