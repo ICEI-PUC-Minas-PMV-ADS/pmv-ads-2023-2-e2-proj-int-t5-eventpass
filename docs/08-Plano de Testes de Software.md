@@ -43,12 +43,12 @@ Por exemplo:
 |       Passos        |        - Acessar a aplicação <br> - Verificar a seção “eventos em destaque”        |
 |  Critério de Êxito  | - Os 3 próximos eventos são exibidos corretamente em uma seção da página principal |
 
-|  **Caso de Teste**  |                                                                                     CT-06 – Cadastro de evento                                                                                      |
-| :-----------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Requisito Associado |                         RF-006 - A aplicação deve garantir que ao cadastrar o evento, o gestor informe a atração, o local, a data e a quantidade de ingressos disponíveis.                          |
-|  Objetivo do Teste  |                                Garantir que o gestor informe a atração, local, data e quantidade de ingressos disponíveis ao realizar o cadastro de um novo evento.                                 |
-|       Passos        | - Acessar a aplicação como gestor <br> - Clicar em “gerenciar eventos” <br> - Iniciar o cadastro de novo evento <br> - Preencher o formulário de cadastro do evento <br> - Clicar em cadastrar <br> |
-|  Critério de Êxito  |                                                         - O gestor só consegue cadastrar o evento caso preencha todos os campos necessários                                                         |
+|  **Caso de Teste**  |                                                                                                                          CT-06 – Cadastro de evento                                                                                                                           |
+| :-----------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Requisito Associado |                                                              RF-006 - A aplicação deve garantir que ao cadastrar o evento, o gestor informe a atração, o local, a data e a quantidade de ingressos disponíveis.                                                               |
+|  Objetivo do Teste  |                                                                     Garantir que o gestor informe a atração, local, data e quantidade de ingressos disponíveis ao realizar o cadastro de um novo evento.                                                                      |
+|       Passos        | - Acessar a aplicação como gestor <br> - Acessar o menu "Meu perfil" na barra superior "header" <br> Selecionar a opção "Criar evento" na barra de navegação lateral <br> - Não preencher todos os campos do formulário de cadastro do evento <br> - Clicar em cadastrar <br> |
+|  Critério de Êxito  |                                                                                              - O gestor só consegue cadastrar o evento caso preencha todos os campos necessários                                                                                              |
 
 |  **Caso de Teste**  |                                                                   CT-07 – Gerênciar ingressos pelo espectador                                                                   |
 | :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
