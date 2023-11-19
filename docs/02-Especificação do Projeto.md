@@ -47,58 +47,52 @@ Os requisitos não funcionais não impedem o funcionamento da aplicação e est�
 
 ### Requisitos Funcionais
 
-
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| A aplicação deve permitir gerenciamento de cadastros. |  ALTA  | 
-|RF-002| A aplicação deve conter perfis de gestor de eventos e espectador. |  ALTA |
-|RF-003| A aplicação deve permitir o gerenciamento do evento pelo gestor.  |  ALTA  |
-|RF-004| A aplicação deve permitir o espectador pesquisar o evento por local, por data e tipo. |  ALTA  |
-|RF-005| A aplicação deve exibir os próximos 3 eventos na tela principal. | MÉDIA |
-|RF-006| A aplicação deve garantir que ao cadastrar o evento, o gestor informe a atração, o local, a data e a quantidade de ingressos disponíveis. |  ALTA |
-|RF-007| A aplicação deve gerar número de ticket para cada ingresso adquirido pelo espectador e deve diminuir a quantidade de ingressos disponíveis. |  ALTA  |
-|RF-008| A aplicação deve gerar um qr code por número de ticket e enviar por e-mail para o espectador. | MÉDIA |
-|RF-009| A aplicação deve possibilitar ao gestor do evento gerar relatório geral do evento com dados do eventos, ingressos disponíveis e ingressos já distribuídos. |  BAIXA |
-
+| ID     | Descrição do Requisito                                                                                                                                     | Prioridade |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| RF-001 | A aplicação deve permitir gerenciamento de cadastros.                                                                                                      | ALTA       |
+| RF-002 | A aplicação deve conter perfis de gestor de eventos e espectador.                                                                                          | ALTA       |
+| RF-003 | A aplicação deve permitir o gerenciamento do evento pelo gestor.                                                                                           | ALTA       |
+| RF-004 | A aplicação deve permitir o espectador pesquisar o evento pelo nome.                                                                                       | ALTA       |
+| RF-005 | A aplicação deve exibir os próximos 3 eventos na tela principal.                                                                                           | MÉDIA      |
+| RF-006 | A aplicação deve garantir que ao cadastrar o evento, o gestor informe a atração, o local, a data e a quantidade de ingressos disponíveis.                  | ALTA       |
+| RF-007 | A aplicação deve permitir o gerenciamento dos ingressos retirados pelo espectador.                                                                         | ALTA       |
+| RF-008 | A aplicação deve enviar um e-mail de confirmação de reserva para o espectador.                                                                             | MÉDIA      |
+| RF-009 | A aplicação deve possibilitar ao gestor do evento gerar relatório geral do evento com dados do eventos, ingressos disponíveis e ingressos já distribuídos. | BAIXA      |
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva para rodar em todos os dispositivos. |  MÉDIA  | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 10s. |  BAIXA |
-|RNF-003| Apenas espectadores previamente cadastrados e logados poderão gerar ingressos |  MÉDIA  |
-|RNF-004| A aplicação deve ser compatível com os principais navegadores do mercado. | ALTA |
-|RNF-005| A aplicação deve seguir boas práticas de SEO. Isso inclui técnicas de otimização on-page e garantir a facilidade de rastreamento pelos motores de busca. |  ALTA |
-
-
-
+| ID      | Descrição do Requisito                                                                                                                                   | Prioridade |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| RNF-001 | A aplicação deve ser responsiva para rodar em todos os dispositivos.                                                                                     | MÉDIA      |
+| RNF-002 | A aplicação deve processar requisições do usuário em no máximo 10s.                                                                                      | BAIXA      |
+| RNF-003 | Apenas espectadores previamente cadastrados e logados poderão gerar ingressos                                                                            | MÉDIA      |
+| RNF-004 | A aplicação deve ser compatível com os principais navegadores do mercado.                                                                                | ALTA       |
+| RNF-005 | A aplicação deve seguir boas práticas de SEO. Isso inclui técnicas de otimização on-page e garantir a facilidade de rastreamento pelos motores de busca. | ALTA       |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
 - [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
+  (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
+  correspondem a uma funcionalidade que deve estar presente na
   plataforma (ex: cadastro de usuário).
 - [Requisitos Não Funcionais
   (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
   correspondem a uma característica técnica, seja de usabilidade,
   desempenho, confiabilidade, segurança ou outro (ex: suporte a
   dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
+  Lembre-se que cada requisito deve corresponder à uma e somente uma
+  característica alvo da sua solução. Além disso, certifique-se de que
+  todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-| ID  | Restrição                                                       |
-| --- | --------------------------------------------------------------- |
-| 01  | O projeto deverá ser entregue até o final do semestre           |
-| 02  | A geração de ingressos deverá ser limitada a 3 unidades por CPF |
-| 03  | O desenvolvimento da solução não poderá ser subcontratado       |
+| ID      | Restrição                                                                                                                            |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| RST-001 | O projeto deverá ser entregue até o final do semestre                                                                                |
+| RST-002 | A geração de ingressos estará sujeita a uma restrição, sendo permitida a emissão de no máximo 3 unidades por usuário em cada evento. |
+| RST-003 | O desenvolvimento da solução não poderá ser subcontratado                                                                            |
 
 ## Diagrama de Casos de Uso
 

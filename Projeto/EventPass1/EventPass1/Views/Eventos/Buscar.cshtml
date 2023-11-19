@@ -21,6 +21,9 @@
     </dl>
 </div>
 <div>
-    <a class="button-retirar" asp-controller="Ingressos" asp-action="Edit" asp-route-id="@Model?.Id">Retirar</a>
-    <a class="button-voltar" asp-controller="Home" asp-action="Index">Voltar</a>
+    @if (User.IsInRole("Espectador"))
+    {
+        <a class="button-retirar" asp-controller="Ingressos" asp-action="Edit" asp-route-id="@Model?.Id">Retirar</a>
+    }
+        <a class="button-voltar" asp-controller="Home" asp-action="Index">Voltar</a>
 </div>
