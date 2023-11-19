@@ -15,8 +15,8 @@ Para as funcionaliadades propostar foram realizados os <a href="8-Plano de Teste
 |       Editar        | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/40ec09f8-7dd6-46ce-b01c-b2a4bc24da72"> |
 |       Excluir       | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/7e7c5a91-d33c-4ad4-9c73-a2a9a1656a0f"> |
 |                     |
-|        Teste        |                                                     CT-04 – Pesquisar evento - Em desenvolvimento                                                     |
-|        Vídeo        |                                                     ![Logo](img/logo-eventpass.png)<video src="">                                                     |
+|        Teste        |                                                               CT-04 – Pesquisar evento                                                                |
+|  Pesquisar evento   | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/491632cb-811b-42c0-83a0-075380df583c"> |
 |                     |                                                                                                                                                       |
 |        Teste        |                                                       CT-05 – Exibir eventos na pagina inicial                                                        |
 |   Exibir eventos    | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/a48bdc39-e5f9-4dc7-89b5-f0a0e8451704"> |
@@ -28,8 +28,10 @@ Para as funcionaliadades propostar foram realizados os <a href="8-Plano de Teste
 |        Vídeo        |                                                     ![Logo](img/logo-eventpass.png)<video src="">                                                     |
 |        Teste        |                                                  CT-08 – Gerar QR Code e e-mail - Em desenvolvimento                                                  |
 |        Vídeo        |                                                     ![Logo](img/logo-eventpass.png)<video src="">                                                     |
-|        Teste        |                                                     CT-09 – Gerar relatório - Em desenvolvimento                                                      |
-|        Vídeo        |                                                     ![Logo](img/logo-eventpass.png)<video src="">                                                     |
+|        Teste        |                                                           CT-09 – Gerar relatório do evento                                                           |
+|   Tela relátorio    | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/d61b58ea-5d13-4534-a202-613f192fc46f"> |
+|                     |
+|                     |
 
 ## Avaliação
 
