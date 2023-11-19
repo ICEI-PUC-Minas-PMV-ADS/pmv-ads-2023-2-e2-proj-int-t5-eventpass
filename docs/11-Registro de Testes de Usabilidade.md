@@ -11,21 +11,21 @@ Os testes de usabilidades foram feitos de forma remota e seus resultados estão 
 
 ### CT-02: Login de usuário
 
-| **Usuário** | **Caso de teste** | **Tempo** | **Ações** | **Qtd. Erros** | **Se recuperou do erro** | **Comentários e observações**                                 |
-| ----------- | ----------------- | --------- | --------- | -------------- | ------------------------ | ------------------------------------------------------------- |
-| Usuário 1   | CT-02             |           |           |                |                          |                                                               |
-| Usuário 2   | CT-02             |           |           |                |                          |                                                               |
-| Usuário 3   | CT-02             |           |           |                |                          |
-| Usuário 4   | CT-02             | 00:00:15  | 2         | 0              | ---                      | Realizou o processo rapidamente sem dúvidas de como execultar |
+| **Usuário** | **Caso de teste** | **Tempo** | **Ações** | **Qtd. Erros** | **Se recuperou do erro** | **Comentários e observações**                                                 |
+| ----------- | ----------------- | --------- | --------- | -------------- | ------------------------ | ----------------------------------------------------------------------------- |
+| Usuário 1   | CT-02             | 00:01:20  | 2         | 0              | ---                      | Realizou o processo sem duvidas                                               |
+| Usuário 2   | CT-02             | 00:00:45  | 2         | 0              | ---                      | Realizou o processo rapidamente sem dúvidas de como executar                  |
+| Usuário 3   | CT-02             | 00:01:10  | 3         | 0              | ---                      | Usuário teve uma breve hesitação, mas conseguiu efetuar o login sem problemas |
+| Usuário 4   | CT-02             | 00:00:15  | 2         | 0              | ---                      | Realizou o processo rapidamente sem dúvidas de como executar                  |
 
 ### CT-03: Cadastrar eventos
 
-| **Usuário** | **Caso de teste** | **Tempo** | **Ações** | **Qtd. Erros** | **Se recuperou do erro** | **Comentários e observações**                                                                                                                                                           |
-| ----------- | ----------------- | --------- | --------- | -------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Usuário 1   | CT-03             |           |           |                |                          |                                                                                                                                                                                         |
-| Usuário 2   | CT-03             |           |           |                |                          |                                                                                                                                                                                         |
-| Usuário 3   | CT-03             |           |           |                |                          |
-| Usuário 4   | CT-03             | 00:02:55  | 5         | 0              | ---                      | logado como gestor o usuário identificou claramente a opção de cadastrar eventos no menu lateral após acessar o menu "Meu perfil" não encontrando dificuldades para execulção da tarefa |
+| **Usuário** | **Caso de teste** | **Tempo** | **Ações** | **Qtd. Erros** | **Se recuperou do erro** | **Comentários e observações**                                                                                                                                                            |
+| ----------- | ----------------- | --------- | --------- | -------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Usuário 1   | CT-03             | 00:01:30  | 4         | 0              | ---                      | Realizou o processo rapidamente sem dúvidas de como executar                                                                                                                             |
+| Usuário 2   | CT-03             | 00:01:00  | 4         | 0              | ---                      | Realizou o processo rapidamente sem dúvidas de como executar                                                                                                                             |
+| Usuário 3   | CT-03             | 00:01:10  | 4         | 0              | ---                      | Realizou o processo rapidamente sem dúvidas de como executar                                                                                                                             |
+| Usuário 4   | CT-03             | 00:02:55  | 5         | 0              | ---                      | Logado como gestor, o usuário identificou claramente a opção de cadastrar eventos no menu lateral após acessar o menu "Meu perfil", não encontrando dificuldades para execução da tarefa |
 
 ### CT-04: Gerênciar eventos
 
@@ -38,21 +38,21 @@ Os testes de usabilidades foram feitos de forma remota e seus resultados estão 
 
 ### CT-05: Solicitar ingressos
 
-| **Usuário** | **Caso de teste** | **Tempo** | **Ações** | **Qtd. Erros** | **Se recuperou do erro**                                                   | **Comentários e observações** |
-| ----------- | ----------------- | --------- | --------- | -------------- | -------------------------------------------------------------------------- | ----------------------------- |
-| Usuário 1   | CT-05             |           |           |                |                                                                            |                               |
-| Usuário 2   | CT-05             |           |           |                |                                                                            |                               |
-| Usuário 3   | CT-05             |           |           |                |                                                                            |
-| Usuário 4   | CT-05             | 00:05:30  | 4         | não            | Não foi possível identificar o evento para retirar o ingresso na aplicação |
+| **Usuário** | **Caso de teste** | **Tempo** | **Ações** | **Qtd. Erros** | **Se recuperou do erro**                                               | **Comentários e observações**                                                                                                         |
+| ----------- | ----------------- | --------- | --------- | -------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Usuário 1   | CT-05             | 00:03:40  | 8         | 0              | ---                                                                    | Usuário encontrou facilmente o evento desejado e solicitou os ingressos com eficiência.                                               |
+| Usuário 2   | CT-05             | 00:06:15  | 15        | 2              | Sim após ajustar os critérios de pesquisa na barra superior            | Usuário teve dificuldade inicial para encontrar o evento, mas, ao ajustar os critérios, conseguiu solicitar os ingressos com sucesso. |
+| Usuário 3   | CT-05             | 00:04:20  | 10        | 0              | ---                                                                    | Usuário realizou o processo de solicitar ingressos de forma rápida e sem erros.                                                       |
+| Usuário 4   | CT-05             | 00:05:30  | 12        | 1              | Sim após não encontrar o evento, realizou a pesquisa na barra superior | Não foi possível identificar o evento para retirar de imediato, sendo necessário recorrer à barra de pesquisa.                        |
 
-### CT-06: Gerênciar os ingressos retirados
+### CT-06: Gerenciar os ingressos retirados
 
-| **Usuário** | **Caso de teste** | **Tempo** | **Ações** | **Qtd. Erros** | **Se recuperou do erro** | **Comentários e observações**                                                                                               |
-| ----------- | ----------------- | --------- | --------- | -------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
-| Usuário 1   | CT-06             |           |           |                |                          |                                                                                                                             |
-| Usuário 2   | CT-06             |           |           |                |                          |                                                                                                                             |
-| Usuário 3   | CT-06             |           |           |                |                          |
-| Usuário 4   | CT-06             | 00:00:40  | 4         | 1              | não                      | Após logado usuário encontrou a tela de gerencimento de ingressos e identificou os detalhes e a opção de deletar o ingresso |
+| **Usuário** | **Caso de teste** | **Tempo** | **Ações** | **Qtd. Erros** | **Se recuperou do erro**                     | **Comentários e observações**                                                                                                     |
+| ----------- | ----------------- | --------- | --------- | -------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Usuário 1   | CT-06             | 00:00:55  | 5         | 1              | Voltou à página inicial e identificou o erro | O usuário teve uma pequena confusão ao tentar deletar um ingresso, mas recuperou-se ao voltar à página inicial e tentou novamente |
+| Usuário 2   | CT-06             | 00:01:30  | 4         | 0              | ---                                          | Usuário navegou facilmente pela tela de gerenciamento de ingressos e identificou as opções disponíveis.                           |
+| Usuário 3   | CT-06             | 00:00:50  | 4         | 0              | ---                                          | O usuário, após logado, encontrou rapidamente a tela de gerenciamento de ingressos e identificou as opções de forma eficiente.    |
+| Usuário 4   | CT-06             | 00:00:40  | 4         | 0              | ---                                          | Após logado, o usuário encontrou a tela de gerenciamento de ingressos, identificou os detalhes e a opção de deletar o ingresso.   |
 
 ### CT-07: Gerenciamento de cadastro
 
