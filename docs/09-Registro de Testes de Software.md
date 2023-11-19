@@ -24,17 +24,23 @@ Para as funcionaliadades propostar foram realizados os <a href="8-Plano de Teste
 |        Teste        |                                                   CT-06 – Cadastro de evento - Campos obrigatórios                                                    |
 | Campos obrigatórios | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/9fac4ede-5c3c-4079-9a7a-102d8c594ab8"> |
 |                     |                                                                                                                                                       |
-|        Teste        |                                                     CT-07 – Número de ticket - Em desenvolvimento                                                     |
-|        Vídeo        |                                                     ![Logo](img/logo-eventpass.png)<video src="">                                                     |
+|        Teste        |                                                 CT-07 – Gerênciar ingressos pelo perfil de espectador                                                 |
+|      Solicitar      | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/b5476196-8ec4-41ec-a5e2-758dfda71a63"> |
+|     Visualizar      | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/fd40d146-59f8-4452-a696-28b28ff841b8"> |
+|       Excluir       | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/a02155c5-ca97-490a-a818-bc9d7764bd94"> |
+|                     |
 |                     |                                                                                                                                                       |
-|        Teste        |                                                  CT-08 – Gerar QR Code e e-mail - Em desenvolvimento                                                  |
-|        Vídeo        |                                                     ![Logo](img/logo-eventpass.png)<video src="">                                                     |
+|        Teste        |                                                        CT-08 – Enviar e-mail de confirmação -                                                         |
+|        Vídeo        | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/690de30f-dcdd-43e1-9a9d-df5cbaa5ac03"> |
 |                     |                                                                                                                                                       |
 |        Teste        |                                                           CT-09 – Gerar relatório do evento                                                           |
 |   Tela relátorio    | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/d61b58ea-5d13-4534-a202-613f192fc46f"> |
+|                     |
+|        Teste        |                                                CT-10 – Limitar retirada de ingresso por usuário evento                                                |
+| Limite de ingresso  | <video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass/assets/126528758/98eb2f7c-bff0-45c2-89b7-ff8b843a4bdc"> |
 |                     |
 |                     |
 
 ## Avaliação
 
-Os testes realizados nas funcionalidades desenvolvidas até o momento apresentaram resultados satisfatórios, uma vez que não foram observados quaisquer erros durante a execução do software.
+Os testes realizados nas funcionalidades desenvolvidas apresentaram resultados satisfatórios, uma vez que não foram observados quaisquer erros durante a execução do software.
