@@ -150,6 +150,21 @@ namespace EventPass1.Controllers
             return View(dados);
         }
 
+        public async Task<IActionResult> Info(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var dados = await _context.Eventos.FindAsync(id);
+
+            if (dados == null)
+                return NotFound();
+
+            ViewBag.Evento = dados;
+
+            return View(dados);
+        }
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

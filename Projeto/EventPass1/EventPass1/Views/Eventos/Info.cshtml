@@ -1,0 +1,61 @@
+﻿@model EventPass1.Models.Evento
+
+@{
+    ViewData["Title"] = "Info";
+}
+
+
+    <div class="form-group">
+        <dl>
+            <div class="form-group">
+                <dt>
+                    @Html.DisplayNameFor(model => model.NomeEvento)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.NomeEvento)
+                </dd>
+            </div>
+
+            <div class="form-group">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Data)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Data)
+                </dd>
+            </div>
+
+            <div class="form-group">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Hora)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Hora)
+                </dd>
+            </div>
+
+            <div class="form-group">
+                <dt>
+                    @Html.DisplayNameFor(model => model.TotalIngressos)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.TotalIngressos)
+                </dd>
+            </div>
+
+            <div class="form-group">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Descricao)
+                </dd>
+            </div>
+        </dl>
+    </div>
+<div>
+    <a asp-controller="Home" asp-action="Index"
+       style="margin-right: 10px; color: white; background-color: #f15a24; font-weight: bold; border: none; border-radius: 5px; padding: 8px;">
+        Voltar
+    </a>
+</div>
