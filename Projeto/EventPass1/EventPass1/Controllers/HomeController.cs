@@ -18,7 +18,12 @@ namespace EventPass1.Controllers
 
         public IActionResult Index()
         {
-            return View();
+			var carrocel = _context.Eventos
+	        .OrderByDescending(e => e.Data)
+	        .Take(6)
+	        .ToList();
+
+			return View(carrocel);
         }
 
         public IActionResult Privacy()
