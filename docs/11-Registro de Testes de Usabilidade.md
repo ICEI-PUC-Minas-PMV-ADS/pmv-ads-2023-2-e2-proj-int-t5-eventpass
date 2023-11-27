@@ -62,3 +62,32 @@ Os testes de usabilidades foram feitos de forma remota e seus resultados estão 
 | Usuário 2   | CT-01             | 00:01:00  | 4         | 0              | ---                      | Usuário gostou do layout da aplicação, no geral, achou a experiência satisfatória                              |
 | Usuário 3   | CT-01             | 00:01:10  | 4         | 0              | ---                      | Usuário achou a experiência positiva, teve facilidade para gerenciar seu cadastro e editar seus dados          |
 | Usuário 4   | CT-07             | 00:01:43  | 5         | 0              | ---                      | Usuário achou a interface intuitiva e conseguiu acessar a tela de edição do perfil e alterar suas informações. |
+
+<h2>Relatório dos Testes de Usabilidade</h2>
+
+#Observações
+Após a conclusão dos testes de usabilidade, foram identificadas oportunidades significativas de aprimoramento no software, visando proporcionar uma experiência mais intuitiva e eficiente aos usuários. Este relatório destaca as principais descobertas, recomendações e insights derivados das avaliações realizadas, proporcionando uma visão abrangente sobre a usabilidade do sistema.
+
+Durante a execução dos testes CTU-04 e CTU-05, foi identificada uma dificuldade na usabilidade da aplicação. Essa problemática ficou claramente evidenciada pelo elevado número de ações executadas pelos usuários ao longo dos testes. A complexidade percebida durante a interação sugere a necessidade de uma análise mais aprofundada para compreender e abordar as questões específicas que impactaram negativamente a experiência do usuário durante a execução desses casos de teste.
+
+#Relatório:
+
+A realização de testes de usuabilidade em um software visa atingir diversos objetivos cruciais para o desenvolvimento e aprimoramento do produto, busca-se avaliar a eficiência do sistema analisando como os usuários interagem com as funcionalidades oferecidas e identificando possíveis obstáculos que possam impactar a experiência do usuário
+
+Na condução dos testes, levaram-se em consideração os parâmetros de tempo de execução, quantidade de ações necessárias para a conclusão da tarefa, incidência de erros e avaliação da experiência do usuário.
+
+**CTU-04 Gerênciar eventos**
+
+A experiência do usuário revela uma dificuldade na identificação dos ícones dos botões, apesar da facilidade inicial em encontrar a tela de gerenciamento de eventos no "Meu Perfil". Embora o usuário tenha interpretado corretamente os ícones de editar, visualizar e deletar, a compreensão da funcionalidade associada ao ícone de relatório de evento exigiu a ação de clicar no mesmo. Isso sugere uma potencial lacuna na clareza e na intuitividade dos ícones, destacando a importância de otimizar a representação visual para facilitar a compreensão imediata das funcionalidades disponíveis.
+
+| **Média de tempo** | **Média de ações** | **Quantidade de erros nos testes** |
+| ------------------ | ------------------ | ---------------------------------- |
+| 00:02:30           | 6                  | 0                                  |
+
+**CTU-05 Solicitar ingressos**
+
+A experiência do usuário evidencia uma dificuldade em identificar e localizar o evento desejado, resultando na necessidade de recorrer à barra de pesquisa para retirá-lo imediatamente. A ausência de informações relevantes, como data e local, na tela inicial dificultou a busca direta, destacando a importância de uma apresentação mais informativa e acessível na interface.
+
+| **Média de tempo** | **Média de ações** | **Quantidade de erros nos testes** |
+| ------------------ | ------------------ | ---------------------------------- |
+| 00:01:22           | 11                 | 3                                  |
