@@ -70,13 +70,29 @@ namespace EventPass1.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local")] Evento evento)
+        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local")] Evento evento, IFormFile flyer)
         {
             if (ModelState.IsValid)
             {
                 var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
                 evento.GestorId = userId;
+
+                if (flyer != null && flyer.Length > 0)
+                {
+                
+                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + flyer.FileName;
+
+                    var filePath = Path.Combine("wwwroot/flyer", uniqueFileName);
+                    filePath = filePath.Replace("\\", "/");
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await flyer.CopyToAsync(fileStream);
+                    }
+
+                    evento.flyer = filePath;
+                }
 
                 _context.Eventos.Add(evento);
                 await _context.SaveChangesAsync();
