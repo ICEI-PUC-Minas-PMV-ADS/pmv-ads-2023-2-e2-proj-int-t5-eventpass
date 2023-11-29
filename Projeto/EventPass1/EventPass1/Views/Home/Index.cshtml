@@ -2,7 +2,6 @@
 @{ ViewData["Title"] = "Home Page"; }
 
 <link rel="stylesheet" href="~/css/style-home.css" />
-
 <div class="text-center">
 	<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
 		<div class="carousel-inner">
@@ -21,7 +20,14 @@
 				@for (var i = 0; i < Math.Min(3, Model.Count); i++)
 				{
 					<div class="carousel-item @(i == 0 ? "active" : "")">
-						<img src="~/img/1.png" class="d-block w-100" alt="..." />
+						@if (Model[i].flyer != null)
+						{
+							<img src="/flyer/@Model[i].flyer" class="d-block w-100" alt="..." />
+						}
+						else
+						{
+							<img src="~/img/1.png" class="d-block w-100" alt="..." />
+						}
 						<div class="carousel-caption d-none d-md-block">
 							<a class="nav-link-carousel" asp-area="" asp-controller="Eventos" asp-action="Info" asp-route-id="@Model[i].IdEvento">@Model[i].NomeEvento</a>
 							<p>Some representative placeholder content for the first slide.</p>
@@ -48,7 +54,14 @@
 				{
 					<div class="col">
 						<div class="card">
-							<img src="~/img/3.png" class="card-img-top" alt="..." />
+						@if (Model[i].flyer != null)
+						{
+							<img src="/flyer/@Model[i].flyer" class="d-block w-100" alt="..." />
+						}
+						else
+						{
+							<img src="~/img/1.png" class="d-block w-100" alt="..." />
+						}
 							<div class="card-body">
 								<div class="card-details">
 									<p>@Model[i].Data</p>
@@ -84,7 +97,7 @@
 				</div>
 				<div class="col">
 					<div class="card">
-						<img src="~/img/2.png" class="card-img-top" alt="..." />
+						<img src="~/img/3.png" class="card-img-top" alt="..." />
 						<div class="card-body">
 							<div class="card-details">
 								<p>DD/MM/AA</p>

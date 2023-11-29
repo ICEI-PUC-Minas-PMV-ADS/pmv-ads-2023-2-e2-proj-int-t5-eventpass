@@ -86,12 +86,17 @@ namespace EventPass1.Controllers
                     var filePath = Path.Combine("wwwroot/flyer", uniqueFileName);
                     filePath = filePath.Replace("\\", "/");
 
+                    var relativePath = Path.GetRelativePath("wwwroot", filePath);
+                    relativePath = relativePath.Replace("\\", "/");
+                    relativePath = "/" + relativePath;
+                    
+
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {
                         await flyer.CopyToAsync(fileStream);
                     }
 
-                    evento.flyer = filePath;
+                    evento.flyer = uniqueFileName;
                 }
 
                 _context.Eventos.Add(evento);
