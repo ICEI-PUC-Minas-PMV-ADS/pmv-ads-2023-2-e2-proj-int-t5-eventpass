@@ -6,8 +6,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.Operations;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System;
+using System.IO;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using System.Reflection;
 
 namespace EventPass1.Controllers
 {
@@ -17,7 +20,7 @@ namespace EventPass1.Controllers
     {
         private readonly AppDbContext _context;
 
-        public EventosController(AppDbContext context)
+		public EventosController(AppDbContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
         }
@@ -85,11 +88,6 @@ namespace EventPass1.Controllers
 
                     var filePath = Path.Combine("wwwroot/flyer", uniqueFileName);
                     filePath = filePath.Replace("\\", "/");
-
-                    var relativePath = Path.GetRelativePath("wwwroot", filePath);
-                    relativePath = relativePath.Replace("\\", "/");
-                    relativePath = "/" + relativePath;
-                    
 
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {
@@ -217,6 +215,18 @@ namespace EventPass1.Controllers
                 return NotFound();
             }
 
+				string relativePath = Path.Combine("wwwroot" , "flyer" , evento.flyer);
+
+				string diretorioBase = AppDomain.CurrentDomain.BaseDirectory;
+
+				string completePath = Path.Combine(diretorioBase, relativePath);
+
+				System.Diagnostics.Debug.WriteLine($"Caminho Completo: {completePath}");
+
+				if (System.IO.File.Exists(completePath))
+				    System.IO.File.Delete(completePath);
+	
+     
             _context.Ingressos.RemoveRange(evento.Ingressos);
             _context.Eventos.Remove(evento);
             await _context.SaveChangesAsync();
