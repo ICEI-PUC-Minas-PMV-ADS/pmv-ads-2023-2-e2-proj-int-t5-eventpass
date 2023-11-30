@@ -140,7 +140,7 @@
                                 </p>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <form asp-action="Create">
+                                        <form asp-action="Create" mothod="post" enctype="multipart/form-data">
                                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                                             <div class="row">
@@ -188,6 +188,11 @@
                                                         <input asp-for="Local" class="form-control" />
                                                         <span asp-validation-for="Local" class="text-danger"></span>
                                                     </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label asp-for="flyer">Imagem do Evento</label>
+                                                    <input type="file" class="form-control" name="flyer" />
                                                 </div>
                                             </div>
 

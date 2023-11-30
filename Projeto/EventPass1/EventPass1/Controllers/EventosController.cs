@@ -6,8 +6,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.Operations;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System;
+using System.IO;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using System.Reflection;
 
 namespace EventPass1.Controllers
 {
@@ -17,7 +20,7 @@ namespace EventPass1.Controllers
     {
         private readonly AppDbContext _context;
 
-        public EventosController(AppDbContext context)
+		public EventosController(AppDbContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
         }
@@ -70,13 +73,29 @@ namespace EventPass1.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local")] Evento evento)
+        public async Task<IActionResult> Create([Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local")] Evento evento, IFormFile flyer)
         {
             if (ModelState.IsValid)
             {
                 var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
                 evento.GestorId = userId;
+
+                if (flyer != null && flyer.Length > 0)
+                {
+                
+                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + flyer.FileName;
+
+                    var filePath = Path.Combine("wwwroot/flyer", uniqueFileName);
+                    filePath = filePath.Replace("\\", "/");
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await flyer.CopyToAsync(fileStream);
+                    }
+
+                    evento.flyer = uniqueFileName;
+                }
 
                 _context.Eventos.Add(evento);
                 await _context.SaveChangesAsync();
@@ -191,9 +210,37 @@ namespace EventPass1.Controllers
                 .Include(e => e.Ingressos)
                 .FirstOrDefaultAsync(e => e.IdEvento == id);
 
-            if (evento == null)
+			if (evento == null)
+			{
+				return NotFound();
+			}
+
+			try
             {
-                return NotFound();
+				string relativePath = Path.Combine("wwwroot", "flyer", evento.flyer);
+
+				string diretorioBase = AppDomain.CurrentDomain.BaseDirectory;
+
+				string completePath = Path.Combine(diretorioBase, relativePath);
+
+				string parteIndesejada = Path.Combine("bin", "Debug", "net6.0");
+
+				completePath = completePath.Replace(parteIndesejada, string.Empty);
+
+				System.Diagnostics.Debug.WriteLine($"Caminho Completo: {completePath}");
+
+				if (System.IO.File.Exists(completePath))
+				{
+					System.IO.File.Delete(completePath);
+				}
+				else
+				{
+					return NotFound();
+				}
+
+            }catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno {ex.Message} ");
             }
 
             _context.Ingressos.RemoveRange(evento.Ingressos);

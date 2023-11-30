@@ -42,7 +42,9 @@ namespace EventPass1.Models
         [Display(Name = "Gestor")]
         public int GestorId { get; set; }
 
-       
+        public string flyer { get; set; }
+
+
         public Usuario Usuario { get; set; }
         public ICollection<Ingresso> Ingressos { get; set; }
     }
