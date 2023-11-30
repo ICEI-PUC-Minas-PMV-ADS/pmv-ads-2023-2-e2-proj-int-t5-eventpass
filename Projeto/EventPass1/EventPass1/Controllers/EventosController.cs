@@ -210,23 +210,39 @@ namespace EventPass1.Controllers
                 .Include(e => e.Ingressos)
                 .FirstOrDefaultAsync(e => e.IdEvento == id);
 
-            if (evento == null)
-            {
-                return NotFound();
-            }
+			if (evento == null)
+			{
+				return NotFound();
+			}
 
-				string relativePath = Path.Combine("wwwroot" , "flyer" , evento.flyer);
+			try
+            {
+				string relativePath = Path.Combine("wwwroot", "flyer", evento.flyer);
 
 				string diretorioBase = AppDomain.CurrentDomain.BaseDirectory;
 
 				string completePath = Path.Combine(diretorioBase, relativePath);
 
+				string parteIndesejada = Path.Combine("bin", "Debug", "net6.0");
+
+				completePath = completePath.Replace(parteIndesejada, string.Empty);
+
 				System.Diagnostics.Debug.WriteLine($"Caminho Completo: {completePath}");
 
 				if (System.IO.File.Exists(completePath))
-				    System.IO.File.Delete(completePath);
-	
-     
+				{
+					System.IO.File.Delete(completePath);
+				}
+				else
+				{
+					return NotFound();
+				}
+
+            }catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno {ex.Message} ");
+            }
+
             _context.Ingressos.RemoveRange(evento.Ingressos);
             _context.Eventos.Remove(evento);
             await _context.SaveChangesAsync();
