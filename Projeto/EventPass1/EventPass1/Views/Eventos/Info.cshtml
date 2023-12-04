@@ -3,59 +3,24 @@
 @{
     ViewData["Title"] = "Info";
 }
+<link rel="stylesheet" href="~/css/style-info.css" />
 
 
-    <div class="form-group">
-        <dl>
-            <div class="form-group">
-                <dt>
-                    @Html.DisplayNameFor(model => model.NomeEvento)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.NomeEvento)
-                </dd>
-            </div>
-
-            <div class="form-group">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Data)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Data)
-                </dd>
-            </div>
-
-            <div class="form-group">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Hora)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Hora)
-                </dd>
-            </div>
-
-            <div class="form-group">
-                <dt>
-                    @Html.DisplayNameFor(model => model.TotalIngressos)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.TotalIngressos)
-                </dd>
-            </div>
-
-            <div class="form-group">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Descricao)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Descricao)
-                </dd>
-            </div>
-        </dl>
+<div class="content-image">
+    <img src="/flyer/@ViewBag.Evento.flyer" class="d-block w-100" alt="..." />
+</div>
+<div class="container-info">
+    <div>
+        <div class="details-info">
+            <p class="name-event">@Model.NomeEvento</p>
+            <p class="date-event">@Model.Data.ToString("dd/MM/yyyy") às @Model.Hora.ToString("HH:mm")</p>
+            <p class="local-event">@Model.Local</p>
+            <p class="description-event">@Model.Descricao</p>
+        </div>
     </div>
+</div>
 <div>
-    <a asp-controller="Home" asp-action="Index"
-       style="margin-right: 10px; color: white; background-color: #f15a24; font-weight: bold; border: none; border-radius: 5px; padding: 8px;">
+    <a asp-controller="Home" asp-action="Index" class="button-back">
         Voltar
     </a>
 </div>

@@ -48,7 +48,7 @@
 <body class="profile">
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar" >
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
                 <div class="position-sticky">
                     <ul class="nav flex-column">
                         <li class="user-tabs">
@@ -65,9 +65,10 @@
                                 class="bi bi-person-fill" viewBox="0 0 16 16">
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                             </svg>
-                            <a class="nav-link-tab" asp-area="" asp-controller="Usuarios1" asp-action="Details" asp-route-id="@ViewData["userId"]">
-							    MEU PERFIL
-							</a>
+                            <a class="nav-link-tab" asp-area="" asp-controller="Usuarios1" asp-action="Details"
+                                asp-route-id="@ViewData["userId"]">
+                                MEU PERFIL
+                            </a>
                         </li>
                         @if (User.IsInRole("Gestor"))
                         {
@@ -135,7 +136,8 @@
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="tab1">
                             <div>
-                                <p style="padding: 0; margin-bottom: 20px; color: #000000; font-weight: bold; font-size: large;">
+                                <p
+                                    style="padding: 0; margin-bottom: 20px; color: #000000; font-weight: bold; font-size: large;">
                                     CADASTRAR EVENTO
                                 </p>
                                 <div class="row">
@@ -148,7 +150,8 @@
                                                     <div class="form-group">
                                                         <label asp-for="NomeEvento" class="control-label"></label>
                                                         <input asp-for="NomeEvento" class="form-control" />
-                                                        <span asp-validation-for="NomeEvento" class="text-danger"></span>
+                                                        <span asp-validation-for="NomeEvento"
+                                                            class="text-danger"></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 col-12">
@@ -162,7 +165,7 @@
                                                     <div class="form-group">
                                                         <label asp-for="Hora" class="control-label"></label>
                                                         <input asp-for="Hora" class="form-control" />
-                                                        <span asp-validation-for="Hora" class="text-danger"></span>
+                                                        <span asp-validation-for=" Hora" class="text-danger" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -172,7 +175,8 @@
                                                     <div class="form-group">
                                                         <label asp-for="TotalIngressos" class="control-label"></label>
                                                         <input asp-for="TotalIngressos" class="form-control" />
-                                                        <span asp-validation-for="TotalIngressos" class="text-danger"></span>
+                                                        <span asp-validation-for="TotalIngressos"
+                                                            class="text-danger"></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 col-12">
@@ -196,9 +200,12 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group" style="margin-top: 20px; display: flex; justify-content: flex-end;">
-                                                <input type="submit" value="Cadastrar" style="margin-right: 10px; color: white; background-color: #f15a24; font-weight: bold; border: none; border-radius: 5px; padding: 8px;" />
-                                                <a asp-action="Index" style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">Voltar</a>
+                                            <div class="form-group"
+                                                style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                                                <input type="submit" value="Cadastrar"
+                                                    style="margin-right: 10px; color: white; background-color: #f15a24; font-weight: bold; border: none; border-radius: 5px; padding: 8px;" />
+                                                <a asp-action="Index"
+                                                    style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">Voltar</a>
                                             </div>
                                         </form>
                                     </div>
@@ -206,7 +213,9 @@
 
 
                                 @section Scripts {
-                                    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+                                    @{
+                                        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                                    }
                                 }
 
                             </div>
