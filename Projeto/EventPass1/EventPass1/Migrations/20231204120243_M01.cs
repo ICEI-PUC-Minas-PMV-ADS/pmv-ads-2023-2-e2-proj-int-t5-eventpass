@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -39,7 +39,8 @@ namespace EventPass1.Migrations
                     TotalIngressos = table.Column<int>(type: "int", nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Local = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GestorId = table.Column<int>(type: "int", nullable: false)
+                    GestorId = table.Column<int>(type: "int", nullable: false),
+                    flyer = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -77,7 +78,7 @@ namespace EventPass1.Migrations
                         column: x => x.IdUsuario,
                         principalTable: "Usuarios",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Restrict );
                 });
 
             migrationBuilder.CreateIndex(
