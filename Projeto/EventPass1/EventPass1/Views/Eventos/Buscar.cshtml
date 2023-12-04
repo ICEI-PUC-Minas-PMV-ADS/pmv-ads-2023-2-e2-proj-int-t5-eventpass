@@ -6,6 +6,9 @@
 
 <link rel="stylesheet" href="~/css/style-buscar.css" />
 
+<div class="content-image" style="margin: 0;">
+    <img src="/flyer/@Model.Evento.flyer" class="d-block w-100" alt="..." style="border-radius: 10px;" />
+</div>
 <div>
     <dl class="row">
         <h4 class="title-buscar">@Html.DisplayFor(model => model.Evento.NomeEvento)</h4>
@@ -21,7 +24,7 @@
     </dl>
 </div>
 <div>
-    @if (User.IsInRole("Espectador"))
+    @if (User.Identity.IsAuthenticated)
     {
         <a class="button-retirar" asp-controller="Ingressos" asp-action="Edit" asp-route-id="@Model?.Id">Retirar</a>
     }
