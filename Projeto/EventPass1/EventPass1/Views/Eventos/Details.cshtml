@@ -5,9 +5,9 @@
 }
 
 <div>
-    <div style="display: flex; justify-content: space-between; margin-bottom: 20px">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px">
         <p style="padding: 0; margin: 0; color: #000000; font-weight: bold; font-size: large;">
-            DADOS DO USUÁRIO</p>
+            DADOS DO EVENTO</p>
         <a class="nav-link-edit" asp-action="Edit" asp-route-id="@Model?.IdEvento"
             style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-pencil-fill"
@@ -17,6 +17,9 @@
             </svg>
             Editar evento
         </a>
+    </div>
+    <div class="content-image" style="margin: 0 0 20px 0;">
+        <img src="/flyer/@Model.flyer" class="d-block w-100" alt="..." style="border-radius: 10px;" />
     </div>
     <div class="form-group">
         <dl>

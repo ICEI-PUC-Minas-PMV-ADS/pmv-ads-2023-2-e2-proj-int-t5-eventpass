@@ -20,13 +20,15 @@
     </div>
 </div>
 <div>
-    @if (User.IsInRole("Espectador"))
+    @if (User.Identity.IsAuthenticated)
     {
-        <a class="button-back" asp-controller="Ingressos" asp-action="Edit" asp-route-id="@Model.Ingresso?.Id">Retirar</a>
+        <a class="button-retirar" asp-controller="Ingressos" asp-action="Edit" asp-route-id="@Model.Ingresso?.Id"
+            style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">Retirar</a>
     }
     else
     {
-        <a class="button-back" asp-controller="Usuarios1" asp-action="Login"> Login</a>
+        <a asp-controller="Usuarios1" asp-action="Login"
+            style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;"> Retirar</a>
     }
 
     <a asp-controller="Home" asp-action="Index" class="button-back">
