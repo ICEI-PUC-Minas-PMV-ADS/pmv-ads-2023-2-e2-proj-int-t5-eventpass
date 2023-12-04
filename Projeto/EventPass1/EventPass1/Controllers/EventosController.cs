@@ -163,21 +163,33 @@ namespace EventPass1.Controllers
 
             return View(dados);
         }
-
         public async Task<IActionResult> Info(int? id)
         {
             if (id == null)
                 return NotFound();
 
-            var dados = await _context.Eventos.FindAsync(id);
+            var evento = await _context.Eventos.FindAsync(id);
 
-            if (dados == null)
+            if (evento == null)
                 return NotFound();
 
-            ViewBag.Evento = dados;
+            var ingresso = _context.Ingressos
+                .Include(i => i.Evento)
+                .Include(i => i.Usuario)
+                .Where(i => i.IdEvento == id && i.Status == 0)
+                .OrderBy(i => i.Id)
+                .FirstOrDefault();
 
-            return View(dados);
+            var viewModel = new EventoIngressoViewModel
+            {
+                Evento = evento,
+                Ingresso = ingresso // Aqui está associando o ingresso ao modelo EventoIngressoViewModel
+            };
+
+            return View(viewModel);
         }
+
+
 
         public async Task<IActionResult> Delete(int? id)
         {

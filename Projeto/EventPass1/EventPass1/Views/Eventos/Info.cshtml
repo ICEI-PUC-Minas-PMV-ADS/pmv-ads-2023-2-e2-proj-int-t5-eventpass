@@ -1,25 +1,34 @@
-﻿@model EventPass1.Models.Evento
+﻿@model EventPass1.Models.EventoIngressoViewModel
+
 
 @{
     ViewData["Title"] = "Info";
 }
 <link rel="stylesheet" href="~/css/style-info.css" />
 
-
 <div class="content-image">
-    <img src="/flyer/@ViewBag.Evento.flyer" class="d-block w-100" alt="..." />
+    <img src="/flyer/@Model.Evento.flyer" class="d-block w-100" alt="..." />
 </div>
 <div class="container-info">
     <div>
         <div class="details-info">
-            <p class="name-event">@Model.NomeEvento</p>
-            <p class="date-event">@Model.Data.ToString("dd/MM/yyyy") às @Model.Hora.ToString("HH:mm")</p>
-            <p class="local-event">@Model.Local</p>
-            <p class="description-event">@Model.Descricao</p>
+            <p class="name-event">@Model.Evento.NomeEvento</p>
+            <p class="date-event">@Model.Evento.Data.ToString("dd/MM/yyyy") às @Model.Evento.Hora.ToString("HH:mm")</p>
+            <p class="local-event">@Model.Evento.Local</p>
+            <p class="description-event">@Model.Evento.Descricao</p>
         </div>
     </div>
 </div>
 <div>
+    @if (User.IsInRole("Espectador"))
+    {
+        <a class="button-back" asp-controller="Ingressos" asp-action="Edit" asp-route-id="@Model.Ingresso?.Id">Retirar</a>
+    }
+    else
+    {
+        <a class="button-back" asp-controller="Usuarios1" asp-action="Login"> Login</a>
+    }
+
     <a asp-controller="Home" asp-action="Index" class="button-back">
         Voltar
     </a>
