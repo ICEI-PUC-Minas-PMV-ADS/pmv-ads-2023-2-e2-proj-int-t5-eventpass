@@ -8,9 +8,9 @@ namespace EventPass1.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-		private readonly AppDbContext _context;
+        private readonly AppDbContext _context;
 
-		public HomeController(ILogger<HomeController> logger, AppDbContext context)
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
             _logger = logger;
             _context = context;
@@ -18,12 +18,12 @@ namespace EventPass1.Controllers
 
         public IActionResult Index()
         {
-			var carrocel = _context.Eventos
-	        .OrderByDescending(e => e.Data)
-	        .Take(6)
-	        .ToList();
+            var carousel = _context.Eventos
+            .OrderByDescending(e => e.Data)
+            .Take(6)
+            .ToList();
 
-			return View(carrocel);
+            return View(carousel);
         }
 
         public IActionResult Privacy()
@@ -37,6 +37,6 @@ namespace EventPass1.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-		
-	}
+
+    }
 }

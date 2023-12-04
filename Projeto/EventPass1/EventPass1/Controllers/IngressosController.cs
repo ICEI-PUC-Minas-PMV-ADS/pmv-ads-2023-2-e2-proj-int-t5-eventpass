@@ -47,9 +47,6 @@ namespace EventPass1.Controllers
 
             return View(ingressos1);
         }
-
-
-
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Ingressos == null)
@@ -112,7 +109,6 @@ namespace EventPass1.Controllers
 
             return View(ingresso);
         }
-
 
         public async Task<IActionResult> Delete(int? id)
         {

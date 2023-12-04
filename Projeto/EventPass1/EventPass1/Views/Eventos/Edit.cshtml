@@ -59,8 +59,7 @@
                         <span asp-validation-for="Local" class="text-danger"></span>
                     </div>
                 </div>
-                <div class="col-md-4 col-12">
-
+                <div class="col-md-4 col-12" style="display: none;">
                     <div class="form-group">
                         <label asp-for="GestorId" class="control-label"></label>
                         <input asp-for="GestorId" type="hidden" />
@@ -71,8 +70,10 @@
             </div>
 
             <div class="form-group" style="margin-top: 20px; display: flex; justify-content: flex-end;">
-                <input type="submit" value="Salvar" style="margin-right: 10px; color: white; background-color: #f15a24; font-weight: bold; border: none; border-radius: 5px; padding: 8px;" />
-                <a asp-action="Index" style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">Voltar</a>
+                <input type="submit" value="Salvar"
+                    style="margin-right: 10px; color: white; background-color: #f15a24; font-weight: bold; border: none; border-radius: 5px; padding: 8px;" />
+                <a asp-action="Index"
+                    style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">Voltar</a>
             </div>
         </form>
     </div>

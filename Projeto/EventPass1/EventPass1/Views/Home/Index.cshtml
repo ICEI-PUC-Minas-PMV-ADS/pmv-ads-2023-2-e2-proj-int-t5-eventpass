@@ -1,5 +1,7 @@
 ﻿@model List<EventPass1.Models.Evento>
-@{ ViewData["Title"] = "Home Page"; }
+@{
+	ViewData["Title"] = "Home Page";
+}
 
 <link rel="stylesheet" href="~/css/style-home.css" />
 <div class="text-center">
@@ -10,7 +12,8 @@
 				<div class="carousel-item active">
 					<img src="~/img/1.png" class="d-block w-100" alt="..." />
 					<div class="carousel-caption d-none d-md-block">
-						<a class="nav-link-carousel" asp-area="" asp-controller="Usuarios1" asp-action="Login">Venha festejar conosco!</a>
+						<a class="nav-link-carousel" asp-area="" asp-controller="Usuarios1" asp-action="Login">Venha
+							festejar conosco!</a>
 						<p>Some representative placeholder content for the first slide.</p>
 					</div>
 				</div>
@@ -26,105 +29,54 @@
 						}
 						else
 						{
-							<img src="~/img/@($"{i+1}.png")" class="d-block w-100" alt="..." />
+							<img src="~/img/@($"{i + 1}.png")" class="d-block w-100" alt="..." />
 						}
 						<div class="carousel-caption d-none d-md-block">
-							<a class="nav-link-carousel" asp-area="" asp-controller="Eventos" asp-action="Info" asp-route-id="@Model[i].IdEvento">@Model[i].NomeEvento</a>
-							<p> @Model[i].Local @Model[i].Data</p>
+							<a class="nav-link-carousel" asp-area="" asp-controller="Eventos" asp-action="Info"
+								asp-route-id="@Model[i].IdEvento">@Model[i].NomeEvento</a>
+							<p> @Model[i].Local @Model[i].Data.ToString("dd/MM/yyyy") às @Model[i].Hora.ToString("HH:mm")</p>
 						</div>
 					</div>
 				}
 			}
 		</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+			data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+			data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
 	</div>
-		<div class="horizontal-space" />
-		<h2 class="text-title">Eventos em destaque!</h2>
-			@if (Model != null && Model.Count > 3)
+	<div class="horizontal-space" />
+	<h2 class="text-title">Eventos em destaque!</h2>
+	@if (Model != null && Model.Any())
+	{
+		<div class="row row-cols-1 row-cols-md-3 g-4">
+			@foreach (var evento in Model.Take(3))
 			{
-			<div class="row row-cols-1 row-cols-md-3 g-4">
-				@for (var i = 3; i < Model.Count; i++)
-				{
-					<div class="col">
-						<div class="card">
-						@if (Model[i].flyer != null)
+				<div class="col">
+					<div class="card">
+						@if (evento.flyer != null)
 						{
-							<img src="/flyer/@Model[i].flyer" class="d-block w-100" alt="..." />
+							<img src="/flyer/@evento.flyer" class="d-block w-100" alt="..." />
 						}
-						else
-						{
-							<img src="~/img/@($"{i-2}.png")" class="d-block w-100" alt="..." />
-						}
-							<div class="card-body">
-								<div class="card-details">
-									<p>@Model[i].Data</p>
-									<a asp-controller="Eventos" asp-action="Info" asp-route-id="@Model[i].IdEvento">Ver detalhes</a>
-								</div>
-								<div class="card-name">
-									<h5 class="card-title">@Model[i].NomeEvento</h5>
-									<p class="card-text">@Model[i].Local</p>
-								</div>
+						<div class="card-body">
+							<div class="card-details">
+								<p>@evento.Data.ToString("dd/MM/yyyy")</p>
+								<a asp-controller="Eventos" asp-action="Info" asp-route-id="@evento.IdEvento">Ver detalhes</a>
+							</div>
+							<div class="card-name">
+								<h5 class="card-title">@evento.NomeEvento</h5>
+								<p class="card-text">@evento.Local</p>
 							</div>
 						</div>
 					</div>
-				}
-			</div>
+				</div>
 			}
-			else
-			{
-			<div class="row row-cols-1 row-cols-md-3 g-4">
-				<div class="col">
-					<div class="card">
-						<img src="~/img/1.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<div class="card-details">
-								<p>DD/MM/AA</p>
-								<a href="#">Ver detalhes</a>
-							</div>
-							<div class="card-name">
-								<h5 class="card-title">Nome do evento 1</h5>
-								<p class="card-text">Localização do evento</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card">
-						<img src="~/img/3.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<div class="card-details">
-								<p>DD/MM/AA</p>
-								<a href="#">Ver detalhes</a>
-							</div>
-							<div class="card-name">
-								<h5 class="card-title">Nome do evento 2</h5>
-								<p class="card-text">Localização do evento</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card">
-						<img src="~/img/3.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<div class="card-details">
-								<p>DD/MM/AA</p>
-								<a href="#">Ver detalhes</a>
-							</div>
-							<div class="card-name">
-								<h5 class="card-title">Nome do evento 3</h5>
-								<p class="card-text">Localização do evento</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			}
+		</div>
+	}
 </div>

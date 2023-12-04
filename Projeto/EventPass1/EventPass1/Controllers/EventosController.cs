@@ -14,17 +14,14 @@ using System.Reflection;
 
 namespace EventPass1.Controllers
 {
-
-
     public class EventosController : Controller
     {
         private readonly AppDbContext _context;
 
-		public EventosController(AppDbContext context, IWebHostEnvironment webHostEnvironment)
+        public EventosController(AppDbContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
         }
-
 
         public IActionResult Index()
         {
@@ -83,7 +80,6 @@ namespace EventPass1.Controllers
 
                 if (flyer != null && flyer.Length > 0)
                 {
-                
                     var uniqueFileName = Guid.NewGuid().ToString() + "_" + flyer.FileName;
 
                     var filePath = Path.Combine("wwwroot/flyer", uniqueFileName);
@@ -99,7 +95,6 @@ namespace EventPass1.Controllers
 
                 _context.Eventos.Add(evento);
                 await _context.SaveChangesAsync();
-
 
                 for (int i = 1; i <= evento.TotalIngressos; i++)
                 {
@@ -210,35 +205,36 @@ namespace EventPass1.Controllers
                 .Include(e => e.Ingressos)
                 .FirstOrDefaultAsync(e => e.IdEvento == id);
 
-			if (evento == null)
-			{
-				return NotFound();
-			}
-
-			try
+            if (evento == null)
             {
-				string relativePath = Path.Combine("wwwroot", "flyer", evento.flyer);
+                return NotFound();
+            }
 
-				string diretorioBase = AppDomain.CurrentDomain.BaseDirectory;
+            try
+            {
+                string relativePath = Path.Combine("wwwroot", "flyer", evento.flyer);
 
-				string completePath = Path.Combine(diretorioBase, relativePath);
+                string diretorioBase = AppDomain.CurrentDomain.BaseDirectory;
 
-				string parteIndesejada = Path.Combine("bin", "Debug", "net6.0");
+                string completePath = Path.Combine(diretorioBase, relativePath);
 
-				completePath = completePath.Replace(parteIndesejada, string.Empty);
+                string parteIndesejada = Path.Combine("bin", "Debug", "net6.0");
 
-				System.Diagnostics.Debug.WriteLine($"Caminho Completo: {completePath}");
+                completePath = completePath.Replace(parteIndesejada, string.Empty);
 
-				if (System.IO.File.Exists(completePath))
-				{
-					System.IO.File.Delete(completePath);
-				}
-				else
-				{
-					return NotFound();
-				}
+                System.Diagnostics.Debug.WriteLine($"Caminho Completo: {completePath}");
 
-            }catch (Exception ex)
+                if (System.IO.File.Exists(completePath))
+                {
+                    System.IO.File.Delete(completePath);
+                }
+                else
+                {
+                    return NotFound();
+                }
+
+            }
+            catch (Exception ex)
             {
                 return StatusCode(500, $"Erro interno {ex.Message} ");
             }

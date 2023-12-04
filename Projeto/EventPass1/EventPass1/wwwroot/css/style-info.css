@@ -1,0 +1,47 @@
+.container-info {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.button-back {
+  margin-right: 10px;
+  color: white;
+  background-color: #f15a24;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.content-image {
+  margin: 0;
+}
+
+.content-image img {
+  border-radius: 10px;
+}
+
+.name-event {
+  margin-top: 20px;
+  color: black;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.date-event {
+  color: #f15a24;
+  font-weight: bold;
+}
+
+.local-event {
+  color: #4f4f4f;
+  font-weight: bold;
+}
+
+.description-event {
+  color: #000;
+  text-align: justify;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
