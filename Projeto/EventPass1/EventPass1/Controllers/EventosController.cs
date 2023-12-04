@@ -132,7 +132,7 @@ namespace EventPass1.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local", "GestorId")] Evento evento)
+        public async Task<IActionResult> Edit(int id, [Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local","flyer", "GestorId")] Evento evento)
         {
             if (id != evento.IdEvento)
                 return NotFound();
