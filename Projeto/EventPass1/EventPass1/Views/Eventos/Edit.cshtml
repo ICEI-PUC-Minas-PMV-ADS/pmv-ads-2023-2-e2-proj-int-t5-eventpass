@@ -9,7 +9,7 @@
 </p>
 <div class="row">
     <div class="col-md-12">
-        <form asp-action="Edit">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdEvento" />
 
@@ -62,7 +62,6 @@
                 <div class="form-group">
                     <label asp-for="flyer">Imagem do Evento</label>
                     <input type="file" class="form-control" name="flyer" />
-                    <span asp-validation-for="flyer" class="text-danger"></span>
                 </div>
                 <div class="col-md-4 col-12" style="display: none;">
                     <div class="form-group">

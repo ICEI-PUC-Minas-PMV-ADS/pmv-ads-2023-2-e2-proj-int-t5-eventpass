@@ -11,6 +11,7 @@ using System.IO;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Reflection;
+using Microsoft.Extensions.Logging;
 
 namespace EventPass1.Controllers
 {
@@ -132,13 +133,30 @@ namespace EventPass1.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local","flyer", "GestorId")] Evento evento)
+        public async Task<IActionResult> Edit(int id, [Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local" ,"GestorId")] Evento evento, IFormFile flyer)
         {
             if (id != evento.IdEvento)
                 return NotFound();
+            
 
             if (ModelState.IsValid)
             {
+
+                if (flyer != null && flyer.Length > 0)
+                {
+                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + flyer.FileName;
+
+                    var filePath = Path.Combine("wwwroot/flyer", uniqueFileName);
+                    filePath = filePath.Replace("\\", "/");
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await flyer.CopyToAsync(fileStream);
+                    }
+
+                    evento.flyer = uniqueFileName;
+                }
+                
                 _context.Eventos.Update(evento);
                 await _context.SaveChangesAsync();
 
@@ -221,35 +239,38 @@ namespace EventPass1.Controllers
             {
                 return NotFound();
             }
-
-            try
+            if (evento.flyer != null)
             {
-                string relativePath = Path.Combine("wwwroot", "flyer", evento.flyer);
+				try
+				{
+					string relativePath = Path.Combine("wwwroot", "flyer", evento.flyer);
 
-                string diretorioBase = AppDomain.CurrentDomain.BaseDirectory;
+					string diretorioBase = AppDomain.CurrentDomain.BaseDirectory;
 
-                string completePath = Path.Combine(diretorioBase, relativePath);
+					string completePath = Path.Combine(diretorioBase, relativePath);
 
-                string parteIndesejada = Path.Combine("bin", "Debug", "net6.0");
+					string parteIndesejada = Path.Combine("bin", "Debug", "net6.0");
 
-                completePath = completePath.Replace(parteIndesejada, string.Empty);
+					completePath = completePath.Replace(parteIndesejada, string.Empty);
 
-                System.Diagnostics.Debug.WriteLine($"Caminho Completo: {completePath}");
+					System.Diagnostics.Debug.WriteLine($"Caminho Completo: {completePath}");
 
-                if (System.IO.File.Exists(completePath))
-                {
-                    System.IO.File.Delete(completePath);
-                }
-                else
-                {
-                    return NotFound();
-                }
+					if (System.IO.File.Exists(completePath))
+					{
+						System.IO.File.Delete(completePath);
+					}
+					else
+					{
+						return NotFound();
+					}
 
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Erro interno {ex.Message} ");
-            }
+				}
+				catch (Exception ex)
+				{
+					return StatusCode(500, $"Erro interno {ex.Message} ");
+				}
+			}
+            
 
             _context.Ingressos.RemoveRange(evento.Ingressos);
             _context.Eventos.Remove(evento);
