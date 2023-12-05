@@ -7,6 +7,17 @@
   background-color: #ddd;
 }
 
+.validator {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-validator {
+  margin-top: 5px;
+  color: rgb(197, 0, 0);
+  font-size: 12px;
+}
+
 .bg-black {
   background-color: black;
   padding: 20px;
@@ -24,7 +35,7 @@
 .right-section p {
   color: #000000;
   text-align: center;
-  font-family: "Just Another Hand", cursive;
+  font-family: 'Just Another Hand', cursive;
   font-size: x-large;
   font-style: normal;
   font-weight: 700;
@@ -42,7 +53,7 @@
 .left-section h4 {
   color: #f15a24;
   text-align: center;
-  font-family: "Just Another Hand", cursive;
+  font-family: 'Just Another Hand', cursive;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -63,7 +74,7 @@
   border: 1px solid #fff;
   color: #fff;
   text-align: center;
-  font-family: "Lexend", sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -73,7 +84,7 @@
   padding: 8px 16px;
 }
 
-.right-section input[type="submit"] {
+.right-section input[type='submit'] {
   border-radius: 5px;
   background: #f15a24;
   color: black;

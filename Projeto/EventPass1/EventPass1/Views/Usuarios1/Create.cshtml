@@ -13,34 +13,35 @@
             <form asp-action="Create">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <p>Cadastre-se</p>
-                <div class="form-group">
+                <div class="form-group validator">
                     <select asp-for="Tipo" class="form-control" aria-placeholder="Teste"
                         asp-items="Html.GetEnumSelectList<TipoUsuario>()">
                         <option value="">Selecione o tipo</option>
                     </select>
-                    <span asp-validation-for="Tipo" class="text-danger"></span>
+                    <span asp-validation-for="Tipo" class="text-validator"></span>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group validator">
                     <input asp-for="NomeUsuario" class="form-control" placeholder="Nome completo" />
-                    <span asp-validation-for="NomeUsuario" class="text-danger"></span>
+                    <span asp-validation-for="NomeUsuario" class="text-validator"></span>
                 </div>
-                <div class="form-group">
+                <div class="form-group validator">
                     <input asp-for="CPF" class="form-control" placeholder="CPF ou CNPJ" />
-                    <span asp-validation-for="CPF" class="text-danger"></span>
+                    <span asp-validation-for="CPF" class="text-validator"></span>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group validator">
                     <input asp-for="Email" class="form-control" placeholder="Email" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <span asp-validation-for="Email" class="text-validator"></span>
                 </div>
-                <div class="form-group">
+                <div class="form-group validator">
                     <input asp-for="Senha" class="form-control" placeholder="Senha" />
-                    <span asp-validation-for="Senha" class="text-danger"></span>
+                    <span asp-validation-for="Senha" class="text-validator"></span>
                 </div>
-                <div class="form-group">
+                <div class="form-group validator">
                     <input asp-for="ConfirmarSenha" class="form-control" placeholder="Confirmar senha" />
-                    <span asp-validation-for="ConfirmarSenha" class="text-danger"></span>
+                    <span asp-validation-for="ConfirmarSenha" class="text-validator"></span>
+                    <p style="margin: 0 0 5px 0; color: rgb(197, 0, 0); font-size: 15px;">@ViewBag.Message</p>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Cadastrar-se" class="btn btn-primary" />
@@ -60,8 +61,8 @@
     </div>
 </div>
 
-<h3>@ViewBag.Message</h3>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

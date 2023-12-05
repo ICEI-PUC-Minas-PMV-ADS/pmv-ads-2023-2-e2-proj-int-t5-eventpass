@@ -20,38 +20,38 @@ namespace EventPass1.Models
         [Display(Name = "Codigo usuario")]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório informar o seu Nome")]
+        [Required(ErrorMessage = "*Obrigatório informar o seu nome")]
         [Display(Name = "Nome do Usuário")]
         public string NomeUsuario { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório informar o seu Email")]
-        [EmailAddress(ErrorMessage = "Email inválido")]
+        [Required(ErrorMessage = "*Obrigatório informar o seu email")]
+        [EmailAddress(ErrorMessage = "*Email inválido")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório digitar a sua senha")]
+        [Required(ErrorMessage = "*Obrigatório digitar a sua senha")]
         [DataType(DataType.Password)]
         public string Senha { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório digitar a confirmação da senha")]
+        [Required(ErrorMessage = "*Obrigatório digitar a confirmação da senha")]
         [DataType(DataType.Password)]
         [Compare("Senha", ErrorMessage = "As senhas não coincidem")]
         [Display(Name = "Confirmar a senha")]
         public string ConfirmarSenha { get; set; }
 
 
-        [Required(ErrorMessage = "Obrigatório informar o seu CPF ou CNPJ ")]
+        [Required(ErrorMessage = "*Obrigatório informar o seu CPF ou CNPJ ")]
 
-        [Display(Name = "Indentificação")]
-        
+        [Display(Name = "Identificação")]
+
         public string CPF { get; set; }
 
         public ICollection<Evento> Eventos { get; set; }
         public ICollection<Ingresso> Ingressos { get; set; }
-        
+
 
     }
 
 
-    
+
 }
 
