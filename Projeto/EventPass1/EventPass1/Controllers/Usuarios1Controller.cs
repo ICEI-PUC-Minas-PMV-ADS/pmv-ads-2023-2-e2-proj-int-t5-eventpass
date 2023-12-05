@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace EventPass1.Controllers
 {
 
-   
+
     public class Usuarios1Controller : Controller
     {
         private readonly AppDbContext _context;
@@ -25,31 +25,31 @@ namespace EventPass1.Controllers
         }
 
         // GET: Usuarios
-      
+
         public async Task<IActionResult> Index()
         {
             return View(await _context.Usuarios.ToListAsync());
         }
-       
+
         public IActionResult AcessDenied()
         {
             return View();
         }
 
-       
+
         public IActionResult Login()
         {
             return View();
         }
         [HttpPost]
-       
+
         public async Task<IActionResult> Login(Usuario usuario)
         {
             var dados = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuario.Email);
 
             if (dados == null)
             {
-                ViewBag.Message = "Usuário e/ou Senha inválidos! ";
+                ViewBag.Message = "Usuário e/ou senha inválidos! ";
                 return View();
             }
 
@@ -79,12 +79,12 @@ namespace EventPass1.Controllers
             }
             else
             {
-                ViewBag.Message = "Usuário e/ou Senha inválidos! ";
+                ViewBag.Message = "Usuário e/ou senha inválidos! ";
             }
 
             return View();
         }
-       
+
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
@@ -114,7 +114,7 @@ namespace EventPass1.Controllers
             return View(usuario);
         }
 
-    
+
         public IActionResult Create()
         {
             return View();
@@ -146,7 +146,6 @@ namespace EventPass1.Controllers
             }
             return View(usuario);
         }
-      
 
         public async Task<IActionResult> Edit(int? id)
         {
@@ -177,17 +176,17 @@ namespace EventPass1.Controllers
             {
                 try
                 {
-                    
+
                     var usuarioOriginal = await _context.Usuarios.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
                     if (usuarioOriginal == null)
                     {
                         return NotFound();
                     }
 
-                    
+
                     usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     usuario.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(usuario.ConfirmarSenha);
-                    usuario.CPF = usuarioOriginal.CPF;                  
+                    usuario.CPF = usuarioOriginal.CPF;
 
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
@@ -209,7 +208,7 @@ namespace EventPass1.Controllers
         }
 
 
-       
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Usuarios == null)
@@ -227,7 +226,7 @@ namespace EventPass1.Controllers
             return View(usuario);
         }
 
-        
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
