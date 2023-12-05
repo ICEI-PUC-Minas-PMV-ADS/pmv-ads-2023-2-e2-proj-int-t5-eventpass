@@ -132,13 +132,27 @@ namespace EventPass1.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local","flyer", "GestorId")] Evento evento)
+        public async Task<IActionResult> Edit(int id, [Bind("IdEvento", "NomeEvento", "Data", "Hora", "TotalIngressos", "Descricao", "Local","flyer", "GestorId")] Evento evento, IFormFile flyer)
         {
             if (id != evento.IdEvento)
                 return NotFound();
 
             if (ModelState.IsValid)
             {
+                if (flyer != null && flyer.Length > 0)
+                {
+                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + flyer.FileName;
+
+                    var filePath = Path.Combine("wwwroot/flyer", uniqueFileName);
+                    filePath = filePath.Replace("\\", "/");
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await flyer.CopyToAsync(fileStream);
+                    }
+
+                    evento.flyer = uniqueFileName;
+                }
                 _context.Eventos.Update(evento);
                 await _context.SaveChangesAsync();
 

@@ -23,7 +23,7 @@
     @if (User.Identity.IsAuthenticated)
     {
         <a class="button-retirar" asp-controller="Ingressos" asp-action="Edit" asp-route-id="@Model.Ingresso?.Id"
-            style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">Retirar</a>
+            style="border: 1px solid black; color: black; font-weight: bold; border-radius: 5px; padding: 8px;">Retirar ingresso</a>
     }
     else
     {

@@ -26,7 +26,7 @@
 <div>
     @if (User.Identity.IsAuthenticated)
     {
-        <a class="button-retirar" asp-controller="Ingressos" asp-action="Edit" asp-route-id="@Model?.Id">Retirar</a>
+        <a class="button-retirar" asp-controller="Ingressos" asp-action="Edit" asp-route-id="@Model?.Id">Retirar ingresso</a>
     }
     else
     {
