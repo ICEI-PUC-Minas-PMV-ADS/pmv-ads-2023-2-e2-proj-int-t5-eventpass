@@ -322,7 +322,7 @@ namespace EventPass1.Controllers
             _context.Update(usuario);
             await _context.SaveChangesAsync();
 
-            // Construa o URL com o token para redefinir a senha
+           
             string callbackUrl = Url.Action("RedefinirSenha", "Usuarios1", new { token = token }, Request.Scheme);
 
             // Envie um e-mail ao usuário com um link para redefinir a senha, incluindo o token no link.
@@ -337,12 +337,12 @@ namespace EventPass1.Controllers
 
         public IActionResult RedefinirSenha(string token)
         {
-            // Verifique se o token é válido e se existe no banco de dados.
+            
             var usuario = _context.Usuarios.FirstOrDefault(u => u.TokenRedefinicaoSenha == token);
 
             if (usuario == null)
             {
-                // Trate o caso em que o token não é válido.
+               
                 ViewBag.Message = "Token de redefinição de senha inválido.";
                 return View("EsqueciMinhaSenha");
             }

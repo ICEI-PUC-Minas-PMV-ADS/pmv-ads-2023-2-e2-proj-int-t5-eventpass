@@ -16,6 +16,7 @@ namespace EventPass1.Controllers
             _context = context;
         }
 
+
         public IActionResult Index()
         {
             var carousel = _context.Eventos
@@ -25,7 +26,6 @@ namespace EventPass1.Controllers
 
             return View(carousel);
         }
-        
 
 
 

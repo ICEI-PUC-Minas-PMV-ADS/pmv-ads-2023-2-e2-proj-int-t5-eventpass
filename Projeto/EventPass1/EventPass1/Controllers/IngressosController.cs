@@ -97,7 +97,7 @@ namespace EventPass1.Controllers
                     var usuario = _context.Usuarios.Find(userId);
 
 
-                    // _emailService.EnviarEmailConfirmacaoReserva(usuario.Email, ingresso.Id, evento.NomeEvento, usuario.NomeUsuario);
+                    _emailService.EnviarEmailConfirmacaoReserva(usuario.Email, ingresso.Id, evento.NomeEvento, usuario.NomeUsuario);
 
                     return RedirectToAction("MeusIngressos");
                 }
