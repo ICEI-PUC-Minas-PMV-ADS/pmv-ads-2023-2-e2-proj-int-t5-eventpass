@@ -2,62 +2,91 @@
 
 
 @{
-    ViewData["Title"] = "lista";
+    ViewData["Title"] = "Lista de eventos";
 }
 
-<h1>Eventos</h1>
+<link rel="stylesheet" href="~/css/style-home.css" />
 
+<p class="text-title" style="font-weight: bold; font-size: 18px">EVENTOS</p>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeEvento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Data)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hora)
-            </th>
-
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Local)
-            </th>
-
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
+@if (Model != null && Model.Any())
+{
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var evento in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NomeEvento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Data)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Hora)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Local)
-                </td>
-                <td>
-                    <a class="btn btn-info" asp-controller="Eventos" asp-action="Info" asp-route-id="@item.IdEvento">Detalhes</a>
-                </td>
-            </tr>
-
-
+            <div class="col">
+                <div class="card">
+                    @if (evento.flyer != null)
+                    {
+                        <img src="/flyer/@evento.flyer" class="d-block w-100" alt="..." />
+                    }
+                    <div class="card-body">
+                        <div class="card-details">
+                            <p>@evento.Data.ToString("dd/MM/yyyy")</p>
+                            <a asp-controller="Eventos" asp-action="Info" asp-route-id="@evento.IdEvento">Ver detalhes</a>
+                        </div>
+                        <div class="card-name">
+                            <h5 class="card-title">@evento.NomeEvento</h5>
+                            <p class="card-text">@evento.Local</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         }
-    </tbody>
+    </div>
+}
 
-</table>
+
+@* <table class="table">
+<thead>
+<tr>
+<th>
+@Html.DisplayNameFor(model => model.NomeEvento)
+</th>
+<th>
+@Html.DisplayNameFor(model => model.Data)
+</th>
+<th>
+@Html.DisplayNameFor(model => model.Hora)
+</th>
+
+<th>
+@Html.DisplayNameFor(model => model.Descricao)
+</th>
+<th>
+@Html.DisplayNameFor(model => model.Local)
+</th>
+
+<th></th>
+</tr>
+</thead>
+<tbody>
+@foreach (var item in Model)
+{
+<tr>
+<td>
+@Html.DisplayFor(modelItem => item.NomeEvento)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Data)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Hora)
+</td>
+
+<td>
+@Html.DisplayFor(modelItem => item.Descricao)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Local)
+</td>
+<td>
+<a class="btn btn-info" asp-controller="Eventos" asp-action="Info" asp-route-id="@item.IdEvento">Detalhes</a>
+</td>
+</tr>
+
+
+}
+</tbody>
+
+</table> *@

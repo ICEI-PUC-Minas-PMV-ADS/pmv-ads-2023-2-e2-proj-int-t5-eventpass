@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,23 +23,15 @@
                     <img src="~/img/logo.png" alt="Logo" width="80" />
                 </a>
 
-                <form asp-controller="Eventos" asp-action="Buscar" method="get" class="input-group busca d-none d-sm-flex">
-                    <input type="text"
-                           class="form-control"
-                           name="nomeEvento"
-                           placeholder="Pesquisar..."
-                           aria-label="Pesquisar"
-                           aria-describedby="basic-addon2" />
+                <form asp-controller="Eventos" asp-action="Buscar" method="get"
+                    class="input-group busca d-none d-sm-flex">
+                    <input type="text" class="form-control" name="nomeEvento" placeholder="Pesquisar..."
+                        aria-label="Pesquisar" aria-describedby="basic-addon2" />
                     <button class="btn btn-outline-secondary" type="submit">Buscar</button>
                 </form>
 
-                <button class="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarCollapse"
-                        aria-controls="navbarCollapse"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -52,23 +45,17 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link-perfil" asp-area="" asp-controller="Usuarios1" asp-action="Details" asp-route-id="@userId">
+                                <a class="nav-link-perfil" asp-area="" asp-controller="Usuarios1" asp-action="Details"
+                                    asp-route-id="@userId">
                                     Meu Perfil
                                 </a>
                             </li>
-                            <li class="nav-item" id="loginButton">
-                                <a class="nav-link" asp-area="" asp-controller="Eventos" asp-action="Lista">Ver todos eventos</a>
-                            </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Usuarios1" asp-action="Logout">Sair</a>
                             </li>
                         }
                         else
                         {
-                            <li class="nav-item" id="loginButton">
-                                <a class="nav-link" asp-area="" asp-controller="Eventos" asp-action="Lista">Ver todos eventos</a>
-                            </li>
                             <li class="nav-item" id="loginButton">
                                 <a class="nav-link" asp-area="" asp-controller="Usuarios1" asp-action="Login">Login</a>
                             </li>
@@ -77,15 +64,13 @@
                 </div>
 
                 <div class="input-group busca d-flex d-sm-none">
-                    <input type="text"
-                           class="form-control"
-                           placeholder="Pesquisar..."
-                           aria-label="Pesquisar"
-                           aria-describedby="basic-addon2" />
+                    <input type="text" class="form-control" placeholder="Pesquisar..." aria-label="Pesquisar"
+                        aria-describedby="basic-addon2" />
                     <button class="btn btn-outline-secondary" type="button" id="basic-addon2">Buscar</button>
                 </div>
             </div>
         </nav>
     </header>
 </body>
+
 </html>

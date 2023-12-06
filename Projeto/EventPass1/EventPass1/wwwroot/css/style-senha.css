@@ -1,0 +1,34 @@
+.container-senha {
+  margin-top: auto;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.home {
+  background-color: #ddd;
+}
+
+.input-email {
+  max-width: 500px;
+}
+
+.button-voltar {
+  border: 1px solid black;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.button-send {
+  color: white;
+  background-color: #f15a24;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 6px;
+}

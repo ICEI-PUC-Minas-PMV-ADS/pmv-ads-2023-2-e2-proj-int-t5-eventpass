@@ -52,7 +52,11 @@
 		</button>
 	</div>
 	<div class="horizontal-space" />
-	<h2 class="text-title">Eventos em destaque!</h2>
+	<div class="link-eventos" style="display: flex; flex-direction: space-beetwen;">
+		<p class="text-title" style="font-weight: bold; font-size: 18px">EVENTOS EM DESTAQUE!</p>
+		<a asp-area="" asp-controller="Eventos" asp-action="Lista"
+			style="font-weight: bold; color: #f15a24; text-decoration: none;">Ver todos eventos</a>
+	</div>
 	@if (Model != null && Model.Any())
 	{
 		<div class="row row-cols-1 row-cols-md-3 g-4">

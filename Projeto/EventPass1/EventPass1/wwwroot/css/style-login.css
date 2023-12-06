@@ -84,14 +84,25 @@
   padding: 8px 16px;
 }
 
+.forget {
+  color: #3f3f3f;
+  text-align: justify;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 16px; /* 100.003% */
+  text-decoration-line: underline;
+}
+
 .right-section input[type='submit'] {
   border-radius: 5px;
   background: #f15a24;
-  color: black;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 8px 16px;
   cursor: pointer;
   font-size: medium;
+  font-weight: bold;
 }
 
 .right-section .btn-info {

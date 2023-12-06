@@ -4,8 +4,10 @@
     ViewData["Title"] = "Redefinir Senha";
 }
 
-<div class="container">
-    <h2>Redefinir Senha</h2>
+<link rel="stylesheet" href="~/css/style-senha.css" />
+
+<div class="container-senha">
+    <p class="text-title" style="font-weight: bold; font-size: 18px">REDEFINIR SENHA</p>
 
     @if (!string.IsNullOrEmpty(ViewBag.Message))
     {
@@ -16,13 +18,13 @@
 
     <form asp-action="RedefinirSenha" method="post">
         <div class="form-group">
-            <label for="novaSenha">Nova Senha:</label>
-            <input type="password" class="form-control" id="novaSenha" name="novaSenha" required>
+            <label for="novaSenha">Digite sua nova senha</label>
+            <input type="password" class="form-control input-email" id="novaSenha" name="novaSenha" required>
         </div>
         <input type="hidden" name="token" value="@ViewBag.Token" />
         <div>
-            <button type="submit" class="btn btn-primary">Enviar</button> |
-            <a class="btn btn-info" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
+            <button type="submit" class="button-send">Enviar</button>
+            <a class="button-voltar" asp-area="" asp-controller="Usuarios1" asp-action="Login">Voltar</a>
         </div>
     </form>
 </div>

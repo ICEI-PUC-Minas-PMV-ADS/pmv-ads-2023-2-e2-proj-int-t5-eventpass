@@ -57,6 +57,7 @@ a {
   align-items: flex-start;
 }
 
-.text-title {
-  text-align: justify;
+.link-eventos {
+  display: flex;
+  justify-content: space-between;
 }

@@ -4,8 +4,10 @@
     ViewData["Title"] = "Esqueci Senha";
 }
 
-<div class="container">
-    <h2>Esqueci Minha Senha</h2>
+<link rel="stylesheet" href="~/css/style-senha.css" />
+
+<div class="container-senha">
+    <p class="text-title" style="font-weight: bold; font-size: 18px">ESQUECI MINHA SENHA</p>
 
     @if (!string.IsNullOrEmpty(ViewBag.Message))
     {
@@ -16,12 +18,12 @@
 
     <form asp-action="EsqueciSenha" method="post">
         <div class="form-group">
-            <label for="email">Endereço de E-mail:</label>
-            <input type="email" class="form-control" id="email" name="email" required>
+            <label for="email">Insira seu email</label>
+            <input type="email" class="form-control input-email" id="email" name="email" required>
         </div>
         <div>
-            <button type="submit" class="btn btn-primary">Enviar</button> |
-            <a class="btn btn-info" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
+            <button type="submit" class="button-send">Enviar</button>
+            <a class="button-voltar" asp-area="" asp-controller="Usuarios1" asp-action="Login">Voltar</a>
         </div>
     </form>
 </div>
@@ -30,5 +32,7 @@
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

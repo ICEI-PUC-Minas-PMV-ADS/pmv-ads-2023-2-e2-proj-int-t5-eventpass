@@ -180,7 +180,7 @@ namespace EventPass1.Controllers
                 var resultCNPJ = main1.IsValidCPFCNPJ(usuario.CPF);
 
                 if (resultCNPJ)
-                {             
+                {
                     _context.Add(usuario);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Login));
@@ -322,7 +322,7 @@ namespace EventPass1.Controllers
             _context.Update(usuario);
             await _context.SaveChangesAsync();
 
-           
+
             string callbackUrl = Url.Action("RedefinirSenha", "Usuarios1", new { token = token }, Request.Scheme);
 
             // Envie um e-mail ao usuário com um link para redefinir a senha, incluindo o token no link.
@@ -337,12 +337,12 @@ namespace EventPass1.Controllers
 
         public IActionResult RedefinirSenha(string token)
         {
-            
+
             var usuario = _context.Usuarios.FirstOrDefault(u => u.TokenRedefinicaoSenha == token);
 
             if (usuario == null)
             {
-               
+
                 ViewBag.Message = "Token de redefinição de senha inválido.";
                 return View("EsqueciMinhaSenha");
             }
