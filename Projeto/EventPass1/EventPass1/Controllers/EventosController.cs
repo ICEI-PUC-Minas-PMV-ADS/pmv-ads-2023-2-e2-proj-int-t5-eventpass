@@ -35,6 +35,13 @@ namespace EventPass1.Controllers
             ViewData["userId"] = userId;
             return View(eventos);
         }
+        public IActionResult lista()
+        {
+            var eventos = _context.Eventos
+            .ToList();
+            return View(eventos);
+        }
+
         public async Task<IActionResult> Relatorio(int id)
         {
             var dados = await _context.Eventos.FindAsync(id);
