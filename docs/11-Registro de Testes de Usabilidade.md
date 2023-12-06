@@ -91,3 +91,5 @@ A experiência do usuário evidencia uma dificuldade em identificar e localizar 
 | **Média de tempo** | **Média de ações** | **Quantidade de erros nos testes** |
 | ------------------ | ------------------ | ---------------------------------- |
 | 00:01:22           | 11                 | 3                                  |
+
+##Melhorias implmentadas
