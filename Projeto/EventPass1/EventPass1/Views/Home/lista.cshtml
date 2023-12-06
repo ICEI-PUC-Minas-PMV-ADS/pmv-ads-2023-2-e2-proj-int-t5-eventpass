@@ -1,4 +1,5 @@
-﻿@model IEnumerable<EventPass1.Models.EventoIngressoViewModel>
+﻿@model IEnumerable<EventPass1.Models.Evento>
+
 
 
 @{
@@ -12,20 +13,20 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Evento.NomeEvento)
+                @Html.DisplayNameFor(model => model.NomeEvento)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Evento.Data)
+                @Html.DisplayNameFor(model => model.Data)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Evento.Hora)
+                @Html.DisplayNameFor(model => model.Hora)
             </th>
 
             <th>
-                @Html.DisplayNameFor(model => model.Evento.Descricao)
+                @Html.DisplayNameFor(model => model.Descricao)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Evento.Local)
+                @Html.DisplayNameFor(model => model.Local)
             </th>
            
             <th></th>
@@ -36,23 +37,23 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Evento.NomeEvento)
+                    @Html.DisplayFor(modelItem => item.NomeEvento)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Evento.Data)
+                    @Html.DisplayFor(modelItem => item.Data)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Evento.Hora)
+                    @Html.DisplayFor(modelItem => item.Hora)
                 </td>
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.Evento.Descricao)
+                    @Html.DisplayFor(modelItem => item.Descricao)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Evento.Local)
+                    @Html.DisplayFor(modelItem => item.Local)
                 </td>
                 <td>
-                    <a class="btn btn-info" asp-controller="Eventos" asp-action="Info" asp-route-id="@item.Evento.IdEvento">Detalhes</a>
+                    <a class="btn btn-info" asp-controller="Eventos" asp-action="Info" asp-route-id="@item.IdEvento">Detalhes</a>
                 </td>
             </tr>
 

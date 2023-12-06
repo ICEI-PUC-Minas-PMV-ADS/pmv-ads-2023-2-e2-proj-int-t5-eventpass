@@ -25,13 +25,18 @@ namespace EventPass1.Controllers
 
             return View(carousel);
         }
+
         public IActionResult Lista()
         {
-            var eventos = _context.Eventos.ToList(); 
+            var eventos = _context.Eventos
+                            .Select(e => new EventoIngressoViewModel
+                            {
+                                Evento = e // supondo que EventoIngressoViewModel tenha uma propriedade 'Evento' do tipo 'Evento'
+                            })
+                            .ToList();
 
-            return View(eventos); 
+            return View(eventos);
         }
-
 
 
 
