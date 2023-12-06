@@ -25,6 +25,15 @@ namespace EventPass1.Controllers
 
             return View(carousel);
         }
+        public IActionResult Lista()
+        {
+            var eventos = _context.Eventos.ToList(); 
+
+            return View(eventos); 
+        }
+
+
+
 
         public IActionResult Privacy()
         {

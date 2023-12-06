@@ -1,0 +1,63 @@
+﻿@model IEnumerable<EventPass1.Models.EventoIngressoViewModel>
+
+
+@{
+    ViewData["Title"] = "lista";
+}
+
+<h1>Eventos</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Evento.NomeEvento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Evento.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Evento.Hora)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Evento.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Evento.Local)
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Evento.NomeEvento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Evento.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Evento.Hora)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Evento.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Evento.Local)
+                </td>
+                <td>
+                    <a class="btn btn-info" asp-controller="Eventos" asp-action="Info" asp-route-id="@item.Evento.IdEvento">Detalhes</a>
+                </td>
+            </tr>
+
+            
+        }
+    </tbody>
+    
+</table>
