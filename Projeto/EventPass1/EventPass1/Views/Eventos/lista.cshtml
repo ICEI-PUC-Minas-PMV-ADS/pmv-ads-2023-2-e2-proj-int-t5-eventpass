@@ -7,7 +7,11 @@
 
 <link rel="stylesheet" href="~/css/style-home.css" />
 
-<p class="text-title" style="font-weight: bold; font-size: 18px">EVENTOS</p>
+<div class="link-eventos">
+    <p class="text-title" style="font-weight: bold; font-size: 18px">EVENTOS</p>
+    <a asp-area="" asp-controller="Home" asp-action="Index"
+        style="font-weight: bold; color: #f15a24; text-decoration: none;">Voltar para a página inicial</a>
+</div>
 
 @if (Model != null && Model.Any())
 {
