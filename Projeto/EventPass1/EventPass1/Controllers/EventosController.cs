@@ -204,7 +204,7 @@ namespace EventPass1.Controllers
             var viewModel = new EventoIngressoViewModel
             {
                 Evento = evento,
-                Ingresso = ingresso // Aqui está associando o ingresso ao modelo EventoIngressoViewModel
+                Ingresso = ingresso 
             };
 
             return View(viewModel);
