@@ -31,7 +31,7 @@ namespace EventPass1.Controllers
             var eventos = _context.Eventos
                             .Select(e => new EventoIngressoViewModel
                             {
-                                Evento = e // supondo que EventoIngressoViewModel tenha uma propriedade 'Evento' do tipo 'Evento'
+                                Evento = e 
                             })
                             .ToList();
 
