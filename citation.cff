@@ -2,22 +2,26 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: pmv-ads-2023-2-e2-proj-int-t5-eventpass
 authors:
-  - family-names: Julia
-    given-names: Chaves Dutra
-  - family-names: Luiz
-    given-names: Eduardo Possidonio
-  - family-names: Pedro
-    given-names: Celso Mendes
-  - family-names: Sandro
-    given-names: Shayne Dutra
-  - family-names: Thiago
-    given-names: Singulano Machado
-  - name-suffix: Professor Luciana de Nardin
+  - family-names: Chaves Dutra
+    given-names: Julia
+  - family-names: Eduardo Possidonio
+    given-names: Luiz
+  - family-names: Celso Mendes
+    given-names: Pedro 
+  - family-names: Shayne Dutra
+    given-names: Sandro 
+  - family-names: Singulano Machado
+    given-names: Thiago 
+  - name-suffix: Professor
     affiliation: PUC Minas
+  - family-names: de Nardin
+    given-names: Luciana 
 keywords:
   - Eventos
   - Ingresso
   - Gestão de eventos
+  - Gestão de ingressos
+  - Calendário de eventos
 repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t5-eventpass.git
 license: CC-BY-4.0
 version: 1.0.0
