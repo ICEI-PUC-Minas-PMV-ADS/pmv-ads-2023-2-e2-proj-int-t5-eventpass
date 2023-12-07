@@ -12,6 +12,9 @@ EventPass
 
 ![Logo](img/logo-eventpass.png) 
 
+## Paleta de cores
+
+![Paleta EventPASS](./img/paleta.png)
 
 ## Conjunto de Slides (Estrutura)
 
