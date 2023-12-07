@@ -54,6 +54,10 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 <li><a href="docs/13-Referências.md"> Referências</a></li>
 </ol>
 
+# Aplicação
+
+<li><a href="http://eventpass.azurewebsites.net/"> Deploy da aplicação</a></li>
+
 # Código
 
 <li><a href="src/README.md"> Código Fonte</a></li>
