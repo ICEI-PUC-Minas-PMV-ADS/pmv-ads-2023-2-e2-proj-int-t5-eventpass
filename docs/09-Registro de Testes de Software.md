@@ -41,6 +41,8 @@ Para as funcionaliadades propostar foram realizados os <a href="8-Plano de Teste
 |                     |
 |                     |
 
-## Avaliação
+<h2>Relatório de teste de software</h2>
 
-Os testes realizados nas funcionalidades desenvolvidas apresentaram resultados satisfatórios, uma vez que não foram observados quaisquer erros durante a execução do software.
+Os testes realizados nas funcionalidades desenvolvidas apresentaram resultados satisfatórios, uma vez que não foram observados quaisquer erros durante a execução do software. Dessa forma, os testes atendem aos requisitos propostos na especificação do projeto.
+
+
